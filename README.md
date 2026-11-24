@@ -18,7 +18,7 @@ Selama `assets/config.js` masih kosong, situs tetap tampil normal dengan konten 
 ## Apa saja yang bisa diatur admin
 
 - **Teks**: judul dan paragraf pembuka setiap bagian, visi, serta kontak (telepon/WhatsApp, email, Instagram, nama PIC). Mengubah nomor telepon otomatis memperbarui semua tombol WhatsApp dan tautan telepon.
-- **Foto halaman**: 10 foto di halaman Gathering bisa diganti. Foto otomatis diperkecil (maks. 1800 px) dan dikompres ke WebP sebelum diunggah.
+- **Foto halaman**: foto utama beranda dan 10 foto di halaman Gathering bisa diganti. Foto otomatis diperkecil (maks. 1800 px) dan dikompres ke WebP sebelum diunggah.
 - **Galeri**: unggah banyak foto sekaligus, beri keterangan, atur urutan, hapus. Bagian Galeri di halaman hanya muncul jika sudah ada foto.
 - **Akun**: ganti kata sandi, dan reset lewat email jika lupa.
 

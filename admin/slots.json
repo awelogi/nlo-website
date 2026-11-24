@@ -355,6 +355,12 @@
  ],
  "images": [
   {
+   "key": "home.foto.hero",
+   "default": "img/hero-beranda.webp",
+   "alt": "Beranda: foto utama di bagian pembuka (hero)",
+   "page": "home"
+  },
+  {
    "key": "gathering.foto.hero-team-building",
    "default": "img/hero-team-building.webp",
    "alt": "Peserta bermain permainan tim di dalam ruangan, dengan panggung bertuliskan Team Building",
