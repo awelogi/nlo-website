@@ -73,7 +73,9 @@ grant select on public.admins to authenticated;
 
 -- updated_at otomatis
 create or replace function public.touch_updated_at()
-returns trigger language plpgsql as $$
+returns trigger language plpgsql
+set search_path = public
+as $$
 begin
   new.updated_at := now();
   new.updated_by := auth.uid();
@@ -91,9 +93,12 @@ on conflict (id) do update
       file_size_limit = excluded.file_size_limit,
       allowed_mime_types = excluded.allowed_mime_types;
 
+-- Bucket publik: file tetap bisa dibuka lewat URL publik tanpa policy SELECT.
+-- SELECT hanya untuk admin (dibutuhkan saat mengganti/menghapus), agar daftar file tidak bisa dilihat publik.
 drop policy if exists "publik melihat media" on storage.objects;
-create policy "publik melihat media" on storage.objects
-  for select to anon, authenticated using (bucket_id = 'site-media');
+drop policy if exists "admin melihat media" on storage.objects;
+create policy "admin melihat media" on storage.objects
+  for select to authenticated using (bucket_id = 'site-media' and public.is_admin());
 
 drop policy if exists "admin mengunggah media" on storage.objects;
 create policy "admin mengunggah media" on storage.objects

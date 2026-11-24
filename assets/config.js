@@ -8,6 +8,6 @@
  * Selama dua nilai ini kosong, situs tetap tampil dengan konten bawaan.
  */
 window.NLO_CONFIG = {
-  supabaseUrl: "",
-  supabaseAnonKey: ""
+  supabaseUrl: "https://tlhtbaiqifdkokqwxepa.supabase.co",
+  supabaseAnonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRsaHRiYWlxaWZka29rcXd4ZXBhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTU1MDEwOTEsImV4cCI6MjExMTA3NzA5MX0.I2UwVqQwKYQ0zGx-wjg114u218yfbID6GaYzcWW5ysQ"
 };

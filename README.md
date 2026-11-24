@@ -32,9 +32,12 @@ Belum bisa diedit dari admin (masih di HTML): isi tab lima tahap karier, Signatu
 1. Masuk ke https://supabase.com, lalu **New project**. Pilih region **Southeast Asia (Singapore)**.
 2. Simpan kata sandi database di tempat aman.
 
+> Proyek NLO yang sudah berjalan: `nlo-website` (ref `tlhtbaiqifdkokqwxepa`) di org **NLO Project**, region Singapore. Migrasi 001 dan 002 sudah dijalankan, dan `assets/config.js` sudah terisi. Langkah 1, 2, dan 5 hanya perlu diulang kalau membuat proyek baru.
+
 ### 2. Jalankan migrasi database
 1. Buka **SQL Editor > New query**.
 2. Salin seluruh isi `supabase/migrations/001_cms.sql`, tempel, lalu klik **Run**.
+3. Ulangi untuk `supabase/migrations/002_private_is_admin.sql`.
 3. Periksa hasilnya: di **Table Editor** muncul tabel `admins`, `site_content`, `gallery`; di **Storage** muncul bucket `site-media` (Public).
 
 ### 3. Atur autentikasi
