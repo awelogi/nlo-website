@@ -22,7 +22,9 @@ Selama `assets/config.js` masih kosong, situs tetap tampil normal dengan konten 
 - **Galeri**: unggah banyak foto sekaligus, beri keterangan, atur urutan, hapus. Bagian Galeri di halaman hanya muncul jika sudah ada foto.
 - **Akun**: ganti kata sandi, dan reset lewat email jika lupa.
 
-Belum bisa diedit dari admin (masih di HTML): isi tab lima tahap karier, Signature program, daftar FAQ, dan ilustrasi.
+Belum bisa diedit dari admin (masih di HTML): isi tab lima tahap karier, kartu Signature program, isi kuis Rancang gathering (pertanyaan dan aturan rekomendasi), langkah Cara kerja sama, daftar FAQ, dan ilustrasi.
+
+File unduhan ada di `unduh/` (company profile dan katalog). Untuk memperbaruinya, timpa file PDF dengan nama yang sama.
 
 ---
 
