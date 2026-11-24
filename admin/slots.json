@@ -5,8 +5,8 @@
    "page": "home",
    "group": "Bagian pembuka (hero)",
    "label": "Judul",
-   "default": "Program PSDM untuk setiap tahap karier karyawan.",
-   "multiline": false
+   "default": "Program Pengembangan Sumber Daya Manusia (PSDM) untuk setiap tahap karier karyawan.",
+   "multiline": true
   },
   {
    "key": "home.hero.lead",
