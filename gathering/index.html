@@ -9,16 +9,27 @@
 <meta property="og:description" content="Beyond Gathering, Creating Meaningful Experiences.">
 <meta name="theme-color" content="#06141c">
 <link rel="icon" type="image/png" href="../img/logo-mark.png">
-<meta property="og:image" content="../img/logo-mark.png">
+<link rel="canonical" href="https://awelogi.github.io/nlo-website/gathering/">
+<meta property="og:url" content="https://awelogi.github.io/nlo-website/gathering/">
+<meta property="og:image" content="https://awelogi.github.io/nlo-website/img/og-gathering.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Art of Gathering | NLO">
+<meta property="og:site_name" content="Need Learning Organizer">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Art of Gathering | NLO">
+<meta name="twitter:description" content="Beyond Gathering, Creating Meaningful Experiences.">
+<meta name="twitter:image" content="https://awelogi.github.io/nlo-website/img/og-gathering.jpg">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="id_ID">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Need Learning Organizer (NLO)", "description": "Employee gathering modern dari Need Learning Organizer: The Art of Gathering, dengan seminar, debrief, dan signature program.", "telephone": "+62-877-8101-8187", "email": "needlearningorganizer@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Bandung", "addressRegion": "Jawa Barat", "addressCountry": "ID"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Need Learning Organizer (NLO)", "description": "Employee gathering modern dari Need Learning Organizer: The Art of Gathering, dengan seminar, debrief, dan signature program.", "telephone": "+62-877-8101-8187", "email": "needlearningorganizer@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Bandung", "addressRegion": "Jawa Barat", "addressCountry": "ID"}, "url": "https://awelogi.github.io/nlo-website/", "logo": "https://awelogi.github.io/nlo-website/img/logo-mark.png", "sameAs": ["https://instagram.com/needlearningorganizer"]}</script>
 
 <script>document.documentElement.classList.add('js')</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400..800&display=swap" rel="stylesheet">
+<link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+@font-face { font-family: "Plus Jakarta Sans"; font-style: normal; font-display: swap; font-weight: 200 800;
+  src: url("../assets/fonts/plus-jakarta-sans-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 :root {
   --ink: #06141c; --ink2: #081c26; --deep: #0b2a36; --deep2: #103a4a;
   --line: rgba(159,196,204,.16); --line2: rgba(159,196,204,.3);
@@ -130,7 +141,7 @@ hr.sep { border: 0; border-top: 1px solid var(--line); margin: 0; }
 /* Footer */
 footer.site-foot { border-top: 1px solid var(--line); padding: 64px 0 calc(36px + env(safe-area-inset-bottom, 0px)); background: var(--ink2); }
 .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 48px; }
-.foot-grid h4 { font-size: .9rem; color: #fff; margin-bottom: 14px; font-weight: 700; }
+.foot-grid .foot-h { font-size: .9rem; line-height: 1.3; letter-spacing: 0; color: #fff; margin: 0 0 14px; font-weight: 700; }
 .foot-grid ul { list-style: none; margin: 0; padding: 0; }
 .foot-grid li { padding: 5px 0; font-size: .95rem; }
 .foot-grid a { color: var(--mist); }
@@ -326,8 +337,8 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
 <a class="skip" href="#konten">Lewati ke konten</a>
 <header class="site">
   <div class="wrap nav">
-    <a class="brand" href="../" aria-label="Need Learning Organizer, ke beranda">
-      <img class="logo-mark" src="../img/logo-mark.png" width="64" height="38" alt="">
+    <a class="brand" href="../">
+      <img class="logo-mark" src="../img/logo-mark.webp" width="64" height="38" alt="">
       <span>Need Learning<small>ORGANIZER</small></span>
     </a>
     <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
@@ -360,9 +371,9 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
         </div>
       </div>
       <div class="collage">
-        <img data-cms-img="gathering.foto.hero-team-building" src="../img/hero-team-building.webp" width="710" height="473" decoding="async" fetchpriority="high" alt="Peserta bermain permainan tim di dalam ruangan, dengan panggung bertuliskan Team Building">
-        <img data-cms-img="gathering.foto.hero-bola-besar" src="../img/hero-bola-besar.webp" width="539" height="539" decoding="async" loading="lazy" alt="Peserta bermain bola besar di lapangan outdoor">
-        <img data-cms-img="gathering.foto.hero-human-knot" src="../img/hero-human-knot.webp" width="588" height="589" decoding="async" loading="lazy" alt="Tim membentuk human knot dengan saling menggenggam tangan">
+        <img data-cms-img="gathering.foto.hero-team-building" src="../img/hero-team-building.webp" srcset="../img/hero-team-building-420.webp 420w, ../img/hero-team-building.webp 710w" sizes="(max-width: 960px) calc(100vw - 36px), 45vw" width="710" height="473" decoding="async" fetchpriority="high" alt="Peserta bermain permainan tim di dalam ruangan, dengan panggung bertuliskan Team Building">
+        <img data-cms-img="gathering.foto.hero-bola-besar" src="../img/hero-bola-besar.webp" srcset="../img/hero-bola-besar-420.webp 420w, ../img/hero-bola-besar.webp 539w" sizes="(max-width: 960px) 48vw, 22vw" width="539" height="539" decoding="async" loading="lazy" alt="Peserta bermain bola besar di lapangan outdoor">
+        <img data-cms-img="gathering.foto.hero-human-knot" src="../img/hero-human-knot.webp" srcset="../img/hero-human-knot-420.webp 420w, ../img/hero-human-knot.webp 588w" sizes="(max-width: 960px) 48vw, 22vw" width="588" height="589" decoding="async" loading="lazy" alt="Tim membentuk human knot dengan saling menggenggam tangan">
       </div>
     </div>
   </section>
@@ -528,7 +539,7 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
           <li><span class="num">09</span>Closing</li>
         </ol>
         <div class="reveal d1">
-          <figure class="photo"><img data-cms-img="gathering.foto.alur-lomba" src="../img/alur-lomba.webp" width="720" height="405" decoding="async" loading="lazy" alt="Peserta berseru gembira saat berlomba dalam permainan tim di area terbuka" style="aspect-ratio:16/10;"></figure>
+          <figure class="photo"><img data-cms-img="gathering.foto.alur-lomba" src="../img/alur-lomba.webp" srcset="../img/alur-lomba-420.webp 420w, ../img/alur-lomba.webp 720w" sizes="(max-width: 960px) calc(100vw - 36px), 45vw" width="720" height="405" decoding="async" loading="lazy" alt="Peserta berseru gembira saat berlomba dalam permainan tim di area terbuka" style="aspect-ratio:16/10;"></figure>
           <div class="hl-card">
             <h3>Reflection and debrief, seminar</h3>
             <p>Tahap ketujuh adalah tempat lapisan Experiential Learning diperdalam lewat seminar dan debrief.</p>
@@ -556,9 +567,9 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
       </div>
       <div class="sig-panel reveal" id="sig-panel" role="tabpanel" aria-labelledby="sig-t0" tabindex="0"><div class="fade"><div class="art-wrap"><svg class="art" viewBox="0 0 480 260" role="img" aria-label="Peta dengan rute dan lima pos pemberhentian untuk perlombaan tim" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="60" y="40" width="360" height="180" rx="14" fill="#0b2a36" stroke="#14a3b8" stroke-width="2"/><path d="M90 190 C 150 90, 200 230, 250 150 S 360 70, 400 110" stroke="#3fd0e0" stroke-width="3" stroke-dasharray="6 8"/><circle cx="90" cy="190" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="90" y="194" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">1</text><circle cx="180" cy="120" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="180" y="124" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">2</text><circle cx="250" cy="150" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="250" y="154" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">3</text><circle cx="330" cy="92" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="330" y="96" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">4</text><circle cx="400" cy="110" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="400" y="114" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">5</text><path d="M400 60 v-16 l14 5 -14 5" stroke="#f2c46d" stroke-width="2" fill="#f2c46d"/></g></svg></div></div><div class="fade"><h3>Amazing Race</h3><p class="tagline">Explore • Collaborate • Win Together</p><div class="meta"><p><strong>Durasi:</strong> 4–6 jam</p><p><strong>Tujuan:</strong> komunikasi, problem solving, teamwork, leadership</p></div><h4>Contoh aktivitas</h4><ol><li>QR Challenge</li><li>Puzzle Mission</li><li>Photo Challenge</li><li>Blind Navigation</li><li>Local Culture Challenge</li></ol></div></div>
       <div class="strip reveal">
-        <figure class="photo"><img data-cms-img="gathering.foto.sig-spider-web" src="../img/sig-spider-web.webp" width="661" height="497" decoding="async" loading="lazy" alt="Peserta melewati jaring laba-laba dengan bantuan tim"><figcaption>Spider Web</figcaption></figure>
-        <figure class="photo"><img data-cms-img="gathering.foto.sig-pipe-ball" src="../img/sig-pipe-ball.webp" width="534" height="534" decoding="async" loading="lazy" alt="Peserta memegang batang warna-warni dalam permainan kerja sama"><figcaption>Pipe Ball</figcaption></figure>
-        <figure class="photo"><img data-cms-img="gathering.foto.sig-caterpillar" src="../img/sig-caterpillar.webp" width="533" height="531" decoding="async" loading="lazy" alt="Peserta duduk di atas wahana caterpillar race"><figcaption>Caterpillar Race</figcaption></figure>
+        <figure class="photo"><img data-cms-img="gathering.foto.sig-spider-web" src="../img/sig-spider-web.webp" srcset="../img/sig-spider-web-420.webp 420w, ../img/sig-spider-web.webp 661w" sizes="(max-width: 720px) calc(100vw - 36px), 31vw" width="661" height="497" decoding="async" loading="lazy" alt="Peserta melewati jaring laba-laba dengan bantuan tim"><figcaption>Spider Web</figcaption></figure>
+        <figure class="photo"><img data-cms-img="gathering.foto.sig-pipe-ball" src="../img/sig-pipe-ball.webp" srcset="../img/sig-pipe-ball-420.webp 420w, ../img/sig-pipe-ball.webp 534w" sizes="(max-width: 720px) calc(100vw - 36px), 31vw" width="534" height="534" decoding="async" loading="lazy" alt="Peserta memegang batang warna-warni dalam permainan kerja sama"><figcaption>Pipe Ball</figcaption></figure>
+        <figure class="photo"><img data-cms-img="gathering.foto.sig-caterpillar" src="../img/sig-caterpillar.webp" srcset="../img/sig-caterpillar-420.webp 420w, ../img/sig-caterpillar.webp 533w" sizes="(max-width: 720px) calc(100vw - 36px), 31vw" width="533" height="531" decoding="async" loading="lazy" alt="Peserta duduk di atas wahana caterpillar race"><figcaption>Caterpillar Race</figcaption></figure>
       </div>
 
       <div class="split" style="margin-top:96px;">
@@ -580,9 +591,9 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
         <p class="lead" data-cms="gathering.hiburan.lead">Pilihan tambahan untuk menghidupkan acara Anda dan mengabadikan setiap momen berharga.</p>
       </div>
       <div class="grid g3">
-        <div class="card ent-card reveal" style="background:var(--ink);"><img data-cms-img="gathering.foto.ent-dj" src="../img/ent-dj.webp" width="720" height="414" decoding="async" loading="lazy" alt="Tangan DJ di depan mixer dengan cahaya biru"><div class="body"><h3>DJ</h3></div></div>
-        <div class="card ent-card reveal d1" style="background:var(--ink);"><img data-cms-img="gathering.foto.ent-live-band" src="../img/ent-live-band.webp" width="720" height="480" decoding="async" loading="lazy" alt="Gitaris dan pemain keyboard tampil live"><div class="body"><h3>Live band</h3></div></div>
-        <div class="card ent-card reveal d2" style="background:var(--ink);"><img data-cms-img="gathering.foto.ent-stand-up" src="../img/ent-stand-up.webp" width="479" height="720" decoding="async" loading="lazy" alt="Pembawa acara stand up comedy di atas panggung"><div class="body"><h3>Stand up comedy</h3></div></div>
+        <div class="card ent-card reveal" style="background:var(--ink);"><img data-cms-img="gathering.foto.ent-dj" src="../img/ent-dj.webp" srcset="../img/ent-dj-420.webp 420w, ../img/ent-dj.webp 720w" sizes="(max-width: 720px) calc(100vw - 36px), 31vw" width="720" height="414" decoding="async" loading="lazy" alt="Tangan DJ di depan mixer dengan cahaya biru"><div class="body"><h3>DJ</h3></div></div>
+        <div class="card ent-card reveal d1" style="background:var(--ink);"><img data-cms-img="gathering.foto.ent-live-band" src="../img/ent-live-band.webp" srcset="../img/ent-live-band-420.webp 420w, ../img/ent-live-band.webp 720w" sizes="(max-width: 720px) calc(100vw - 36px), 31vw" width="720" height="480" decoding="async" loading="lazy" alt="Gitaris dan pemain keyboard tampil live"><div class="body"><h3>Live band</h3></div></div>
+        <div class="card ent-card reveal d2" style="background:var(--ink);"><img data-cms-img="gathering.foto.ent-stand-up" src="../img/ent-stand-up.webp" srcset="../img/ent-stand-up-420.webp 420w, ../img/ent-stand-up.webp 479w" sizes="(max-width: 720px) calc(100vw - 36px), 31vw" width="479" height="720" decoding="async" loading="lazy" alt="Pembawa acara stand up comedy di atas panggung"><div class="body"><h3>Stand up comedy</h3></div></div>
       </div>
       <h3 class="sub-h reveal">Pilihan hiburan lainnya</h3>
       <div class="chips reveal"><span>Acoustic</span><span>Talent show</span><span>Employee awards</span><span>Door prize</span></div>
@@ -644,11 +655,11 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="brand" href="../"><img class="logo-mark" src="../img/logo-mark.png" width="64" height="38" alt=""><span>Need Learning<small>ORGANIZER</small></span></a>
+        <a class="brand" href="../"><img class="logo-mark" src="../img/logo-mark.webp" width="64" height="38" alt=""><span>Need Learning<small>ORGANIZER</small></span></a>
         <p class="foot-desc">Konsultan Program Pengembangan Sumber Daya Manusia (PSDM) Perusahaan.</p>
       </div>
       <div>
-        <h4>Jelajahi</h4>
+        <h2 class="foot-h">Jelajahi</h2>
         <ul>
           <li><a href="../#tentang">Tentang</a></li>
           <li><a href="../#alur">Alur karier</a></li>
@@ -658,7 +669,7 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
         </ul>
       </div>
       <div>
-        <h4>Kontak</h4>
+        <h2 class="foot-h">Kontak</h2>
         <ul>
           <li><a data-cms-tel href="tel:+6287781018187"><span data-cms="kontak.telepon">+62 877-8101-8187</span></a></li>
           <li><a data-cms-mail href="mailto:needlearningorganizer@gmail.com"><span data-cms="kontak.email">needlearningorganizer@gmail.com</span></a></li>
@@ -670,7 +681,7 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
   </div>
 </footer>
 
-<a class="wa-float" data-cms-wa href="https://wa.me/6287781018187?text=Halo%20NLO%2C%20saya%20ingin%20berdiskusi%20tentang%20program%20employee%20gathering." target="_blank" rel="noopener" aria-label="Chat WhatsApp dengan NLO"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg><span>Chat WhatsApp</span></a>
+<aside aria-label="Kontak cepat"><a class="wa-float" data-cms-wa href="https://wa.me/6287781018187?text=Halo%20NLO%2C%20saya%20ingin%20berdiskusi%20tentang%20program%20employee%20gathering." target="_blank" rel="noopener" aria-label="Chat WhatsApp dengan NLO"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg><span>Chat WhatsApp</span></a></aside>
 
 <script>
   (function(){

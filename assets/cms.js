@@ -60,7 +60,7 @@
   function applyImages(map) {
     document.querySelectorAll("img[data-cms-img]").forEach(function (img) {
       var u = map[img.getAttribute("data-cms-img")];
-      if (isSafeUrl(u)) { img.removeAttribute("width"); img.removeAttribute("height"); img.src = u; }
+      if (isSafeUrl(u)) { ["srcset", "sizes", "width", "height"].forEach(function (a) { img.removeAttribute(a); }); img.src = u; }
     });
   }
 

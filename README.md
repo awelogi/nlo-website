@@ -90,8 +90,15 @@ Tidak ada proses build. File yang perlu ditimpa saat pembaruan hanyalah file yan
 6. Ubah nomor telepon di **Teks > Kontak**: tombol WhatsApp di situs ikut berganti.
 7. Coba masuk dengan akun yang bukan admin: harus ditolak.
 
+### Pratinjau link, sitemap, dan halaman 404
+- `img/og-beranda.jpg` dan `img/og-gathering.jpg` (1200x630) adalah gambar yang muncul saat link dibagikan di WhatsApp, LinkedIn, dan media sosial lain.
+- `sitemap.xml` bisa didaftarkan di Google Search Console.
+- `404.html` tampil untuk alamat yang tidak ditemukan.
+- Font Plus Jakarta Sans di-host sendiri di `assets/fonts/`, tidak bergantung pada Google Fonts.
+
 ### (Opsional) Domain sendiri
 Di **Settings > Pages > Custom domain**, isi misalnya `needlearningorganizer.com`, lalu di penyedia domain buat record `CNAME` `www` ke `awelogi.github.io` (atau 4 record `A` sesuai panduan GitHub untuk domain utama). Setelah itu perbarui **Site URL** dan **Redirect URLs** di Supabase ke domain baru.
+Ganti juga semua `https://awelogi.github.io/nlo-website/` dengan domain baru di `index.html`, `gathering/index.html` (tag `canonical`, `og:url`, `og:image`, `twitter:image`, dan data JSON-LD) serta di `sitemap.xml`. Di `404.html`, ganti awalan `/nlo-website/` menjadi `/`.
 
 ---
 
