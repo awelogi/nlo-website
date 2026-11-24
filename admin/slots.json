@@ -145,6 +145,22 @@
    "multiline": true
   },
   {
+   "key": "home.kerjasama.judul",
+   "page": "home",
+   "group": "Cara kerja sama",
+   "label": "Judul",
+   "default": "Cara kerja sama dengan NLO.",
+   "multiline": false
+  },
+  {
+   "key": "home.kerjasama.lead",
+   "page": "home",
+   "group": "Cara kerja sama",
+   "label": "Paragraf pembuka",
+   "default": "Empat langkah dari percakapan pertama sampai hasil yang terukur.",
+   "multiline": false
+  },
+  {
    "key": "kontak.telepon",
    "page": "kontak",
    "group": "Kontak",
@@ -277,7 +293,7 @@
    "page": "gathering",
    "group": "Signature program",
    "label": "Paragraf pembuka",
-   "default": "Pilih salah satu konsep untuk melihat konsep dan contoh aktivitasnya.",
+   "default": "Delapan konsep pilihan. Ketuk kartu untuk membaliknya dan melihat contoh aktivitas.",
    "multiline": false
   },
   {
@@ -342,6 +358,22 @@
    "group": "Ajakan menghubungi",
    "label": "Paragraf pembuka",
    "default": "Ceritakan kebutuhan perusahaan Anda, dan kami bantu menyusun programnya bersama.",
+   "multiline": true
+  },
+  {
+   "key": "gathering.rancang.judul",
+   "page": "gathering",
+   "group": "Rancang gathering (kuis)",
+   "label": "Judul",
+   "default": "Rancang gathering-mu dalam satu menit.",
+   "multiline": false
+  },
+  {
+   "key": "gathering.rancang.lead",
+   "page": "gathering",
+   "group": "Rancang gathering (kuis)",
+   "label": "Paragraf pembuka",
+   "default": "Jawab empat pertanyaan singkat. Kami tunjukkan signature program yang paling cocok, lalu Anda bisa langsung mengirimnya ke tim NLO.",
    "multiline": true
   },
   {

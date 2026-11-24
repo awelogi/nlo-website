@@ -353,6 +353,89 @@ img[loading="lazy"] { background: var(--deep); }
   .hero-photo { border-radius: 20px;
     -webkit-mask-image: linear-gradient(to top, transparent 0, #000 14%); mask-image: linear-gradient(to top, transparent 0, #000 14%); }
 }
+
+/* ================= upgrade kreatif ================= */
+/* 5. ritme warna: komponen di bagian terang */
+.paper .card { background: #fff; border-color: rgba(11,42,54,.1); box-shadow: 0 1px 2px rgba(11,42,54,.06); }
+.paper .card:hover { border-color: rgba(10,125,145,.35); }
+.paper .card h3, .paper h3 { color: var(--paper-ink); }
+.paper .icon-chip { background: rgba(10,125,145,.09); border-color: rgba(10,125,145,.22); }
+.paper .ic { stroke: #0a7d91; }
+.paper .quote { background: var(--paper-ink); }
+.paper .chips span { color: var(--paper-ink); border-color: rgba(11,42,54,.18); background: #fff; }
+.dl-card { display: flex; align-items: center; gap: 16px; margin-top: 18px; padding: 16px 20px; border-radius: var(--r); border: 1px dashed rgba(10,125,145,.45); color: var(--paper-ink); background: rgba(255,255,255,.6); transition: background .2s, border-color .2s; }
+.dl-card:hover { text-decoration: none; background: #fff; border-style: solid; }
+.dl-card .icon-chip { margin: 0; width: 46px; height: 46px; }
+.dl-card strong { display: block; font-size: 1rem; }
+.dl-card small { display: block; color: #56707a; font-size: .86rem; }
+.btn .ic { width: 18px; height: 18px; stroke: currentColor; }
+/* ilustrasi lebih kaya */
+.art-wrap { position: relative; overflow: hidden; background:
+  radial-gradient(circle at 18% 12%, rgba(63,208,224,.24), transparent 55%),
+  radial-gradient(circle at 92% 100%, rgba(242,196,109,.12), transparent 48%),
+  linear-gradient(180deg, #0c2d3a, #06141c); }
+.art-wrap::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(159,196,204,.14) 1px, transparent 1.2px); background-size: 18px 18px; -webkit-mask-image: linear-gradient(180deg, #000, transparent 85%); mask-image: linear-gradient(180deg, #000, transparent 85%); pointer-events: none; }
+.art-wrap > * { position: relative; }
+/* promo gathering dengan foto asli */
+.photo-thumbs img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 14px; border: 1px solid var(--line2); display: block; }
+.photo-thumbs figure:first-child img { aspect-ratio: 16 / 9; }
+
+/* 2. tahap di hero bisa diketuk */
+.hero-visual .emblem .node-link { pointer-events: auto; cursor: pointer; }
+.hero-visual .emblem .node-link circle:not(.hit) { transition: stroke-width .2s, filter .2s; }
+.hero-visual .emblem .node-link:hover circle:not(.hit), .hero-visual .emblem .node-link:focus-visible circle:not(.hit) { stroke-width: 4; filter: drop-shadow(0 0 6px #3fd0e0); }
+.hero-visual .emblem .node-link:focus-visible { outline: none; }
+.hero-visual .emblem .node-link:focus-visible text[paint-order] { fill: #3fd0e0; }
+.hero-hint { position: relative; z-index: 2; display: inline-flex; align-items: center; gap: 8px; margin: 14px 0 0; padding: 7px 14px 7px 10px; border-radius: 999px; background: rgba(6,20,28,.78); border: 1px solid var(--line2); color: #fff; font-size: .82rem; font-weight: 600; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.hero-hint .ic { width: 16px; height: 16px; }
+.hero-visual { display: flex; flex-direction: column; align-items: center; }
+.hero-frame { position: relative; align-self: stretch; }
+.stage-panel.flash { animation: flash 1.2s ease-out; }
+@keyframes flash { 0% { box-shadow: 0 0 0 0 rgba(63,208,224,.6); } 100% { box-shadow: 0 0 0 18px rgba(63,208,224,0); } }
+
+/* 7. cara kerja sama */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; position: relative; }
+.steps::before { content: ""; position: absolute; left: 28px; right: 28px; top: 27px; height: 2px; background: linear-gradient(90deg, var(--glow), rgba(63,208,224,.15)); }
+.step { position: relative; }
+.step-dot { position: relative; z-index: 1; width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; background: var(--ink); border: 2px solid var(--glow); box-shadow: 0 0 0 6px var(--deep), 0 0 18px rgba(63,208,224,.35); margin-bottom: 22px; }
+.step-dot .ic { width: 24px; height: 24px; }
+.step-n { display: block; color: var(--glow); font-weight: 800; font-size: .82rem; margin-bottom: 6px; }
+.step h3 { font-size: 1.15rem; margin-bottom: 8px; }
+.step p { color: var(--mist); font-size: .97rem; }
+
+/* 1. rel perjalanan halaman */
+.rail { position: fixed; z-index: 40; left: max(14px, calc((100vw - 1180px) / 2 - 64px)); top: 120px; bottom: 56px; width: 20px; opacity: 0; pointer-events: none; transition: opacity .4s; }
+.rail.show { opacity: 1; pointer-events: auto; }
+.rail-track { position: absolute; left: 9px; top: 0; bottom: 0; width: 2px; background: rgba(159,196,204,.16); border-radius: 2px; overflow: hidden; }
+.rail-fill { width: 100%; height: 0; background: linear-gradient(180deg, #14a3b8, #3fd0e0); box-shadow: 0 0 10px #3fd0e0; }
+.rail ol { list-style: none; margin: 0; padding: 0; position: absolute; inset: 0; }
+.rail li { position: absolute; left: 0; transform: translateY(-50%); }
+.rail a { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.rail-dot { width: 20px; height: 20px; border-radius: 50%; background: var(--ink); border: 2px solid rgba(159,196,204,.45); transition: border-color .25s, background .25s, box-shadow .25s, transform .25s; }
+.rail a.passed .rail-dot { border-color: var(--glow); }
+.rail a.active .rail-dot { background: var(--glow); border-color: var(--glow); box-shadow: 0 0 12px var(--glow); transform: scale(1.1); }
+.rail-lbl { opacity: 0; transform: translateX(-6px); transition: opacity .2s, transform .2s; white-space: nowrap; padding: 5px 12px; border-radius: 999px; background: rgba(6,20,28,.92); border: 1px solid var(--line2); color: #fff; font-size: .82rem; font-weight: 700; pointer-events: none; }
+.rail a:hover .rail-lbl, .rail a:focus-visible .rail-lbl { opacity: 1; transform: none; }
+.rail a:focus-visible { outline: none; }
+.rail a:focus-visible .rail-dot { outline: 2px solid var(--glow); outline-offset: 3px; }
+.rail-bar { position: fixed; left: 0; right: 0; top: calc(72px + env(safe-area-inset-top, 0px)); height: 3px; z-index: 59; pointer-events: none; display: none; }
+.rail-bar div { height: 100%; width: 0; background: linear-gradient(90deg, #14a3b8, #3fd0e0); box-shadow: 0 0 8px #3fd0e0; }
+@media (max-width: 1259px) { .rail { display: none; } .rail-bar { display: block; } }
+
+@media (max-width: 960px) {
+  .steps { grid-template-columns: 1fr 1fr; row-gap: 36px; }
+  .steps::before { display: none; }
+}
+@media (max-width: 720px) {
+  .steps { grid-template-columns: 1fr; gap: 0; }
+  .step { padding: 0 0 30px 76px; min-height: 86px; }
+  .step:last-child { padding-bottom: 0; }
+  .step-dot { position: absolute; left: 0; top: 0; margin: 0; }
+  .steps::before { display: block; left: 27px; right: auto; top: 28px; bottom: 28px; width: 2px; height: auto; background: linear-gradient(180deg, var(--glow), rgba(63,208,224,.15)); }
+  .photo-thumbs { grid-template-columns: 1fr 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { .stage-panel.flash { animation: none; } }
+
 /* ---- galeri ---- */
 .gal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
 .gal-item { margin: 0; cursor: zoom-in; border-radius: 16px; overflow: hidden; border: 1px solid var(--line2); background: var(--deep); }
@@ -368,7 +451,7 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
 </style>
 </head>
 <body data-page="home">
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.4 3.2-5.5 6.5-5.5s5.9 2.1 6.5 5.5"/><circle cx="17" cy="9" r="2.8"/><path d="M16 14.6c2.6.2 4.6 2.2 5 5"/></symbol><symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol><symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0V4z"/><path d="M8 6H4a3 3 0 0 0 3 4M16 6h4a3 3 0 0 1-3 4"/><path d="M12 13v4M8 21h8M9 17h6"/></symbol><symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></symbol><symbol id="i-sunset" viewBox="0 0 24 24"><path d="M3 17h18"/><path d="M7 17a5 5 0 0 1 10 0"/><path d="M12 5v3M5.6 9.6l2 2M18.4 9.6l-2 2"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></symbol><symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5c1 1.2 2.2 1.8 3.5 1.8s2.5-.6 3.5-1.8"/><path d="M9 9.5h.01M15 9.5h.01"/></symbol><symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol><symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-4 7 4v13"/><path d="M9 21v-6h6v6"/></symbol><symbol id="i-bars" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol><symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z"/><path d="M20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z"/></symbol><symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></symbol><symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></symbol><symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></symbol><symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol><symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></symbol><symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></symbol><symbol id="i-gamepad" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="9" rx="4"/><path d="M8 11v3M6.5 12.5h3M15 12h.01M17 13.5h.01"/></symbol><symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol></defs></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.4 3.2-5.5 6.5-5.5s5.9 2.1 6.5 5.5"/><circle cx="17" cy="9" r="2.8"/><path d="M16 14.6c2.6.2 4.6 2.2 5 5"/></symbol><symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol><symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0V4z"/><path d="M8 6H4a3 3 0 0 0 3 4M16 6h4a3 3 0 0 1-3 4"/><path d="M12 13v4M8 21h8M9 17h6"/></symbol><symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></symbol><symbol id="i-sunset" viewBox="0 0 24 24"><path d="M3 17h18"/><path d="M7 17a5 5 0 0 1 10 0"/><path d="M12 5v3M5.6 9.6l2 2M18.4 9.6l-2 2"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></symbol><symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5c1 1.2 2.2 1.8 3.5 1.8s2.5-.6 3.5-1.8"/><path d="M9 9.5h.01M15 9.5h.01"/></symbol><symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol><symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-4 7 4v13"/><path d="M9 21v-6h6v6"/></symbol><symbol id="i-bars" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol><symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z"/><path d="M20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z"/></symbol><symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></symbol><symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></symbol><symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></symbol><symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol><symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></symbol><symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></symbol><symbol id="i-gamepad" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="9" rx="4"/><path d="M8 11v3M6.5 12.5h3M15 12h.01M17 13.5h.01"/></symbol><symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></symbol><symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol></defs></svg>
 
 <a class="skip" href="#layanan">Lewati ke konten</a>
 <header class="site">
@@ -391,6 +474,8 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
   </div>
 </header>
 
+<nav class="rail" aria-label="Perjalanan halaman"><div class="rail-track"><div class="rail-fill"></div></div><ol><li><a href="#layanan" data-sec="layanan"><span class="rail-dot"></span><span class="rail-lbl">Layanan</span></a></li><li><a href="#tentang" data-sec="tentang"><span class="rail-dot"></span><span class="rail-lbl">Tentang</span></a></li><li><a href="#alur" data-sec="alur"><span class="rail-dot"></span><span class="rail-lbl">Alur karier</span></a></li><li><a href="#riset" data-sec="riset"><span class="rail-dot"></span><span class="rail-lbl">Riset</span></a></li><li><a href="#gathering" data-sec="gathering"><span class="rail-dot"></span><span class="rail-lbl">Gathering</span></a></li><li><a href="#pendekatan" data-sec="pendekatan"><span class="rail-dot"></span><span class="rail-lbl">Pendekatan</span></a></li><li><a href="#kerjasama" data-sec="kerjasama"><span class="rail-dot"></span><span class="rail-lbl">Cara kerja sama</span></a></li><li><a href="#kontak" data-sec="kontak"><span class="rail-dot"></span><span class="rail-lbl">Kontak</span></a></li></ol></nav>
+<div class="rail-bar" aria-hidden="true"><div></div></div>
 <main id="top">
 
   <!-- Hero -->
@@ -408,8 +493,11 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
         </div>
       </div>
       <div class="hero-visual">
+        <div class="hero-frame">
         <img class="hero-photo" data-cms-img="home.foto.hero" src="img/hero-beranda.webp" srcset="img/hero-beranda-640.webp 640w, img/hero-beranda.webp 1148w" sizes="(max-width: 720px) calc(100vw - 36px), (max-width: 960px) min(680px, 100vw - 48px), 55vw" width="1148" height="921" fetchpriority="high" decoding="async" alt="Tiga karyawan tersenyum berdiskusi di depan laptop dan tablet">
-        <div class="emblem"><svg class="emblem-svg" viewBox="0 0 470 390" role="img" aria-labelledby="emb-t" xmlns="http://www.w3.org/2000/svg"><title id="emb-t">Lima tahap siklus karier karyawan: Onboarding, Development, Promotion, Leadership, Pre-retire</title><defs><linearGradient id="eg" x1="0" x2="1"><stop offset="0" stop-color="#14a3b8"/><stop offset="1" stop-color="#3fd0e0"/></linearGradient></defs><circle cx="235" cy="200" r="176" fill="none" stroke="rgba(159,196,204,.12)"/><circle cx="235" cy="200" r="130" fill="none" stroke="rgba(159,196,204,.08)"/><circle cx="235" cy="200" r="84" fill="none" stroke="rgba(159,196,204,.06)"/><path class="track" d="M48 330 C63.0 319.3 108.3 285.3 138 266 C167.7 246.7 196.0 235.0 226 214 C256.0 193.0 289.3 164.7 318 140 C346.7 115.3 384.7 78.3 398 66" fill="none" stroke="url(#eg)" stroke-width="4" stroke-linecap="round" pathLength="1000"/><g class="node" style="animation-delay:0.50s"><circle cx="48" cy="330" r="17" fill="#06141c" stroke="#3fd0e0" stroke-width="2.5"/><text x="48" y="336" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="800" fill="#3fd0e0">1</text><text x="72" y="356" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="700" fill="#e9f6f8" stroke="#06141c" stroke-width="5" paint-order="stroke" stroke-linejoin="round">Onboarding</text></g><g class="node" style="animation-delay:0.72s"><circle cx="138" cy="266" r="17" fill="#06141c" stroke="#3fd0e0" stroke-width="2.5"/><text x="138" y="272" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="800" fill="#3fd0e0">2</text><text x="162" y="292" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="700" fill="#e9f6f8" stroke="#06141c" stroke-width="5" paint-order="stroke" stroke-linejoin="round">Development</text></g><g class="node" style="animation-delay:0.94s"><circle cx="226" cy="214" r="17" fill="#06141c" stroke="#3fd0e0" stroke-width="2.5"/><text x="226" y="220" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="800" fill="#3fd0e0">3</text><text x="250" y="240" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="700" fill="#e9f6f8" stroke="#06141c" stroke-width="5" paint-order="stroke" stroke-linejoin="round">Promotion</text></g><g class="node" style="animation-delay:1.16s"><circle cx="318" cy="140" r="17" fill="#06141c" stroke="#3fd0e0" stroke-width="2.5"/><text x="318" y="146" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="800" fill="#3fd0e0">4</text><text x="342" y="166" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="700" fill="#e9f6f8" stroke="#06141c" stroke-width="5" paint-order="stroke" stroke-linejoin="round">Leadership</text></g><g class="node" style="animation-delay:1.38s"><circle cx="398" cy="66" r="17" fill="#14a3b8" stroke="#3fd0e0" stroke-width="2.5"/><text x="398" y="72" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="800" fill="#06141c">5</text><text x="376" y="46" text-anchor="end" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="700" fill="#e9f6f8" stroke="#06141c" stroke-width="5" paint-order="stroke" stroke-linejoin="round">Pre-retire</text></g></svg></div>
+        <div class="emblem"><svg class="emblem-svg" viewBox="0 0 470 390" role="group" aria-labelledby="emb-t" xmlns="http://www.w3.org/2000/svg"><title id="emb-t">Lima tahap siklus karier karyawan: Onboarding, Development, Promotion, Leadership, Pre-retire</title><defs><linearGradient id="eg" x1="0" x2="1"><stop offset="0" stop-color="#14a3b8"/><stop offset="1" stop-color="#3fd0e0"/></linearGradient></defs><circle cx="235" cy="200" r="176" fill="none" stroke="rgba(159,196,204,.12)"/><circle cx="235" cy="200" r="130" fill="none" stroke="rgba(159,196,204,.08)"/><circle cx="235" cy="200" r="84" fill="none" stroke="rgba(159,196,204,.06)"/><path class="track" d="M48 330 C63.0 319.3 108.3 285.3 138 266 C167.7 246.7 196.0 235.0 226 214 C256.0 193.0 289.3 164.7 318 140 C346.7 115.3 384.7 78.3 398 66" fill="none" stroke="url(#eg)" stroke-width="4" stroke-linecap="round" pathLength="1000"/><a class="node-link" href="#alur" data-stage="0" aria-label="Tahap 1: Onboarding, lihat detail"><g class="node" style="animation-delay:0.50s"><rect class="hit" x="18" y="300" width="223" height="68" rx="16" fill="transparent"/><circle cx="48" cy="330" r="17" fill="#06141c" stroke="#3fd0e0" stroke-width="2.5"/><text x="48" y="336" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="800" fill="#3fd0e0">1</text><text x="72" y="356" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="700" fill="#e9f6f8" stroke="#06141c" stroke-width="5" paint-order="stroke" stroke-linejoin="round">Onboarding</text></g></a><a class="node-link" href="#alur" data-stage="1" aria-label="Tahap 2: Development, lihat detail"><g class="node" style="animation-delay:0.72s"><rect class="hit" x="108" y="236" width="240" height="68" rx="16" fill="transparent"/><circle cx="138" cy="266" r="17" fill="#06141c" stroke="#3fd0e0" stroke-width="2.5"/><text x="138" y="272" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="800" fill="#3fd0e0">2</text><text x="162" y="292" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="700" fill="#e9f6f8" stroke="#06141c" stroke-width="5" paint-order="stroke" stroke-linejoin="round">Development</text></g></a><a class="node-link" href="#alur" data-stage="2" aria-label="Tahap 3: Promotion, lihat detail"><g class="node" style="animation-delay:0.94s"><rect class="hit" x="196" y="184" width="206" height="68" rx="16" fill="transparent"/><circle cx="226" cy="214" r="17" fill="#06141c" stroke="#3fd0e0" stroke-width="2.5"/><text x="226" y="220" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="800" fill="#3fd0e0">3</text><text x="250" y="240" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="700" fill="#e9f6f8" stroke="#06141c" stroke-width="5" paint-order="stroke" stroke-linejoin="round">Promotion</text></g></a><a class="node-link" href="#alur" data-stage="3" aria-label="Tahap 4: Leadership, lihat detail"><g class="node" style="animation-delay:1.16s"><rect class="hit" x="288" y="110" width="223" height="68" rx="16" fill="transparent"/><circle cx="318" cy="140" r="17" fill="#06141c" stroke="#3fd0e0" stroke-width="2.5"/><text x="318" y="146" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="800" fill="#3fd0e0">4</text><text x="342" y="166" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="700" fill="#e9f6f8" stroke="#06141c" stroke-width="5" paint-order="stroke" stroke-linejoin="round">Leadership</text></g></a><a class="node-link" href="#alur" data-stage="4" aria-label="Tahap 5: Pre-retire, lihat detail"><g class="node" style="animation-delay:1.38s"><rect class="hit" x="207" y="16" width="221" height="80" rx="16" fill="transparent"/><circle cx="398" cy="66" r="17" fill="#14a3b8" stroke="#3fd0e0" stroke-width="2.5"/><text x="398" y="72" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="800" fill="#06141c">5</text><text x="376" y="46" text-anchor="end" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="700" fill="#e9f6f8" stroke="#06141c" stroke-width="5" paint-order="stroke" stroke-linejoin="round">Pre-retire</text></g></a></svg></div>
+        </div>
+        <p class="hero-hint"><svg class="ic" aria-hidden="true"><use href="#i-compass"/></svg>Ketuk angka 1 sampai 5 untuk melihat tiap tahap</p>
       </div>
     </div>
   </section>
@@ -445,7 +533,7 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
   </section>
 
   <!-- Tentang -->
-  <section class="section" id="tentang">
+  <section class="section paper" id="tentang">
     <div class="wrap split top">
       <div class="reveal">
         <h2 data-cms="home.tentang.judul">Mitra strategis dalam pengembangan manusia.</h2>
@@ -454,6 +542,10 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
           <p data-cms="home.visi">Menjadi mitra strategis perusahaan dalam PSDM yang adaptif, kompeten, dan berdaya saing tinggi.</p>
           <div class="who">VISI NLO</div>
         </div>
+        <a class="dl-card" href="unduh/nlo-company-profile.pdf" download>
+          <span class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg></span>
+          <span><strong>Unduh company profile</strong><small>PDF, 9 halaman, 1,6 MB</small></span>
+        </a>
       </div>
       <div class="reveal d1">
         <h3 style="margin-bottom:20px;">Misi: empat pilar komitmen</h3>
@@ -515,16 +607,17 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
           <h2 data-cms="gathering.hero.judul">The Art of Gathering</h2>
           <p class="sub">Beyond Gathering, Creating Meaningful Experiences</p>
           <blockquote>Karena tim hebat tidak hanya dibangun di ruang meeting, tetapi melalui pengalaman yang mereka jalani bersama.</blockquote>
-          <div class="actions"><a class="btn btn-solid" href="gathering/">Lihat program gathering</a></div>
+          <div class="actions"><a class="btn btn-solid" href="gathering/">Lihat program gathering</a><a class="btn btn-ghost" href="unduh/nlo-katalog-the-art-of-gathering.pdf" download><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Unduh katalog</a></div>
         </div>
-        <div class="thumbs">
-          <figure><div class="art-wrap"><svg class="art" viewBox="0 0 480 260" role="img" aria-label="Peta dengan rute dan lima pos pemberhentian untuk perlombaan tim" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="60" y="40" width="360" height="180" rx="14" fill="#0b2a36" stroke="#14a3b8" stroke-width="2"/><path d="M90 190 C 150 90, 200 230, 250 150 S 360 70, 400 110" stroke="#3fd0e0" stroke-width="3" stroke-dasharray="6 8"/><circle cx="90" cy="190" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="90" y="194" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">1</text><circle cx="180" cy="120" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="180" y="124" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">2</text><circle cx="250" cy="150" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="250" y="154" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">3</text><circle cx="330" cy="92" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="330" y="96" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">4</text><circle cx="400" cy="110" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="400" y="114" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">5</text><path d="M400 60 v-16 l14 5 -14 5" stroke="#f2c46d" stroke-width="2" fill="#f2c46d"/></g></svg></div><figcaption>Amazing Race</figcaption></figure>
-          <figure><div class="art-wrap"><svg class="art" viewBox="0 0 480 260" role="img" aria-label="Peta kota dengan jalur dan tanda X sebagai tujuan pencarian harta karun" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="60" y="40" width="360" height="180" rx="14" fill="#0b2a36" stroke="#14a3b8" stroke-width="2"/><line x1="120" y1="40" x2="120" y2="220" stroke="#9fc4cc" stroke-opacity="0.12"/><line x1="180" y1="40" x2="180" y2="220" stroke="#9fc4cc" stroke-opacity="0.12"/><line x1="240" y1="40" x2="240" y2="220" stroke="#9fc4cc" stroke-opacity="0.12"/><line x1="300" y1="40" x2="300" y2="220" stroke="#9fc4cc" stroke-opacity="0.12"/><line x1="360" y1="40" x2="360" y2="220" stroke="#9fc4cc" stroke-opacity="0.12"/><line x1="60" y1="80" x2="420" y2="80" stroke="#9fc4cc" stroke-opacity="0.12"/><line x1="60" y1="120" x2="420" y2="120" stroke="#9fc4cc" stroke-opacity="0.12"/><line x1="60" y1="160" x2="420" y2="160" stroke="#9fc4cc" stroke-opacity="0.12"/><line x1="60" y1="200" x2="420" y2="200" stroke="#9fc4cc" stroke-opacity="0.12"/><path d="M110 200 C 150 150, 190 210, 240 150 S 330 100, 360 90" stroke="#3fd0e0" stroke-width="2.5" stroke-dasharray="5 6"/><path d="M352 84 l16 16 M368 84 l-16 16" stroke="#f2c46d" stroke-width="3"/><path d="M250 70 c-10 0 -18 8 -18 18 c0 14 18 30 18 30 s18-16 18-30 c0-10-8-18-18-18z" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><circle cx="250" cy="88" r="5" fill="#3fd0e0" stroke="none"/></g></svg></div><figcaption>Treasure Hunt</figcaption></figure>
-          <figure><div class="art-wrap"><svg class="art" viewBox="0 0 480 260" role="img" aria-label="Seseorang berjalan dengan egrang bambu dalam permainan tradisional" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="40" y1="236" x2="440" y2="236" stroke="#9fc4cc" stroke-opacity="0.35" stroke-width="2"/><line x1="205" y1="236" x2="205" y2="120" stroke="#f2c46d" stroke-width="6"/><line x1="275" y1="236" x2="275" y2="120" stroke="#f2c46d" stroke-width="6"/><circle cx="240" cy="62.0" r="16.0" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><rect x="214.0" y="84.0" width="52.0" height="70.0" rx="18.0" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><path d="M70 236 l10 -10 M410 236 l-10 -10" stroke="#9fc4cc" stroke-opacity="0.5"/><path d="M320 190 l40 0 M340 170 l20 0" stroke="#f2c46d" stroke-opacity="0.6" stroke-width="2"/></g></svg></div><figcaption>Traditional Games</figcaption></figure>
+        <div class="thumbs photo-thumbs">
+          <figure><img src="img/hero-team-building.webp" srcset="img/hero-team-building-420.webp 420w, img/hero-team-building.webp 710w" sizes="(max-width: 960px) calc(100vw - 72px), 520px" width="710" height="473" loading="lazy" decoding="async" alt="Peserta bermain permainan tim di dalam ruangan dengan wahana tiup"><figcaption>Team Building</figcaption></figure>
+          <figure><img src="img/hero-bola-besar.webp" srcset="img/hero-bola-besar-420.webp 420w, img/hero-bola-besar.webp 534w" sizes="(max-width: 720px) calc(100vw - 72px), 260px" width="534" height="534" loading="lazy" decoding="async" alt="Peserta bermain bola besar di lapangan outdoor"><figcaption>Fun Team Building</figcaption></figure>
+          <figure><img src="img/hero-human-knot.webp" srcset="img/hero-human-knot-420.webp 420w, img/hero-human-knot.webp 534w" sizes="(max-width: 720px) calc(100vw - 72px), 260px" width="534" height="534" loading="lazy" decoding="async" alt="Tim membentuk human knot dengan saling menggenggam tangan"><figcaption>Human Knot</figcaption></figure>
         </div>
       </div>
     </div>
   </section>
+
 
 
   <!-- Galeri (diisi dari admin; tersembunyi selama kosong) -->
@@ -574,6 +667,18 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
     </div>
   </section>
 
+  <!-- Cara kerja sama -->
+  <section class="section bg-deep" id="kerjasama">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 data-cms="home.kerjasama.judul">Cara kerja sama dengan NLO.</h2>
+        <p class="lead" data-cms="home.kerjasama.lead">Empat langkah dari percakapan pertama sampai hasil yang terukur.</p>
+      </div>
+      <ol class="steps"><li class="step reveal"><span class="step-dot"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg></span><span class="step-n">Langkah 1</span><h3>Konsultasi kebutuhan</h3><p>Ceritakan tujuan, jumlah peserta, dan waktu yang direncanakan lewat WhatsApp atau telepon.</p></li><li class="step reveal d1"><span class="step-dot"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg></span><span class="step-n">Langkah 2</span><h3>Analisis dan rancangan program</h3><p>Kebutuhan dipetakan dengan Training Need Analysis (TNA), lalu program disusun berbasis kompetensi.</p></li><li class="step reveal d2"><span class="step-dot"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></span><span class="step-n">Langkah 3</span><h3>Pelaksanaan program</h3><p>Program berjalan in-house, hybrid, atau digital, dengan metode experiential, studi kasus, dan simulasi.</p></li><li class="step reveal d3"><span class="step-dot"><svg class="ic" aria-hidden="true"><use href="#i-flag"/></svg></span><span class="step-n">Langkah 4</span><h3>Evaluasi dan tindak lanjut</h3><p>Hasil dievaluasi pada level 1 sampai 3, lalu dilanjutkan dengan coaching dan sesi follow-up.</p></li></ol>
+      <div class="actions reveal" style="margin-top:44px;"><a class="btn btn-solid" href="#kontak">Mulai konsultasi</a></div>
+    </div>
+  </section>
+
   <!-- Kontak -->
   <section class="section" id="kontak">
     <div class="wrap split top">
@@ -585,6 +690,7 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
           <li><a data-cms-mail href="mailto:needlearningorganizer@gmail.com"><span class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></span><span><small>Email</small><span data-cms="kontak.email">needlearningorganizer@gmail.com</span></span></a></li>
           <li><span class="v"><span class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg></span><span><small>Lokasi</small>Bandung, Jawa Barat</span></span></li>
           <li><a data-cms-ig href="https://instagram.com/needlearningorganizer" target="_blank" rel="noopener"><span class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-camera"/></svg></span><span><small>Instagram</small><span data-cms="kontak.instagram">@needlearningorganizer</span></span></a></li>
+          <li><a href="unduh/nlo-company-profile.pdf" download><span class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg></span><span><small>Company profile</small>Unduh PDF (1,6 MB)</span></a></li>
         </ul>
       </div>
       <form class="form-card reveal d1" id="wa-form" novalidate>
@@ -623,6 +729,9 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
           <li><a href="#riset">Riset &amp; assessment</a></li>
           <li><a href="gathering/">Employee Gathering</a></li>
           <li><a href="#pendekatan">Pendekatan</a></li>
+          <li><a href="#kerjasama">Cara kerja sama</a></li>
+          <li><a href="unduh/nlo-company-profile.pdf" download>Company profile (PDF)</a></li>
+          <li><a href="unduh/nlo-katalog-the-art-of-gathering.pdf" download>Katalog gathering (PDF)</a></li>
         </ul>
       </div>
       <div>
@@ -676,6 +785,55 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
   tabs.forEach(function(t){ t.addEventListener("click", function(){ renderStage(Number(t.dataset.stage)); }); });
   renderStage(0);
   arrowNav([].slice.call(tabs));
+
+  // 2. tahap di hero bisa diketuk
+  document.querySelectorAll(".node-link").forEach(function(a){
+    a.addEventListener("click", function(e){
+      e.preventDefault();
+      var i = Number(a.getAttribute("data-stage"));
+      renderStage(i);
+      var sec = document.getElementById("alur");
+      sec.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      var p = document.getElementById("stage-panel"); p.classList.remove("flash"); void p.offsetWidth; p.classList.add("flash");
+      setTimeout(function(){ var t = document.querySelector('.stage-tab[data-stage="' + i + '"]'); if (t) t.focus({ preventScroll: true }); }, 500);
+    });
+  });
+
+  // 1. rel perjalanan: posisi titik mengikuti letak bagian, isi garis mengikuti scroll
+  (function(){
+    var rail = document.querySelector(".rail"), fill = document.querySelector(".rail-fill"), bar = document.querySelector(".rail-bar div");
+    if (!rail) return;
+    var links = [].slice.call(rail.querySelectorAll("a")), secs = links.map(function(a){ return document.getElementById(a.dataset.sec); });
+    var tops = [], start = 0, end = 1, lastActive = -1, peekT;
+    function measure(){
+      tops = secs.map(function(s){ return s ? s.getBoundingClientRect().top + window.scrollY : 0; });
+      start = tops[0]; end = tops[tops.length - 1];
+      links.forEach(function(a, i){ a.parentNode.style.top = ((tops[i] - start) / Math.max(1, end - start) * 100) + "%"; });
+      update();
+    }
+    function update(){
+      var y = window.scrollY + window.innerHeight * 0.4;
+      var prog = Math.min(1, Math.max(0, (y - start) / Math.max(1, end - start)));
+      fill.style.height = (prog * 100) + "%";
+      var doc = document.documentElement, page = Math.min(1, window.scrollY / Math.max(1, doc.scrollHeight - window.innerHeight));
+      bar.style.width = (page * 100) + "%";
+      rail.classList.toggle("show", window.scrollY > window.innerHeight * 0.5);
+      var active = -1;
+      tops.forEach(function(t, i){ if (y >= t) active = i; });
+      links.forEach(function(a, i){ a.classList.toggle("active", i === active); a.classList.toggle("passed", i < active); if (i === active) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current"); });
+      if (active !== lastActive && active >= 0) {
+        var lbl = links[active].querySelector(".rail-lbl"); lbl.classList.add("peek");
+        clearTimeout(peekT); peekT = setTimeout(function(){ lbl.classList.remove("peek"); }, 1400);
+        if (lastActive >= 0) links[lastActive].querySelector(".rail-lbl").classList.remove("peek");
+        lastActive = active;
+      }
+    }
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", measure);
+    window.addEventListener("load", measure);
+    if ("ResizeObserver" in window) new ResizeObserver(function(){ measure(); }).observe(document.body);
+    measure();
+  })();
 
   var menuBtn = document.querySelector(".menu-btn"), menu = document.getElementById("menu");
   menuBtn.addEventListener("click", function(){ var o = menu.classList.toggle("open"); menuBtn.setAttribute("aria-expanded", String(o)); });

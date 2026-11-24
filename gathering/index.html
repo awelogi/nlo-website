@@ -317,6 +317,104 @@ img[loading="lazy"] { background: var(--deep); }
   .collage img:not(:first-child) { aspect-ratio: 4 / 3; }
 }
 
+
+/* ================= upgrade kreatif ================= */
+.btn .ic { width: 18px; height: 18px; stroke: currentColor; }
+.dl-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; font-weight: 600; font-size: .94rem; }
+.dl-link .ic { width: 18px; height: 18px; }
+.cta .pic-card .btn-ghost { margin-top: 10px; }
+/* bagian terang */
+.paper .card { background: #fff; border-color: rgba(11,42,54,.1); box-shadow: 0 1px 2px rgba(11,42,54,.06); }
+.paper .card:hover { border-color: rgba(10,125,145,.35); }
+.paper .card h3, .paper h3 { color: var(--paper-ink); }
+.paper .icon-chip { background: rgba(10,125,145,.09); border-color: rgba(10,125,145,.22); }
+.paper .ic { stroke: #0a7d91; }
+.paper .why .n, .why.paper .n { color: #0a7d91; }
+.paper .sol li, .sol.paper li { color: var(--paper-ink); border-color: rgba(11,42,54,.12); }
+.paper .sol li small, .sol.paper li small { color: #56707a; }
+.paper .chips span { color: var(--paper-ink); border-color: rgba(11,42,54,.2); background: #fff; }
+.paper .chips.on span { border-color: #0a7d91; }
+.paper .format-row .lbl { color: #3e5d67; }
+/* ilustrasi lebih kaya */
+.art-wrap { position: relative; overflow: hidden; background:
+  radial-gradient(circle at 18% 12%, rgba(63,208,224,.24), transparent 55%),
+  radial-gradient(circle at 92% 100%, rgba(242,196,109,.12), transparent 48%),
+  linear-gradient(180deg, #0c2d3a, #06141c); }
+.art-wrap::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(159,196,204,.14) 1px, transparent 1.2px); background-size: 18px 18px; -webkit-mask-image: linear-gradient(180deg, #000, transparent 85%); mask-image: linear-gradient(180deg, #000, transparent 85%); pointer-events: none; }
+.art-wrap > * { position: relative; }
+
+/* 4. kartu signature program yang bisa dibalik */
+.flip-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.flip { perspective: 1400px; }
+.flip-inner { display: grid; height: 100%; transition: transform .7s cubic-bezier(.2,.7,.2,1); transform-style: preserve-3d; }
+.flip.is-flipped .flip-inner { transform: rotateY(180deg); }
+.face { grid-area: 1 / 1; display: flex; flex-direction: column; padding: 18px 18px 20px; border-radius: 18px; border: 1px solid var(--line2); background: linear-gradient(180deg, rgba(16,58,74,.7), rgba(11,42,54,.7)); -webkit-backface-visibility: hidden; backface-visibility: hidden; cursor: pointer; }
+.face .art-wrap { padding: 8px; margin-bottom: 16px; border-radius: 12px; }
+.face .art { max-height: 140px; }
+.face h3 { font-size: 1.12rem; line-height: 1.3; }
+.front .tagline { margin-top: 6px; color: var(--glow); font-weight: 600; font-size: .86rem; line-height: 1.45; }
+.back { transform: rotateY(180deg); background: linear-gradient(160deg, #0f3b4b, #08202b); border-color: rgba(63,208,224,.45); }
+.face .konsep { margin-top: 10px; color: var(--mist); font-size: .9rem; line-height: 1.55; }
+.face .meta { margin-top: 10px; font-size: .88rem; line-height: 1.5; color: var(--text); }
+.face .meta strong { color: #fff; }
+.acts-h { margin-top: 12px; color: var(--glow); font-weight: 700; font-size: .8rem; }
+.acts { margin: 4px 0 0; padding: 0; list-style: none; counter-reset: a; }
+.acts li { counter-increment: a; position: relative; padding: 6px 0 6px 30px; border-bottom: 1px solid var(--line); color: #fff; font-weight: 600; font-size: .9rem; line-height: 1.35; }
+.acts li::before { content: counter(a, decimal-leading-zero); position: absolute; left: 0; top: 7px; color: var(--glow); font-size: .76rem; font-weight: 800; }
+.flip-btn { margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: 999px; border: 1px solid var(--line2); background: rgba(6,20,28,.5); color: #fff; font: inherit; font-size: .86rem; font-weight: 700; cursor: pointer; }
+.front .flip-btn { margin-top: auto; } .front .flip-btn { margin-top: auto; } .front > :nth-last-child(2) { margin-bottom: 16px; }
+.back .flip-btn { margin-top: 14px; }
+.flip-btn:hover { border-color: var(--glow); }
+.flip-btn .ic { width: 16px; height: 16px; }
+.flip.pulse .flip-inner { animation: pulse 1.4s ease-out; border-radius: 18px; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(63,208,224,.65); } 100% { box-shadow: 0 0 0 20px rgba(63,208,224,0); } }
+
+/* 3. kuis rancang gathering */
+.quiz { max-width: 880px; padding: clamp(22px, 4vw, 40px); border-radius: 24px; border: 1px solid rgba(63,208,224,.35); background: radial-gradient(circle at 90% 0%, rgba(63,208,224,.16), transparent 50%), var(--ink); box-shadow: 0 30px 60px rgba(0,0,0,.25); }
+.quiz-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 22px; }
+.quiz-steps { display: flex; gap: 6px; flex: 1; max-width: 260px; }
+.quiz-steps span { flex: 1; height: 5px; border-radius: 5px; background: rgba(159,196,204,.2); transition: background .3s; }
+.quiz-steps span.on { background: var(--glow); }
+.quiz-count { color: var(--mist); font-size: .88rem; font-weight: 600; }
+.quiz-q { font-size: clamp(1.3rem, 2.4vw, 1.7rem); font-weight: 800; color: #fff; letter-spacing: -0.01em; margin: 0 0 18px; }
+.quiz-opts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.quiz-opt { display: flex; align-items: center; gap: 14px; text-align: left; padding: 16px 18px; border-radius: 16px; border: 1px solid var(--line2); background: rgba(16,58,74,.45); color: #fff; font: inherit; font-weight: 700; font-size: 1rem; line-height: 1.35; cursor: pointer; transition: border-color .2s, background .2s, transform .2s; }
+.quiz-opt:hover { border-color: var(--glow); transform: translateY(-2px); }
+.quiz-opt[aria-pressed="true"] { border-color: var(--glow); background: rgba(63,208,224,.14); }
+.quiz-opt .icon-chip { margin: 0; width: 44px; height: 44px; flex-shrink: 0; }
+.quiz-opt small { display: block; color: var(--mist); font-weight: 500; font-size: .86rem; margin-top: 2px; }
+.quiz-nav { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 20px; min-height: 40px; }
+.quiz-back { display: inline-flex; align-items: center; gap: 8px; background: none; border: 0; color: var(--mist); font: inherit; font-weight: 600; cursor: pointer; padding: 8px 0; }
+.quiz-back:hover { color: #fff; }
+.quiz-back .ic { width: 18px; height: 18px; stroke: currentColor; }
+.quiz-result { display: grid; grid-template-columns: 240px 1fr; gap: 28px; align-items: start; }
+.quiz-result .art-wrap { padding: 10px; }
+.quiz-result .kicker { color: var(--glow); font-weight: 700; font-size: .88rem; }
+.quiz-result h3 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; margin: 4px 0 6px; }
+.quiz-result .why-text { color: var(--text); }
+.quiz-result .tagline { color: var(--glow); font-weight: 600; font-size: .92rem; }
+.quiz-extra { list-style: none; margin: 16px 0 0; padding: 0; }
+.quiz-extra li { position: relative; padding: 8px 0 8px 28px; border-top: 1px solid var(--line); color: var(--text); font-size: .95rem; }
+.quiz-extra li::before { content: ""; position: absolute; left: 4px; top: 15px; width: 11px; height: 6px; border-left: 2px solid var(--glow); border-bottom: 2px solid var(--glow); transform: rotate(-45deg); }
+.quiz-extra strong { color: #fff; }
+.quiz-summary { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.quiz-summary span { padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line2); color: var(--mist); font-size: .82rem; font-weight: 600; }
+.quiz-note { margin-top: 14px; color: var(--mist); font-size: .85rem; }
+.quiz .actions { margin-top: 22px; }
+.fade-in { animation: fadeIn .4s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 1100px) { .flip-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 860px) { .flip-grid { grid-template-columns: repeat(2, 1fr); } .quiz-result { grid-template-columns: 1fr; } .quiz-result .art-wrap { max-width: 320px; } }
+@media (max-width: 560px) { .flip-grid { grid-template-columns: 1fr; } .quiz-opts { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) {
+  .flip-inner { transition: none; transform: none !important; }
+  .flip .back { transform: none; visibility: hidden; }
+  .flip.is-flipped .back { visibility: visible; }
+  .flip.is-flipped .front { visibility: hidden; }
+  .flip.pulse .flip-inner { animation: none; }
+}
+
 /* ---- galeri ---- */
 .gal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
 .gal-item { margin: 0; cursor: zoom-in; border-radius: 16px; overflow: hidden; border: 1px solid var(--line2); background: var(--deep); }
@@ -332,7 +430,7 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
 </style>
 </head>
 <body data-page="gathering">
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.4 3.2-5.5 6.5-5.5s5.9 2.1 6.5 5.5"/><circle cx="17" cy="9" r="2.8"/><path d="M16 14.6c2.6.2 4.6 2.2 5 5"/></symbol><symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol><symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0V4z"/><path d="M8 6H4a3 3 0 0 0 3 4M16 6h4a3 3 0 0 1-3 4"/><path d="M12 13v4M8 21h8M9 17h6"/></symbol><symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></symbol><symbol id="i-sunset" viewBox="0 0 24 24"><path d="M3 17h18"/><path d="M7 17a5 5 0 0 1 10 0"/><path d="M12 5v3M5.6 9.6l2 2M18.4 9.6l-2 2"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></symbol><symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5c1 1.2 2.2 1.8 3.5 1.8s2.5-.6 3.5-1.8"/><path d="M9 9.5h.01M15 9.5h.01"/></symbol><symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol><symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-4 7 4v13"/><path d="M9 21v-6h6v6"/></symbol><symbol id="i-bars" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol><symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z"/><path d="M20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z"/></symbol><symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></symbol><symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></symbol><symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></symbol><symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol><symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></symbol><symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></symbol><symbol id="i-gamepad" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="9" rx="4"/><path d="M8 11v3M6.5 12.5h3M15 12h.01M17 13.5h.01"/></symbol><symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol></defs></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.4 3.2-5.5 6.5-5.5s5.9 2.1 6.5 5.5"/><circle cx="17" cy="9" r="2.8"/><path d="M16 14.6c2.6.2 4.6 2.2 5 5"/></symbol><symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol><symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0V4z"/><path d="M8 6H4a3 3 0 0 0 3 4M16 6h4a3 3 0 0 1-3 4"/><path d="M12 13v4M8 21h8M9 17h6"/></symbol><symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></symbol><symbol id="i-sunset" viewBox="0 0 24 24"><path d="M3 17h18"/><path d="M7 17a5 5 0 0 1 10 0"/><path d="M12 5v3M5.6 9.6l2 2M18.4 9.6l-2 2"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></symbol><symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5c1 1.2 2.2 1.8 3.5 1.8s2.5-.6 3.5-1.8"/><path d="M9 9.5h.01M15 9.5h.01"/></symbol><symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol><symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-4 7 4v13"/><path d="M9 21v-6h6v6"/></symbol><symbol id="i-bars" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol><symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z"/><path d="M20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z"/></symbol><symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></symbol><symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></symbol><symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></symbol><symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol><symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></symbol><symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></symbol><symbol id="i-gamepad" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="9" rx="4"/><path d="M8 11v3M6.5 12.5h3M15 12h.01M17 13.5h.01"/></symbol><symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol><symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.6-4.5M4 4v4h4M4 13a8 8 0 0 0 14.6 4.5M20 20v-4h-4"/></symbol><symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol><symbol id="i-flip" viewBox="0 0 24 24"><path d="M4 9a8 8 0 0 1 14-3l2 2M20 4v4h-4M20 15a8 8 0 0 1-14 3l-2-2M4 20v-4h4"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol></defs></svg>
 
 <a class="skip" href="#konten">Lewati ke konten</a>
 <header class="site">
@@ -366,9 +464,10 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
         <p class="sub" data-cms="gathering.hero.sub">Beyond Gathering, Creating Meaningful Experiences</p>
         <blockquote data-cms="gathering.hero.kutipan">Karena tim hebat tidak hanya dibangun di ruang meeting, tetapi melalui pengalaman yang mereka jalani bersama.</blockquote>
         <div class="actions">
-          <a class="btn btn-solid" href="#hubungi">Rancang gathering Anda</a>
+          <a class="btn btn-solid" href="#rancang">Rancang gathering Anda</a>
           <a class="btn btn-ghost" href="#signature">Lihat signature program</a>
         </div>
+        <a class="dl-link" href="../unduh/nlo-katalog-the-art-of-gathering.pdf" download><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Unduh katalog lengkap (PDF, 21 halaman, 6,7 MB)</a>
       </div>
       <div class="collage">
         <img data-cms-img="gathering.foto.hero-team-building" src="../img/hero-team-building.webp" srcset="../img/hero-team-building-420.webp 420w, ../img/hero-team-building.webp 710w" sizes="(max-width: 960px) calc(100vw - 36px), 45vw" width="710" height="473" decoding="async" fetchpriority="high" alt="Peserta bermain permainan tim di dalam ruangan, dengan panggung bertuliskan Team Building">
@@ -386,6 +485,7 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
       <a href="#nilai">Nilai tambah</a>
       <a href="#solusi">Solusi</a>
       <a href="#alur">Alur program</a>
+      <a href="#rancang">Rancang</a>
       <a href="#signature">Signature program</a>
       <a href="#hiburan">Hiburan &amp; dokumentasi</a>
       <a href="#galeri" hidden>Galeri</a>
@@ -394,7 +494,7 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
   </nav>
 
   <!-- Mengapa penting -->
-  <section class="section why" id="mengapa">
+  <section class="section why paper" id="mengapa">
     <div class="wrap">
       <div class="section-head reveal">
         <h2 data-cms="gathering.mengapa.judul">Mengapa employee gathering penting?</h2>
@@ -469,7 +569,7 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
   </section>
 
   <!-- Solusi -->
-  <section class="section sol" id="solusi">
+  <section class="section sol paper" id="solusi">
     <div class="wrap">
       <div class="section-head reveal">
         <h2 data-cms="gathering.solusi.judul">Solusi gathering untuk perusahaan Anda.</h2>
@@ -549,23 +649,178 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
     </div>
   </section>
 
+  <!-- Rancang gathering -->
+  <section class="section bg-deep" id="rancang">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 data-cms="gathering.rancang.judul">Rancang gathering-mu dalam satu menit.</h2>
+        <p class="lead" data-cms="gathering.rancang.lead">Jawab empat pertanyaan singkat. Kami tunjukkan signature program yang paling cocok, lalu Anda bisa langsung mengirimnya ke tim NLO.</p>
+      </div>
+      <div class="quiz reveal" id="quiz" aria-live="polite">
+        <div class="quiz-top">
+          <div class="quiz-steps" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+          <p class="quiz-count" id="quiz-count">Pertanyaan 1 dari 4</p>
+        </div>
+        <div class="quiz-body" id="quiz-body">
+          <noscript><p>Aktifkan JavaScript untuk memakai kuis ini, atau langsung hubungi tim NLO di bagian bawah halaman.</p></noscript>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Signature program -->
   <section class="section" id="signature">
     <div class="wrap">
       <div class="section-head reveal">
         <h2 data-cms="gathering.signature.judul">Signature program.</h2>
-        <p class="lead" data-cms="gathering.signature.lead">Pilih salah satu konsep untuk melihat konsep dan contoh aktivitasnya.</p>
+        <p class="lead" data-cms="gathering.signature.lead">Delapan konsep pilihan. Ketuk kartu untuk membaliknya dan melihat contoh aktivitas.</p>
       </div>
-      <div class="sig-tabs reveal" role="tablist" aria-label="Signature program">
-        <button class="sig-tab" role="tab" id="sig-t0" aria-controls="sig-panel" aria-selected="true" tabindex="0" data-sig="0">Amazing Race</button>
-        <button class="sig-tab" role="tab" id="sig-t1" aria-controls="sig-panel" aria-selected="false" tabindex="-1" data-sig="1">Treasure Hunt</button>
-        <button class="sig-tab" role="tab" id="sig-t2" aria-controls="sig-panel" aria-selected="false" tabindex="-1" data-sig="2">Traditional Games</button>
-        <button class="sig-tab" role="tab" id="sig-t3" aria-controls="sig-panel" aria-selected="false" tabindex="-1" data-sig="3">Fun Team Building</button>
-        <button class="sig-tab" role="tab" id="sig-t4" aria-controls="sig-panel" aria-selected="false" tabindex="-1" data-sig="4">Squid Game</button>
-        <button class="sig-tab" role="tab" id="sig-t5" aria-controls="sig-panel" aria-selected="false" tabindex="-1" data-sig="5">Master Chef Challenge</button>
-        <button class="sig-tab" role="tab" id="sig-t6" aria-controls="sig-panel" aria-selected="false" tabindex="-1" data-sig="6">Gala Dinner</button>
+      <div class="flip-grid">
+        <article class="flip reveal" id="prog-0" data-prog="0">
+          <div class="flip-inner">
+            <div class="face front">
+              <div class="art-wrap"><svg class="art" viewBox="0 0 480 260" role="img" aria-label="Peta dengan rute dan lima pos pemberhentian untuk perlombaan tim" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="60" y="40" width="360" height="180" rx="14" fill="#0b2a36" stroke="#14a3b8" stroke-width="2"/><path d="M90 190 C 150 90, 200 230, 250 150 S 360 70, 400 110" stroke="#3fd0e0" stroke-width="3" stroke-dasharray="6 8"/><circle cx="90" cy="190" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="90" y="194" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">1</text><circle cx="180" cy="120" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="180" y="124" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">2</text><circle cx="250" cy="150" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="250" y="154" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">3</text><circle cx="330" cy="92" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="330" y="96" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">4</text><circle cx="400" cy="110" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="400" y="114" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">5</text><path d="M400 60 v-16 l14 5 -14 5" stroke="#f2c46d" stroke-width="2" fill="#f2c46d"/></g></svg></div>
+              <h3>Amazing Race</h3>
+              <p class="tagline">Explore • Collaborate • Win Together</p>
+              <div class="meta"><p><strong>Durasi:</strong> 4–6 jam</p><p><strong>Tujuan:</strong> komunikasi, problem solving, teamwork, leadership</p></div>
+              <button class="flip-btn" type="button" aria-expanded="false" aria-controls="prog-back-0"><svg class="ic" aria-hidden="true"><use href="#i-flip"/></svg>Lihat aktivitas</button>
+            </div>
+            <div class="face back" id="prog-back-0" inert>
+              <h3>Amazing Race</h3>
+              
+              <p class="acts-h">Contoh aktivitas</p>
+              <ol class="acts"><li>QR Challenge</li><li>Puzzle Mission</li><li>Photo Challenge</li><li>Blind Navigation</li><li>Local Culture Challenge</li></ol>
+              <button class="flip-btn" type="button"><svg class="ic" aria-hidden="true"><use href="#i-arrow-left"/></svg>Kembali</button>
+            </div>
+          </div>
+        </article>
+        <article class="flip reveal" id="prog-1" data-prog="1">
+          <div class="flip-inner">
+            <div class="face front">
+              <div class="art-wrap"><svg class="art" viewBox="0 0 480 260" role="img" aria-label="Peta kota dengan jalur dan tanda X sebagai tujuan pencarian harta karun" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="60" y="40" width="360" height="180" rx="14" fill="#0b2a36" stroke="#14a3b8" stroke-width="2"/><line x1="120" y1="40" x2="120" y2="220" stroke="#9fc4cc" stroke-opacity="0.12"/><line x1="180" y1="40" x2="180" y2="220" stroke="#9fc4cc" stroke-opacity="0.12"/><line x1="240" y1="40" x2="240" y2="220" stroke="#9fc4cc" stroke-opacity="0.12"/><line x1="300" y1="40" x2="300" y2="220" stroke="#9fc4cc" stroke-opacity="0.12"/><line x1="360" y1="40" x2="360" y2="220" stroke="#9fc4cc" stroke-opacity="0.12"/><line x1="60" y1="80" x2="420" y2="80" stroke="#9fc4cc" stroke-opacity="0.12"/><line x1="60" y1="120" x2="420" y2="120" stroke="#9fc4cc" stroke-opacity="0.12"/><line x1="60" y1="160" x2="420" y2="160" stroke="#9fc4cc" stroke-opacity="0.12"/><line x1="60" y1="200" x2="420" y2="200" stroke="#9fc4cc" stroke-opacity="0.12"/><path d="M110 200 C 150 150, 190 210, 240 150 S 330 100, 360 90" stroke="#3fd0e0" stroke-width="2.5" stroke-dasharray="5 6"/><path d="M352 84 l16 16 M368 84 l-16 16" stroke="#f2c46d" stroke-width="3"/><path d="M250 70 c-10 0 -18 8 -18 18 c0 14 18 30 18 30 s18-16 18-30 c0-10-8-18-18-18z" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><circle cx="250" cy="88" r="5" fill="#3fd0e0" stroke="none"/></g></svg></div>
+              <h3>Treasure Hunt</h3>
+              <p class="tagline">The City Becomes Your Playground</p>
+              <p class="konsep">Peserta menjelajah kota sambil menyelesaikan misi menggunakan aplikasi maupun petunjuk lokasi.</p>
+              <button class="flip-btn" type="button" aria-expanded="false" aria-controls="prog-back-1"><svg class="ic" aria-hidden="true"><use href="#i-flip"/></svg>Lihat aktivitas</button>
+            </div>
+            <div class="face back" id="prog-back-1" inert>
+              <h3>Treasure Hunt</h3>
+              
+              <p class="acts-h">Contoh aktivitas</p>
+              <ol class="acts"><li>GPS Challenge</li><li>Heritage Quiz</li><li>Hidden Object</li><li>Story Challenge</li><li>Creative Campaign</li></ol>
+              <button class="flip-btn" type="button"><svg class="ic" aria-hidden="true"><use href="#i-arrow-left"/></svg>Kembali</button>
+            </div>
+          </div>
+        </article>
+        <article class="flip reveal" id="prog-2" data-prog="2">
+          <div class="flip-inner">
+            <div class="face front">
+              <div class="art-wrap"><svg class="art" viewBox="0 0 480 260" role="img" aria-label="Seseorang berjalan dengan egrang bambu dalam permainan tradisional" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="40" y1="236" x2="440" y2="236" stroke="#9fc4cc" stroke-opacity="0.35" stroke-width="2"/><line x1="205" y1="236" x2="205" y2="120" stroke="#f2c46d" stroke-width="6"/><line x1="275" y1="236" x2="275" y2="120" stroke="#f2c46d" stroke-width="6"/><circle cx="240" cy="62.0" r="16.0" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><rect x="214.0" y="84.0" width="52.0" height="70.0" rx="18.0" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><path d="M70 236 l10 -10 M410 236 l-10 -10" stroke="#9fc4cc" stroke-opacity="0.5"/><path d="M320 190 l40 0 M340 170 l20 0" stroke="#f2c46d" stroke-opacity="0.6" stroke-width="2"/></g></svg></div>
+              <h3>Traditional Games</h3>
+              <p class="tagline">Traditional Game, Modern Collaboration</p>
+              <p class="konsep">Mengadaptasi konsep Perlombaan Desa yang menggabungkan permainan tradisional untuk membangun kerja sama tim.</p>
+              <button class="flip-btn" type="button" aria-expanded="false" aria-controls="prog-back-2"><svg class="ic" aria-hidden="true"><use href="#i-flip"/></svg>Lihat aktivitas</button>
+            </div>
+            <div class="face back" id="prog-back-2" inert>
+              <h3>Traditional Games</h3>
+              
+              <p class="acts-h">Contoh aktivitas</p>
+              <ol class="acts"><li>Bakiak</li><li>Egrang (bambu)</li><li>Galasin</li><li>Egrang batok kelapa</li><li>Gobak sodor</li><li>Panahan</li><li>Ring tos</li></ol>
+              <button class="flip-btn" type="button"><svg class="ic" aria-hidden="true"><use href="#i-arrow-left"/></svg>Kembali</button>
+            </div>
+          </div>
+        </article>
+        <article class="flip reveal" id="prog-3" data-prog="3">
+          <div class="flip-inner">
+            <div class="face front">
+              <div class="art-wrap"><svg class="art" viewBox="0 0 480 260" role="img" aria-label="Tiga orang saling terhubung dengan tali dalam permainan tim" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M140 150 L240 96 L340 150 Z" fill="none" stroke="#3fd0e0" stroke-width="2" stroke-dasharray="3 6"/><circle cx="140" cy="121.2" r="11.2" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><rect x="121.8" y="136.6" width="36.4" height="49.0" rx="12.6" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><circle cx="240" cy="71.2" r="11.2" fill="#0b2a36" stroke="#14a3b8" stroke-width="2"/><rect x="221.8" y="86.6" width="36.4" height="49.0" rx="12.6" fill="#0b2a36" stroke="#14a3b8" stroke-width="2"/><circle cx="340" cy="121.2" r="11.2" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><rect x="321.8" y="136.6" width="36.4" height="49.0" rx="12.6" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><circle cx="240" cy="200" r="16" fill="none" stroke="#f2c46d" stroke-width="3"/><circle cx="262" cy="200" r="16" fill="none" stroke="#f2c46d" stroke-width="3"/></g></svg></div>
+              <h3>Fun Team Building</h3>
+              <p class="tagline">Small Games. Big Impact.</p>
+              
+              <button class="flip-btn" type="button" aria-expanded="false" aria-controls="prog-back-3"><svg class="ic" aria-hidden="true"><use href="#i-flip"/></svg>Lihat aktivitas</button>
+            </div>
+            <div class="face back" id="prog-back-3" inert>
+              <h3>Fun Team Building</h3>
+              
+              <p class="acts-h">Contoh aktivitas</p>
+              <ol class="acts"><li>Balloon Race</li><li>Giant Volleyball</li><li>Spider Web</li><li>Water Transfer</li><li>Human Knot</li><li>Caterpillar Race</li><li>Pipe Ball</li><li>Synergy Bridge</li></ol>
+              <button class="flip-btn" type="button"><svg class="ic" aria-hidden="true"><use href="#i-arrow-left"/></svg>Kembali</button>
+            </div>
+          </div>
+        </article>
+        <article class="flip reveal" id="prog-4" data-prog="4">
+          <div class="flip-inner">
+            <div class="face front">
+              <div class="art-wrap"><svg class="art" viewBox="0 0 480 260" role="img" aria-label="Lampu lalu lintas merah dan hijau di atas lapangan permainan" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="190" y="30" width="100" height="170" rx="18" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><circle cx="240" cy="70" r="20" fill="#e5695f" stroke="none"/><circle cx="240" cy="115" r="20" fill="#f2c46d" stroke="none" fill-opacity="0.4"/><circle cx="240" cy="160" r="20" fill="#3fd0e0" stroke="none" fill-opacity="0.4"/><line x1="40" y1="236" x2="440" y2="236" stroke="#9fc4cc" stroke-opacity="0.35" stroke-width="2"/><path d="M70 236 l60 -22 M410 236 l-60 -22" stroke="#9fc4cc" stroke-opacity="0.4" stroke-width="2"/><circle cx="360" cy="158.8" r="8.8" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><rect x="345.7" y="170.9" width="28.6" height="38.5" rx="9.9" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><circle cx="110" cy="168.8" r="8.8" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><rect x="95.7" y="180.9" width="28.6" height="38.5" rx="9.9" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/></g></svg></div>
+              <h3>Squid Game</h3>
+              <p class="tagline">Strategic Resilience • Risk Management • Coordination</p>
+              <p class="konsep">Kompetisi individu diubah menjadi kompetisi berbasis tim. Estetika ikonik Squid Game dikemas profesional, aman, dan penuh keseruan.</p>
+              <button class="flip-btn" type="button" aria-expanded="false" aria-controls="prog-back-4"><svg class="ic" aria-hidden="true"><use href="#i-flip"/></svg>Lihat aktivitas</button>
+            </div>
+            <div class="face back" id="prog-back-4" inert>
+              <h3>Squid Game</h3>
+              
+              <p class="acts-h">Contoh aktivitas</p>
+              <ol class="acts"><li>Red Light, Green Light</li><li>Dalgona Candy Challenge</li><li>Marble Battle</li><li>Tug of War</li><li>Squid Game Finale</li></ol>
+              <button class="flip-btn" type="button"><svg class="ic" aria-hidden="true"><use href="#i-arrow-left"/></svg>Kembali</button>
+            </div>
+          </div>
+        </article>
+        <article class="flip reveal" id="prog-5" data-prog="5">
+          <div class="flip-inner">
+            <div class="face front">
+              <div class="art-wrap"><svg class="art" viewBox="0 0 480 260" role="img" aria-label="Panci mengepul di atas kompor dengan piring dan sendok" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="40" y1="236" x2="440" y2="236" stroke="#9fc4cc" stroke-opacity="0.35" stroke-width="2"/><path d="M150 150 h140 v60 a40 40 0 0 1 -40 40 h-60 a40 40 0 0 1 -40 -40 z" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><path d="M130 150 h180" stroke="#3fd0e0" stroke-width="3"/><path d="M210 130 q-8 -12 0 -22 q8 -10 0 -22" stroke="#9fc4cc" stroke-opacity="0.6" stroke-width="2"/><path d="M240 130 q-8 -12 0 -22 q8 -10 0 -22" stroke="#9fc4cc" stroke-opacity="0.6" stroke-width="2"/><path d="M270 130 q-8 -12 0 -22 q8 -10 0 -22" stroke="#9fc4cc" stroke-opacity="0.6" stroke-width="2"/><ellipse cx="380" cy="230" rx="60" ry="10" fill="#0b2a36" stroke="#14a3b8" stroke-width="2"/><path d="M330 230 q50 -40 100 0" fill="none" stroke="#14a3b8" stroke-width="2"/><line x1="70" y1="120" x2="110" y2="220" stroke="#f2c46d" stroke-width="5"/><ellipse cx="66" cy="112" rx="14" ry="8" fill="#f2c46d" stroke="none"/></g></svg></div>
+              <h3>Master Chef Challenge</h3>
+              <p class="tagline">Culinary Teamwork • Time Pressure • Creative Problem Solving</p>
+              <p class="konsep">Kompetisi memasak individu diubah menjadi kompetisi berbasis tim di ruang terbuka. Estetika ikonik MasterChef dikemas profesional, aman, dan penuh keseruan.</p>
+              <button class="flip-btn" type="button" aria-expanded="false" aria-controls="prog-back-5"><svg class="ic" aria-hidden="true"><use href="#i-flip"/></svg>Lihat aktivitas</button>
+            </div>
+            <div class="face back" id="prog-back-5" inert>
+              <h3>Master Chef Challenge</h3>
+              
+              <p class="acts-h">Contoh aktivitas</p>
+              <ol class="acts"><li>Mystery Box Challenge</li><li>Relay Cooking Race</li><li>Plating &amp; Presentation Battle</li><li>Blind Taste Test</li><li>Chef's Table Judging Finale</li></ol>
+              <button class="flip-btn" type="button"><svg class="ic" aria-hidden="true"><use href="#i-arrow-left"/></svg>Kembali</button>
+            </div>
+          </div>
+        </article>
+        <article class="flip reveal" id="prog-6" data-prog="6">
+          <div class="flip-inner">
+            <div class="face front">
+              <div class="art-wrap"><svg class="art" viewBox="0 0 480 260" role="img" aria-label="Sorotan lampu ke panggung dengan dua gelas minum dan satu orang di tengah" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M240 20 L140 236 L340 236 Z" fill="#f2c46d" fill-opacity="0.12" stroke="none"/><line x1="240" y1="20" x2="240" y2="40" stroke="#f2c46d" stroke-width="3"/><line x1="40" y1="236" x2="440" y2="236" stroke="#9fc4cc" stroke-opacity="0.35" stroke-width="2"/><path d="M180 236 q0 -40 20 -60 M300 236 q0 -40 -20 -60" stroke="#9fc4cc" stroke-opacity="0.2" stroke-width="2"/><path d="M150 170 l14 40 l-14 0 l14 0 M168 170 l-14 40" stroke="#3fd0e0" stroke-width="2"/><path d="M322 170 h28 l-6 36 h-16 z" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><line x1="336" y1="206" x2="336" y2="236" stroke="#3fd0e0" stroke-width="2"/><path d="M200 220 h80" stroke="#9fc4cc" stroke-opacity="0.5" stroke-width="2"/><path d="M170 210 h10 v8 h-10 z M300 200 h8 v8 h-8 z" fill="none" stroke="none"/><circle cx="240" cy="119.6" r="9.6" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><rect x="224.4" y="132.8" width="31.2" height="42.0" rx="10.8" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/></g></svg></div>
+              <h3>Gala Dinner</h3>
+              <p class="tagline">Elegance • Immersive Experience • Celebration</p>
+              <p class="konsep">Malam penghargaan formal diubah menjadi perayaan tematik dengan dekorasi eksklusif dan dress code tematik yang glamor, profesional, dan berkesan. Bertema kostum, indoor.</p>
+              <button class="flip-btn" type="button" aria-expanded="false" aria-controls="prog-back-6"><svg class="ic" aria-hidden="true"><use href="#i-flip"/></svg>Lihat aktivitas</button>
+            </div>
+            <div class="face back" id="prog-back-6" inert>
+              <h3>Gala Dinner</h3>
+              
+              <p class="acts-h">Contoh aktivitas</p>
+              <ol class="acts"><li>Red Carpet Welcome &amp; Photo Booth</li><li>Best Costume Award</li><li>Themed Dinner Course &amp; Entertainment</li><li>Interactive Live Performance</li><li>Award Night Finale &amp; Toast</li></ol>
+              <button class="flip-btn" type="button"><svg class="ic" aria-hidden="true"><use href="#i-arrow-left"/></svg>Kembali</button>
+            </div>
+          </div>
+        </article>
+        <article class="flip reveal" id="prog-7" data-prog="7">
+          <div class="flip-inner">
+            <div class="face front">
+              <div class="art-wrap"><svg class="art" viewBox="0 0 480 260" role="img" aria-label="Mobil VW klasik melintasi jalan berbukit dengan percikan cat dan perahu karet" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M40 150 L120 80 L170 120 L240 60 L330 140 L400 95 L440 130" stroke="#9fc4cc" stroke-opacity="0.45" stroke-width="2"/><path d="M40 236 H440" stroke="#9fc4cc" stroke-opacity="0.35" stroke-width="2"/><path d="M40 214 q30 -10 60 0 t60 0 t60 0" stroke="#14a3b8" stroke-width="3"/><path d="M58 206 h70 l-8 14 h-54 z" fill="#f2c46d" stroke="none"/><path d="M80 200 v-14 M104 200 v-14" stroke="#f2c46d" stroke-width="3"/><path d="M230 222 v-40 a14 14 0 0 1 14 -14 h86 a26 26 0 0 1 26 26 v28 z" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2.5"/><path d="M250 168 l18 -30 h52 l22 30" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2.5"/><path d="M262 166 l12 -22 h18 v22 z M300 166 v-22 h16 l14 22 z" fill="#3fd0e0" fill-opacity="0.18" stroke="#3fd0e0" stroke-width="1.5"/><circle cx="262" cy="224" r="15" fill="#0b2a36" stroke="#3fd0e0" stroke-width="3"/><circle cx="262" cy="224" r="5" fill="#3fd0e0" stroke="none"/><circle cx="334" cy="224" r="15" fill="#0b2a36" stroke="#3fd0e0" stroke-width="3"/><circle cx="334" cy="224" r="5" fill="#3fd0e0" stroke="none"/><circle cx="352" cy="190" r="4" fill="#f2c46d" stroke="none"/><circle cx="398" cy="58" r="13" fill="#e5695f" stroke="none"/><circle cx="416" cy="74" r="6" fill="#e5695f" stroke="none"/><circle cx="382" cy="76" r="4" fill="#e5695f" stroke="none"/><circle cx="150" cy="58" r="10" fill="#3fd0e0" stroke="none"/><circle cx="166" cy="48" r="4" fill="#3fd0e0" stroke="none"/><circle cx="138" cy="44" r="3" fill="#3fd0e0" stroke="none"/><circle cx="420" cy="180" r="8" fill="#f2c46d" stroke="none"/><circle cx="432" cy="168" r="3" fill="#f2c46d" stroke="none"/></g></svg></div>
+              <h3>Paint Ball, Offroad, Rafting &amp; VW Tour</h3>
+              <p class="tagline">Strategic Resilience • Risk Management • Coordination</p>
+              <p class="konsep">Menggabungkan keseruan aktivitas outdoor dengan pembelajaran teamwork, strategi, komunikasi, dan pengambilan keputusan.</p>
+              <button class="flip-btn" type="button" aria-expanded="false" aria-controls="prog-back-7"><svg class="ic" aria-hidden="true"><use href="#i-flip"/></svg>Lihat aktivitas</button>
+            </div>
+            <div class="face back" id="prog-back-7" inert>
+              <h3>Paint Ball, Offroad, Rafting &amp; VW Tour</h3>
+              
+              <p class="acts-h">Contoh aktivitas</p>
+              <ol class="acts"><li>Paint Ball</li><li>Offroad</li><li>Rafting</li><li>VW Tour</li></ol>
+              <button class="flip-btn" type="button"><svg class="ic" aria-hidden="true"><use href="#i-arrow-left"/></svg>Kembali</button>
+            </div>
+          </div>
+        </article>
       </div>
-      <div class="sig-panel reveal" id="sig-panel" role="tabpanel" aria-labelledby="sig-t0" tabindex="0"><div class="fade"><div class="art-wrap"><svg class="art" viewBox="0 0 480 260" role="img" aria-label="Peta dengan rute dan lima pos pemberhentian untuk perlombaan tim" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="60" y="40" width="360" height="180" rx="14" fill="#0b2a36" stroke="#14a3b8" stroke-width="2"/><path d="M90 190 C 150 90, 200 230, 250 150 S 360 70, 400 110" stroke="#3fd0e0" stroke-width="3" stroke-dasharray="6 8"/><circle cx="90" cy="190" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="90" y="194" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">1</text><circle cx="180" cy="120" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="180" y="124" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">2</text><circle cx="250" cy="150" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="250" y="154" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">3</text><circle cx="330" cy="92" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="330" y="96" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">4</text><circle cx="400" cy="110" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="400" y="114" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">5</text><path d="M400 60 v-16 l14 5 -14 5" stroke="#f2c46d" stroke-width="2" fill="#f2c46d"/></g></svg></div></div><div class="fade"><h3>Amazing Race</h3><p class="tagline">Explore • Collaborate • Win Together</p><div class="meta"><p><strong>Durasi:</strong> 4–6 jam</p><p><strong>Tujuan:</strong> komunikasi, problem solving, teamwork, leadership</p></div><h4>Contoh aktivitas</h4><ol><li>QR Challenge</li><li>Puzzle Mission</li><li>Photo Challenge</li><li>Blind Navigation</li><li>Local Culture Challenge</li></ol></div></div>
       <div class="strip reveal">
         <figure class="photo"><img data-cms-img="gathering.foto.sig-spider-web" src="../img/sig-spider-web.webp" srcset="../img/sig-spider-web-420.webp 420w, ../img/sig-spider-web.webp 661w" sizes="(max-width: 720px) calc(100vw - 36px), 31vw" width="661" height="497" decoding="async" loading="lazy" alt="Peserta melewati jaring laba-laba dengan bantuan tim"><figcaption>Spider Web</figcaption></figure>
         <figure class="photo"><img data-cms-img="gathering.foto.sig-pipe-ball" src="../img/sig-pipe-ball.webp" srcset="../img/sig-pipe-ball-420.webp 420w, ../img/sig-pipe-ball.webp 534w" sizes="(max-width: 720px) calc(100vw - 36px), 31vw" width="534" height="534" decoding="async" loading="lazy" alt="Peserta memegang batang warna-warni dalam permainan kerja sama"><figcaption>Pipe Ball</figcaption></figure>
@@ -644,6 +899,7 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
           <div class="pic-name" data-cms="kontak.pic">Helga Yuliana</div>
           <a class="pic-tel" data-cms-tel href="tel:+6287781018187"><span data-cms="kontak.telepon">+62 877-8101-8187</span></a>
           <a class="btn btn-solid" data-cms-wa href="https://wa.me/6287781018187?text=Halo%20Helga%2C%20saya%20ingin%20berdiskusi%20tentang%20program%20employee%20gathering." target="_blank" rel="noopener">Chat WhatsApp</a>
+          <a class="btn btn-ghost" href="../unduh/nlo-katalog-the-art-of-gathering.pdf" download><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Unduh katalog (PDF)</a>
         </div>
       </div>
     </div>
@@ -666,6 +922,8 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
           <li><a href="../#riset">Riset &amp; assessment</a></li>
           <li><a href="#top">Employee Gathering</a></li>
           <li><a href="../#pendekatan">Pendekatan</a></li>
+          <li><a href="../unduh/nlo-katalog-the-art-of-gathering.pdf" download>Katalog gathering (PDF)</a></li>
+          <li><a href="../unduh/nlo-company-profile.pdf" download>Company profile (PDF)</a></li>
         </ul>
       </div>
       <div>
@@ -702,22 +960,130 @@ dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: r
     });
   }
 
-  var sigPrograms = [{"name": "Amazing Race", "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Peta dengan rute dan lima pos pemberhentian untuk perlombaan tim\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"60\" y=\"40\" width=\"360\" height=\"180\" rx=\"14\" fill=\"#0b2a36\" stroke=\"#14a3b8\" stroke-width=\"2\"/><path d=\"M90 190 C 150 90, 200 230, 250 150 S 360 70, 400 110\" stroke=\"#3fd0e0\" stroke-width=\"3\" stroke-dasharray=\"6 8\"/><circle cx=\"90\" cy=\"190\" r=\"13\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><text x=\"90\" y=\"194\" text-anchor=\"middle\" font-family=\"Plus Jakarta Sans, sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#3fd0e0\" stroke=\"none\">1<\/text><circle cx=\"180\" cy=\"120\" r=\"13\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><text x=\"180\" y=\"124\" text-anchor=\"middle\" font-family=\"Plus Jakarta Sans, sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#3fd0e0\" stroke=\"none\">2<\/text><circle cx=\"250\" cy=\"150\" r=\"13\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><text x=\"250\" y=\"154\" text-anchor=\"middle\" font-family=\"Plus Jakarta Sans, sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#3fd0e0\" stroke=\"none\">3<\/text><circle cx=\"330\" cy=\"92\" r=\"13\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><text x=\"330\" y=\"96\" text-anchor=\"middle\" font-family=\"Plus Jakarta Sans, sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#3fd0e0\" stroke=\"none\">4<\/text><circle cx=\"400\" cy=\"110\" r=\"13\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><text x=\"400\" y=\"114\" text-anchor=\"middle\" font-family=\"Plus Jakarta Sans, sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#3fd0e0\" stroke=\"none\">5<\/text><path d=\"M400 60 v-16 l14 5 -14 5\" stroke=\"#f2c46d\" stroke-width=\"2\" fill=\"#f2c46d\"/><\/g><\/svg>", "tagline": "Explore • Collaborate • Win Together", "konsep": "", "durasi": "4–6 jam", "tujuan": "komunikasi, problem solving, teamwork, leadership", "acts": ["QR Challenge", "Puzzle Mission", "Photo Challenge", "Blind Navigation", "Local Culture Challenge"]}, {"name": "Treasure Hunt", "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Peta kota dengan jalur dan tanda X sebagai tujuan pencarian harta karun\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"60\" y=\"40\" width=\"360\" height=\"180\" rx=\"14\" fill=\"#0b2a36\" stroke=\"#14a3b8\" stroke-width=\"2\"/><line x1=\"120\" y1=\"40\" x2=\"120\" y2=\"220\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><line x1=\"180\" y1=\"40\" x2=\"180\" y2=\"220\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><line x1=\"240\" y1=\"40\" x2=\"240\" y2=\"220\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><line x1=\"300\" y1=\"40\" x2=\"300\" y2=\"220\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><line x1=\"360\" y1=\"40\" x2=\"360\" y2=\"220\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><line x1=\"60\" y1=\"80\" x2=\"420\" y2=\"80\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><line x1=\"60\" y1=\"120\" x2=\"420\" y2=\"120\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><line x1=\"60\" y1=\"160\" x2=\"420\" y2=\"160\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><line x1=\"60\" y1=\"200\" x2=\"420\" y2=\"200\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><path d=\"M110 200 C 150 150, 190 210, 240 150 S 330 100, 360 90\" stroke=\"#3fd0e0\" stroke-width=\"2.5\" stroke-dasharray=\"5 6\"/><path d=\"M352 84 l16 16 M368 84 l-16 16\" stroke=\"#f2c46d\" stroke-width=\"3\"/><path d=\"M250 70 c-10 0 -18 8 -18 18 c0 14 18 30 18 30 s18-16 18-30 c0-10-8-18-18-18z\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><circle cx=\"250\" cy=\"88\" r=\"5\" fill=\"#3fd0e0\" stroke=\"none\"/><\/g><\/svg>", "tagline": "The City Becomes Your Playground", "konsep": "Peserta menjelajah kota sambil menyelesaikan misi menggunakan aplikasi maupun petunjuk lokasi.", "durasi": "", "tujuan": "", "acts": ["GPS Challenge", "Heritage Quiz", "Hidden Object", "Story Challenge", "Creative Campaign"]}, {"name": "Traditional Games", "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Seseorang berjalan dengan egrang bambu dalam permainan tradisional\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"40\" y1=\"236\" x2=\"440\" y2=\"236\" stroke=\"#9fc4cc\" stroke-opacity=\"0.35\" stroke-width=\"2\"/><line x1=\"205\" y1=\"236\" x2=\"205\" y2=\"120\" stroke=\"#f2c46d\" stroke-width=\"6\"/><line x1=\"275\" y1=\"236\" x2=\"275\" y2=\"120\" stroke=\"#f2c46d\" stroke-width=\"6\"/><circle cx=\"240\" cy=\"62.0\" r=\"16.0\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"214.0\" y=\"84.0\" width=\"52.0\" height=\"70.0\" rx=\"18.0\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><path d=\"M70 236 l10 -10 M410 236 l-10 -10\" stroke=\"#9fc4cc\" stroke-opacity=\"0.5\"/><path d=\"M320 190 l40 0 M340 170 l20 0\" stroke=\"#f2c46d\" stroke-opacity=\"0.6\" stroke-width=\"2\"/><\/g><\/svg>", "tagline": "Traditional Game, Modern Collaboration", "konsep": "Mengadaptasi konsep Perlombaan Desa yang menggabungkan permainan tradisional untuk membangun kerja sama tim.", "durasi": "", "tujuan": "", "acts": ["Bakiak", "Egrang (bambu)", "Galasin", "Egrang batok kelapa", "Gobak sodor", "Panahan", "Ring tos"]}, {"name": "Fun Team Building", "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Tiga orang saling terhubung dengan tali dalam permainan tim\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M140 150 L240 96 L340 150 Z\" fill=\"none\" stroke=\"#3fd0e0\" stroke-width=\"2\" stroke-dasharray=\"3 6\"/><circle cx=\"140\" cy=\"121.2\" r=\"11.2\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"121.8\" y=\"136.6\" width=\"36.4\" height=\"49.0\" rx=\"12.6\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><circle cx=\"240\" cy=\"71.2\" r=\"11.2\" fill=\"#0b2a36\" stroke=\"#14a3b8\" stroke-width=\"2\"/><rect x=\"221.8\" y=\"86.6\" width=\"36.4\" height=\"49.0\" rx=\"12.6\" fill=\"#0b2a36\" stroke=\"#14a3b8\" stroke-width=\"2\"/><circle cx=\"340\" cy=\"121.2\" r=\"11.2\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"321.8\" y=\"136.6\" width=\"36.4\" height=\"49.0\" rx=\"12.6\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><circle cx=\"240\" cy=\"200\" r=\"16\" fill=\"none\" stroke=\"#f2c46d\" stroke-width=\"3\"/><circle cx=\"262\" cy=\"200\" r=\"16\" fill=\"none\" stroke=\"#f2c46d\" stroke-width=\"3\"/><\/g><\/svg>", "tagline": "Small Games. Big Impact.", "konsep": "", "durasi": "", "tujuan": "", "acts": ["Balloon Race", "Giant Volleyball", "Spider Web", "Water Transfer", "Human Knot", "Caterpillar Race", "Pipe Ball", "Synergy Bridge"]}, {"name": "Squid Game", "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Lampu lalu lintas merah dan hijau di atas lapangan permainan\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"190\" y=\"30\" width=\"100\" height=\"170\" rx=\"18\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><circle cx=\"240\" cy=\"70\" r=\"20\" fill=\"#e5695f\" stroke=\"none\"/><circle cx=\"240\" cy=\"115\" r=\"20\" fill=\"#f2c46d\" stroke=\"none\" fill-opacity=\"0.4\"/><circle cx=\"240\" cy=\"160\" r=\"20\" fill=\"#3fd0e0\" stroke=\"none\" fill-opacity=\"0.4\"/><line x1=\"40\" y1=\"236\" x2=\"440\" y2=\"236\" stroke=\"#9fc4cc\" stroke-opacity=\"0.35\" stroke-width=\"2\"/><path d=\"M70 236 l60 -22 M410 236 l-60 -22\" stroke=\"#9fc4cc\" stroke-opacity=\"0.4\" stroke-width=\"2\"/><circle cx=\"360\" cy=\"158.8\" r=\"8.8\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"345.7\" y=\"170.9\" width=\"28.6\" height=\"38.5\" rx=\"9.9\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><circle cx=\"110\" cy=\"168.8\" r=\"8.8\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"95.7\" y=\"180.9\" width=\"28.6\" height=\"38.5\" rx=\"9.9\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><\/g><\/svg>", "tagline": "Strategic Resilience • Risk Management • Coordination", "konsep": "Kompetisi individu diubah menjadi kompetisi berbasis tim. Estetika ikonik Squid Game dikemas profesional, aman, dan penuh keseruan.", "durasi": "", "tujuan": "", "acts": ["Red Light, Green Light", "Dalgona Candy Challenge", "Marble Battle", "Tug of War", "Squid Game Finale"]}, {"name": "Master Chef Challenge", "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Panci mengepul di atas kompor dengan piring dan sendok\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"40\" y1=\"236\" x2=\"440\" y2=\"236\" stroke=\"#9fc4cc\" stroke-opacity=\"0.35\" stroke-width=\"2\"/><path d=\"M150 150 h140 v60 a40 40 0 0 1 -40 40 h-60 a40 40 0 0 1 -40 -40 z\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><path d=\"M130 150 h180\" stroke=\"#3fd0e0\" stroke-width=\"3\"/><path d=\"M210 130 q-8 -12 0 -22 q8 -10 0 -22\" stroke=\"#9fc4cc\" stroke-opacity=\"0.6\" stroke-width=\"2\"/><path d=\"M240 130 q-8 -12 0 -22 q8 -10 0 -22\" stroke=\"#9fc4cc\" stroke-opacity=\"0.6\" stroke-width=\"2\"/><path d=\"M270 130 q-8 -12 0 -22 q8 -10 0 -22\" stroke=\"#9fc4cc\" stroke-opacity=\"0.6\" stroke-width=\"2\"/><ellipse cx=\"380\" cy=\"230\" rx=\"60\" ry=\"10\" fill=\"#0b2a36\" stroke=\"#14a3b8\" stroke-width=\"2\"/><path d=\"M330 230 q50 -40 100 0\" fill=\"none\" stroke=\"#14a3b8\" stroke-width=\"2\"/><line x1=\"70\" y1=\"120\" x2=\"110\" y2=\"220\" stroke=\"#f2c46d\" stroke-width=\"5\"/><ellipse cx=\"66\" cy=\"112\" rx=\"14\" ry=\"8\" fill=\"#f2c46d\" stroke=\"none\"/><\/g><\/svg>", "tagline": "Culinary Teamwork • Time Pressure • Creative Problem Solving", "konsep": "Kompetisi memasak individu diubah menjadi kompetisi berbasis tim di ruang terbuka. Estetika ikonik MasterChef dikemas profesional, aman, dan penuh keseruan.", "durasi": "", "tujuan": "", "acts": ["Mystery Box Challenge", "Relay Cooking Race", "Plating & Presentation Battle", "Blind Taste Test", "Chef's Table Judging Finale"]}, {"name": "Gala Dinner", "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Sorotan lampu ke panggung dengan dua gelas minum dan satu orang di tengah\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M240 20 L140 236 L340 236 Z\" fill=\"#f2c46d\" fill-opacity=\"0.12\" stroke=\"none\"/><line x1=\"240\" y1=\"20\" x2=\"240\" y2=\"40\" stroke=\"#f2c46d\" stroke-width=\"3\"/><line x1=\"40\" y1=\"236\" x2=\"440\" y2=\"236\" stroke=\"#9fc4cc\" stroke-opacity=\"0.35\" stroke-width=\"2\"/><path d=\"M180 236 q0 -40 20 -60 M300 236 q0 -40 -20 -60\" stroke=\"#9fc4cc\" stroke-opacity=\"0.2\" stroke-width=\"2\"/><path d=\"M150 170 l14 40 l-14 0 l14 0 M168 170 l-14 40\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><path d=\"M322 170 h28 l-6 36 h-16 z\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><line x1=\"336\" y1=\"206\" x2=\"336\" y2=\"236\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><path d=\"M200 220 h80\" stroke=\"#9fc4cc\" stroke-opacity=\"0.5\" stroke-width=\"2\"/><path d=\"M170 210 h10 v8 h-10 z M300 200 h8 v8 h-8 z\" fill=\"none\" stroke=\"none\"/><circle cx=\"240\" cy=\"119.6\" r=\"9.6\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"224.4\" y=\"132.8\" width=\"31.2\" height=\"42.0\" rx=\"10.8\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><\/g><\/svg>", "tagline": "Elegance • Immersive Experience • Celebration", "konsep": "Malam penghargaan formal diubah menjadi perayaan tematik dengan dekorasi eksklusif dan dress code tematik yang glamor, profesional, dan berkesan. Bertema kostum, indoor.", "durasi": "", "tujuan": "", "acts": ["Red Carpet Welcome & Photo Booth", "Best Costume Award", "Themed Dinner Course & Entertainment", "Interactive Live Performance", "Award Night Finale & Toast"]}];
-  var sigPanel = document.getElementById("sig-panel");
-  var sigTabs = document.querySelectorAll(".sig-tab");
-  function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
-  function renderSig(i){
-    var p = sigPrograms[i];
-    sigTabs.forEach(function(t, idx){ t.setAttribute("aria-selected", idx === i ? "true" : "false"); t.tabIndex = idx === i ? 0 : -1; });
-    sigPanel.setAttribute("aria-labelledby", "sig-t" + i);
-    var meta = (p.durasi || p.tujuan) ? '<div class="meta">' + (p.durasi ? '<p><strong>Durasi:</strong> '+esc(p.durasi)+'</p>' : '') + (p.tujuan ? '<p><strong>Tujuan:</strong> '+esc(p.tujuan)+'</p>' : '') + '</div>' : '';
-    sigPanel.innerHTML =
-      '<div class="fade"><div class="art-wrap">'+p.art+'</div></div>' +
-      '<div class="fade"><h3>'+esc(p.name)+'</h3><p class="tagline">'+esc(p.tagline)+'</p>' + (p.konsep ? '<p class="konsep">'+esc(p.konsep)+'</p>' : '') + meta +
-      '<h4>Contoh aktivitas</h4><ol>'+p.acts.map(function(a){return '<li>'+esc(a)+'</li>';}).join("")+'</ol></div>';
+
+  // 4. kartu yang bisa dibalik
+  function setFlip(card, on){
+    card.classList.toggle("is-flipped", on);
+    var front = card.querySelector(".front"), back = card.querySelector(".back");
+    if (on) { back.removeAttribute("inert"); front.setAttribute("inert", ""); } else { front.removeAttribute("inert"); back.setAttribute("inert", ""); }
+    card.querySelector(".front .flip-btn").setAttribute("aria-expanded", String(on));
   }
-  sigTabs.forEach(function(t){ t.addEventListener("click", function(){ renderSig(Number(t.dataset.sig)); }); });
-  arrowNav([].slice.call(sigTabs));
+  document.querySelectorAll(".flip").forEach(function(card){
+    card.addEventListener("click", function(e){
+      if (e.target.closest("a")) return;
+      var on = !card.classList.contains("is-flipped"); setFlip(card, on);
+      var btn = card.querySelector(on ? ".back .flip-btn" : ".front .flip-btn");
+      if (e.target.closest(".flip-btn")) setTimeout(function(){ btn.focus({ preventScroll: true }); }, 60);
+    });
+  });
+
+  // 3. kuis rancang gathering
+  (function(){
+    var PROGS = [{"name": "Amazing Race", "tagline": "Explore • Collaborate • Win Together", "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Peta dengan rute dan lima pos pemberhentian untuk perlombaan tim\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"60\" y=\"40\" width=\"360\" height=\"180\" rx=\"14\" fill=\"#0b2a36\" stroke=\"#14a3b8\" stroke-width=\"2\"/><path d=\"M90 190 C 150 90, 200 230, 250 150 S 360 70, 400 110\" stroke=\"#3fd0e0\" stroke-width=\"3\" stroke-dasharray=\"6 8\"/><circle cx=\"90\" cy=\"190\" r=\"13\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><text x=\"90\" y=\"194\" text-anchor=\"middle\" font-family=\"Plus Jakarta Sans, sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#3fd0e0\" stroke=\"none\">1<\/text><circle cx=\"180\" cy=\"120\" r=\"13\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><text x=\"180\" y=\"124\" text-anchor=\"middle\" font-family=\"Plus Jakarta Sans, sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#3fd0e0\" stroke=\"none\">2<\/text><circle cx=\"250\" cy=\"150\" r=\"13\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><text x=\"250\" y=\"154\" text-anchor=\"middle\" font-family=\"Plus Jakarta Sans, sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#3fd0e0\" stroke=\"none\">3<\/text><circle cx=\"330\" cy=\"92\" r=\"13\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><text x=\"330\" y=\"96\" text-anchor=\"middle\" font-family=\"Plus Jakarta Sans, sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#3fd0e0\" stroke=\"none\">4<\/text><circle cx=\"400\" cy=\"110\" r=\"13\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><text x=\"400\" y=\"114\" text-anchor=\"middle\" font-family=\"Plus Jakarta Sans, sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#3fd0e0\" stroke=\"none\">5<\/text><path d=\"M400 60 v-16 l14 5 -14 5\" stroke=\"#f2c46d\" stroke-width=\"2\" fill=\"#f2c46d\"/><\/g><\/svg>"}, {"name": "Treasure Hunt", "tagline": "The City Becomes Your Playground", "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Peta kota dengan jalur dan tanda X sebagai tujuan pencarian harta karun\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"60\" y=\"40\" width=\"360\" height=\"180\" rx=\"14\" fill=\"#0b2a36\" stroke=\"#14a3b8\" stroke-width=\"2\"/><line x1=\"120\" y1=\"40\" x2=\"120\" y2=\"220\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><line x1=\"180\" y1=\"40\" x2=\"180\" y2=\"220\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><line x1=\"240\" y1=\"40\" x2=\"240\" y2=\"220\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><line x1=\"300\" y1=\"40\" x2=\"300\" y2=\"220\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><line x1=\"360\" y1=\"40\" x2=\"360\" y2=\"220\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><line x1=\"60\" y1=\"80\" x2=\"420\" y2=\"80\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><line x1=\"60\" y1=\"120\" x2=\"420\" y2=\"120\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><line x1=\"60\" y1=\"160\" x2=\"420\" y2=\"160\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><line x1=\"60\" y1=\"200\" x2=\"420\" y2=\"200\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><path d=\"M110 200 C 150 150, 190 210, 240 150 S 330 100, 360 90\" stroke=\"#3fd0e0\" stroke-width=\"2.5\" stroke-dasharray=\"5 6\"/><path d=\"M352 84 l16 16 M368 84 l-16 16\" stroke=\"#f2c46d\" stroke-width=\"3\"/><path d=\"M250 70 c-10 0 -18 8 -18 18 c0 14 18 30 18 30 s18-16 18-30 c0-10-8-18-18-18z\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><circle cx=\"250\" cy=\"88\" r=\"5\" fill=\"#3fd0e0\" stroke=\"none\"/><\/g><\/svg>"}, {"name": "Traditional Games", "tagline": "Traditional Game, Modern Collaboration", "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Seseorang berjalan dengan egrang bambu dalam permainan tradisional\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"40\" y1=\"236\" x2=\"440\" y2=\"236\" stroke=\"#9fc4cc\" stroke-opacity=\"0.35\" stroke-width=\"2\"/><line x1=\"205\" y1=\"236\" x2=\"205\" y2=\"120\" stroke=\"#f2c46d\" stroke-width=\"6\"/><line x1=\"275\" y1=\"236\" x2=\"275\" y2=\"120\" stroke=\"#f2c46d\" stroke-width=\"6\"/><circle cx=\"240\" cy=\"62.0\" r=\"16.0\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"214.0\" y=\"84.0\" width=\"52.0\" height=\"70.0\" rx=\"18.0\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><path d=\"M70 236 l10 -10 M410 236 l-10 -10\" stroke=\"#9fc4cc\" stroke-opacity=\"0.5\"/><path d=\"M320 190 l40 0 M340 170 l20 0\" stroke=\"#f2c46d\" stroke-opacity=\"0.6\" stroke-width=\"2\"/><\/g><\/svg>"}, {"name": "Fun Team Building", "tagline": "Small Games. Big Impact.", "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Tiga orang saling terhubung dengan tali dalam permainan tim\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M140 150 L240 96 L340 150 Z\" fill=\"none\" stroke=\"#3fd0e0\" stroke-width=\"2\" stroke-dasharray=\"3 6\"/><circle cx=\"140\" cy=\"121.2\" r=\"11.2\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"121.8\" y=\"136.6\" width=\"36.4\" height=\"49.0\" rx=\"12.6\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><circle cx=\"240\" cy=\"71.2\" r=\"11.2\" fill=\"#0b2a36\" stroke=\"#14a3b8\" stroke-width=\"2\"/><rect x=\"221.8\" y=\"86.6\" width=\"36.4\" height=\"49.0\" rx=\"12.6\" fill=\"#0b2a36\" stroke=\"#14a3b8\" stroke-width=\"2\"/><circle cx=\"340\" cy=\"121.2\" r=\"11.2\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"321.8\" y=\"136.6\" width=\"36.4\" height=\"49.0\" rx=\"12.6\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><circle cx=\"240\" cy=\"200\" r=\"16\" fill=\"none\" stroke=\"#f2c46d\" stroke-width=\"3\"/><circle cx=\"262\" cy=\"200\" r=\"16\" fill=\"none\" stroke=\"#f2c46d\" stroke-width=\"3\"/><\/g><\/svg>"}, {"name": "Squid Game", "tagline": "Strategic Resilience • Risk Management • Coordination", "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Lampu lalu lintas merah dan hijau di atas lapangan permainan\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"190\" y=\"30\" width=\"100\" height=\"170\" rx=\"18\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><circle cx=\"240\" cy=\"70\" r=\"20\" fill=\"#e5695f\" stroke=\"none\"/><circle cx=\"240\" cy=\"115\" r=\"20\" fill=\"#f2c46d\" stroke=\"none\" fill-opacity=\"0.4\"/><circle cx=\"240\" cy=\"160\" r=\"20\" fill=\"#3fd0e0\" stroke=\"none\" fill-opacity=\"0.4\"/><line x1=\"40\" y1=\"236\" x2=\"440\" y2=\"236\" stroke=\"#9fc4cc\" stroke-opacity=\"0.35\" stroke-width=\"2\"/><path d=\"M70 236 l60 -22 M410 236 l-60 -22\" stroke=\"#9fc4cc\" stroke-opacity=\"0.4\" stroke-width=\"2\"/><circle cx=\"360\" cy=\"158.8\" r=\"8.8\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"345.7\" y=\"170.9\" width=\"28.6\" height=\"38.5\" rx=\"9.9\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><circle cx=\"110\" cy=\"168.8\" r=\"8.8\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"95.7\" y=\"180.9\" width=\"28.6\" height=\"38.5\" rx=\"9.9\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><\/g><\/svg>"}, {"name": "Master Chef Challenge", "tagline": "Culinary Teamwork • Time Pressure • Creative Problem Solving", "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Panci mengepul di atas kompor dengan piring dan sendok\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"40\" y1=\"236\" x2=\"440\" y2=\"236\" stroke=\"#9fc4cc\" stroke-opacity=\"0.35\" stroke-width=\"2\"/><path d=\"M150 150 h140 v60 a40 40 0 0 1 -40 40 h-60 a40 40 0 0 1 -40 -40 z\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><path d=\"M130 150 h180\" stroke=\"#3fd0e0\" stroke-width=\"3\"/><path d=\"M210 130 q-8 -12 0 -22 q8 -10 0 -22\" stroke=\"#9fc4cc\" stroke-opacity=\"0.6\" stroke-width=\"2\"/><path d=\"M240 130 q-8 -12 0 -22 q8 -10 0 -22\" stroke=\"#9fc4cc\" stroke-opacity=\"0.6\" stroke-width=\"2\"/><path d=\"M270 130 q-8 -12 0 -22 q8 -10 0 -22\" stroke=\"#9fc4cc\" stroke-opacity=\"0.6\" stroke-width=\"2\"/><ellipse cx=\"380\" cy=\"230\" rx=\"60\" ry=\"10\" fill=\"#0b2a36\" stroke=\"#14a3b8\" stroke-width=\"2\"/><path d=\"M330 230 q50 -40 100 0\" fill=\"none\" stroke=\"#14a3b8\" stroke-width=\"2\"/><line x1=\"70\" y1=\"120\" x2=\"110\" y2=\"220\" stroke=\"#f2c46d\" stroke-width=\"5\"/><ellipse cx=\"66\" cy=\"112\" rx=\"14\" ry=\"8\" fill=\"#f2c46d\" stroke=\"none\"/><\/g><\/svg>"}, {"name": "Gala Dinner", "tagline": "Elegance • Immersive Experience • Celebration", "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Sorotan lampu ke panggung dengan dua gelas minum dan satu orang di tengah\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M240 20 L140 236 L340 236 Z\" fill=\"#f2c46d\" fill-opacity=\"0.12\" stroke=\"none\"/><line x1=\"240\" y1=\"20\" x2=\"240\" y2=\"40\" stroke=\"#f2c46d\" stroke-width=\"3\"/><line x1=\"40\" y1=\"236\" x2=\"440\" y2=\"236\" stroke=\"#9fc4cc\" stroke-opacity=\"0.35\" stroke-width=\"2\"/><path d=\"M180 236 q0 -40 20 -60 M300 236 q0 -40 -20 -60\" stroke=\"#9fc4cc\" stroke-opacity=\"0.2\" stroke-width=\"2\"/><path d=\"M150 170 l14 40 l-14 0 l14 0 M168 170 l-14 40\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><path d=\"M322 170 h28 l-6 36 h-16 z\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><line x1=\"336\" y1=\"206\" x2=\"336\" y2=\"236\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><path d=\"M200 220 h80\" stroke=\"#9fc4cc\" stroke-opacity=\"0.5\" stroke-width=\"2\"/><path d=\"M170 210 h10 v8 h-10 z M300 200 h8 v8 h-8 z\" fill=\"none\" stroke=\"none\"/><circle cx=\"240\" cy=\"119.6\" r=\"9.6\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"224.4\" y=\"132.8\" width=\"31.2\" height=\"42.0\" rx=\"10.8\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><\/g><\/svg>"}, {"name": "Paint Ball, Offroad, Rafting & VW Tour", "tagline": "Strategic Resilience • Risk Management • Coordination", "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Mobil VW klasik melintasi jalan berbukit dengan percikan cat dan perahu karet\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M40 150 L120 80 L170 120 L240 60 L330 140 L400 95 L440 130\" stroke=\"#9fc4cc\" stroke-opacity=\"0.45\" stroke-width=\"2\"/><path d=\"M40 236 H440\" stroke=\"#9fc4cc\" stroke-opacity=\"0.35\" stroke-width=\"2\"/><path d=\"M40 214 q30 -10 60 0 t60 0 t60 0\" stroke=\"#14a3b8\" stroke-width=\"3\"/><path d=\"M58 206 h70 l-8 14 h-54 z\" fill=\"#f2c46d\" stroke=\"none\"/><path d=\"M80 200 v-14 M104 200 v-14\" stroke=\"#f2c46d\" stroke-width=\"3\"/><path d=\"M230 222 v-40 a14 14 0 0 1 14 -14 h86 a26 26 0 0 1 26 26 v28 z\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2.5\"/><path d=\"M250 168 l18 -30 h52 l22 30\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2.5\"/><path d=\"M262 166 l12 -22 h18 v22 z M300 166 v-22 h16 l14 22 z\" fill=\"#3fd0e0\" fill-opacity=\"0.18\" stroke=\"#3fd0e0\" stroke-width=\"1.5\"/><circle cx=\"262\" cy=\"224\" r=\"15\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"3\"/><circle cx=\"262\" cy=\"224\" r=\"5\" fill=\"#3fd0e0\" stroke=\"none\"/><circle cx=\"334\" cy=\"224\" r=\"15\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"3\"/><circle cx=\"334\" cy=\"224\" r=\"5\" fill=\"#3fd0e0\" stroke=\"none\"/><circle cx=\"352\" cy=\"190\" r=\"4\" fill=\"#f2c46d\" stroke=\"none\"/><circle cx=\"398\" cy=\"58\" r=\"13\" fill=\"#e5695f\" stroke=\"none\"/><circle cx=\"416\" cy=\"74\" r=\"6\" fill=\"#e5695f\" stroke=\"none\"/><circle cx=\"382\" cy=\"76\" r=\"4\" fill=\"#e5695f\" stroke=\"none\"/><circle cx=\"150\" cy=\"58\" r=\"10\" fill=\"#3fd0e0\" stroke=\"none\"/><circle cx=\"166\" cy=\"48\" r=\"4\" fill=\"#3fd0e0\" stroke=\"none\"/><circle cx=\"138\" cy=\"44\" r=\"3\" fill=\"#3fd0e0\" stroke=\"none\"/><circle cx=\"420\" cy=\"180\" r=\"8\" fill=\"#f2c46d\" stroke=\"none\"/><circle cx=\"432\" cy=\"168\" r=\"3\" fill=\"#f2c46d\" stroke=\"none\"/><\/g><\/svg>"}];
+    var REASON = [
+      "Melatih komunikasi, problem solving, teamwork, dan leadership dalam 4 sampai 6 jam. Khusus outdoor.",
+      "Tim menjelajah kota sambil menyelesaikan misi lewat aplikasi maupun petunjuk lokasi.",
+      "Mengadaptasi konsep Perlombaan Desa: permainan tradisional yang membangun kerja sama tim.",
+      "Rangkaian permainan singkat seperti Human Knot dan Spider Web. Small games, big impact.",
+      "Kompetisi berbasis tim yang melatih ketahanan strategi, manajemen risiko, dan koordinasi.",
+      "Kompetisi memasak berbasis tim di ruang terbuka, melatih kerja sama di bawah tekanan waktu.",
+      "Malam penghargaan yang dikemas menjadi perayaan tematik dengan dress code kostum.",
+      "Paint ball, offroad, rafting, dan VW tour yang melatih strategi, komunikasi, dan pengambilan keputusan."
+    ];
+    var Q = [
+      { key: "tujuan", q: "Apa tujuan utama gathering ini?", opts: [
+        ["kompak", "users", "Kekompakan dan kerja sama tim", "Mempererat sinergi antar tim dan divisi"],
+        ["pimpin", "compass", "Komunikasi, strategi, dan kepemimpinan", "Belajar lewat tantangan bersama"],
+        ["rayakan", "star", "Perayaan dan apresiasi", "Merayakan pencapaian dan karyawan"],
+        ["seru", "gamepad", "Pengalaman seru yang beda", "Yang akan terus dibicarakan tim"] ] },
+      { key: "lokasi", q: "Di mana kegiatannya ingin diadakan?", opts: [
+        ["outdoor", "sun", "Outdoor", "Alam terbuka, lapangan, atau kota"],
+        ["indoor", "building", "Indoor", "Hotel, aula, atau ballroom"],
+        ["bebas", "sliders", "Belum tahu", "Terbuka untuk saran dari NLO"] ] },
+      { key: "peserta", q: "Berapa perkiraan jumlah pesertanya?", opts: [
+        ["kecil", "users", "Kurang dari 50 orang", ""],
+        ["sedang", "users", "50 sampai 150 orang", ""],
+        ["besar", "users", "Lebih dari 150 orang", ""] ] },
+      { key: "belajar", q: "Perlu sesi pembelajaran di dalamnya?", opts: [
+        ["ya", "bulb", "Ya, sertakan seminar dan debrief", "Agar hasilnya terukur dan bisa dilaporkan"],
+        ["tidak", "smile", "Cukup keseruannya dulu", "Fokus pada pengalaman bersama"] ] }
+    ];
+    // indeks program: 0 Amazing Race, 1 Treasure Hunt, 2 Traditional Games, 3 Fun Team Building,
+    // 4 Squid Game, 5 Master Chef, 6 Gala Dinner, 7 Paint Ball/Offroad/Rafting/VW Tour
+    var MAP = {
+      kompak:  { outdoor: [2, 3], indoor: [3, 4], bebas: [3, 2] },
+      pimpin:  { outdoor: [0, 7], indoor: [4, 3], bebas: [0, 4] },
+      rayakan: { outdoor: [5, 6], indoor: [6, 4], bebas: [6, 5] },
+      seru:    { outdoor: [7, 1], indoor: [4, 3], bebas: [1, 4] }
+    };
+    var body = document.getElementById("quiz-body"), count = document.getElementById("quiz-count");
+    var bars = [].slice.call(document.querySelectorAll(".quiz-steps span"));
+    var ans = {}, step = 0;
+    function el(tag, cls, text){ var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+    function icon(name){ var s = document.createElementNS("http://www.w3.org/2000/svg", "svg"); s.setAttribute("class", "ic"); s.setAttribute("aria-hidden", "true"); var u = document.createElementNS("http://www.w3.org/2000/svg", "use"); u.setAttribute("href", "#i-" + name); s.appendChild(u); return s; }
+    function label(qi, val){ var o = Q[qi].opts.filter(function(x){ return x[0] === val; })[0]; return o ? o[2] : ""; }
+    function render(focus){
+      bars.forEach(function(b, i){ b.classList.toggle("on", i < Math.min(step + 1, 4)); });
+      body.textContent = "";
+      var wrap = el("div", "fade-in");
+      if (step < Q.length) {
+        var q = Q[step];
+        count.textContent = "Pertanyaan " + (step + 1) + " dari " + Q.length;
+        var h = el("p", "quiz-q", q.q); h.id = "quiz-q"; wrap.appendChild(h);
+        var grid = el("div", "quiz-opts"); grid.setAttribute("role", "group"); grid.setAttribute("aria-labelledby", "quiz-q");
+        q.opts.forEach(function(o){
+          var b = el("button", "quiz-opt"); b.type = "button"; b.setAttribute("aria-pressed", String(ans[q.key] === o[0]));
+          var chip = el("span", "icon-chip"); chip.appendChild(icon(o[1])); b.appendChild(chip);
+          var t = el("span", null, o[2]); if (o[3]) t.appendChild(el("small", null, o[3])); b.appendChild(t);
+          b.addEventListener("click", function(){ ans[q.key] = o[0]; step++; render(true); });
+          grid.appendChild(b);
+        });
+        wrap.appendChild(grid);
+        var nav = el("div", "quiz-nav");
+        if (step > 0) { var back = el("button", "quiz-back"); back.type = "button"; back.appendChild(icon("arrow-left")); back.appendChild(document.createTextNode("Kembali")); back.addEventListener("click", function(){ step--; render(true); }); nav.appendChild(back); }
+        wrap.appendChild(nav);
+      } else {
+        count.textContent = "Rekomendasi untuk tim Anda";
+        var pick = MAP[ans.tujuan][ans.lokasi], main = pick[0], alt = pick[1];
+        var res = el("div", "quiz-result");
+        var art = el("div", "art-wrap"); art.innerHTML = PROGS[main].art; res.appendChild(art);
+        var txt = el("div");
+        txt.appendChild(el("p", "kicker", "Signature program yang cocok"));
+        txt.appendChild(el("h3", null, PROGS[main].name));
+        txt.appendChild(el("p", "tagline", PROGS[main].tagline));
+        var w = el("p", "why-text", REASON[main]); w.style.marginTop = "10px"; txt.appendChild(w);
+        var ex = el("ul", "quiz-extra");
+        function add(strong, rest){ var li = el("li"); li.appendChild(el("strong", null, strong)); li.appendChild(document.createTextNode(rest)); ex.appendChild(li); }
+        add("Alternatif: ", PROGS[alt].name + ".");
+        if (ans.belajar === "ya") add("Seminar dan debrief: ", "1 sesi seminar khusus bersama fasilitator, ditambah game master debrief di lapangan.");
+        if (ans.peserta !== "kecil" || ans.tujuan === "kompak") add("Final project: ", "misalnya Bridge of Synergy atau Giant Puzzle, untuk menyatukan seluruh tim di akhir acara.");
+        txt.appendChild(ex);
+        var sum = el("div", "quiz-summary");
+        Q.forEach(function(q, i){ sum.appendChild(el("span", null, label(i, ans[q.key]))); });
+        txt.appendChild(sum);
+        txt.appendChild(el("p", "quiz-note", "Ini rekomendasi awal berdasarkan katalog NLO. Tim kami akan menyesuaikan program dengan kebutuhan Anda."));
+        var acts = el("div", "actions");
+        var wa = el("a", "btn btn-solid"); wa.target = "_blank"; wa.rel = "noopener";
+        var msg = "Halo NLO, saya ingin merancang employee gathering.\n\nTujuan: " + label(0, ans.tujuan) + "\nLokasi: " + label(1, ans.lokasi) + "\nPeserta: " + label(2, ans.peserta) + "\nPembelajaran: " + label(3, ans.belajar) + "\n\nRekomendasi dari situs: " + PROGS[main].name + " (alternatif: " + PROGS[alt].name + ").";
+        wa.href = "https://wa.me/" + ((window.NLO && window.NLO.wa) || "6287781018187") + "?text=" + encodeURIComponent(msg);
+        wa.appendChild(icon("chat")); wa.appendChild(document.createTextNode("Kirim ke WhatsApp NLO"));
+        var see = el("a", "btn btn-ghost", "Lihat detail program"); see.href = "#prog-" + main;
+        see.addEventListener("click", function(e){
+          e.preventDefault(); var card = document.getElementById("prog-" + main);
+          card.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "center" });
+          setTimeout(function(){ setFlip(card, true); card.classList.remove("pulse"); void card.offsetWidth; card.classList.add("pulse"); card.querySelector(".back .flip-btn").focus({ preventScroll: true }); }, 500);
+        });
+        var again = el("button", "quiz-back"); again.type = "button"; again.appendChild(icon("refresh")); again.appendChild(document.createTextNode("Ulangi"));
+        again.addEventListener("click", function(){ ans = {}; step = 0; render(true); });
+        acts.appendChild(wa); acts.appendChild(see); acts.appendChild(again);
+        txt.appendChild(acts);
+        res.appendChild(txt); wrap.appendChild(res);
+      }
+      body.appendChild(wrap);
+      if (focus) { var f = body.querySelector(".quiz-opt, .quiz-result h3"); if (f) { if (f.tagName === "H3") f.tabIndex = -1; f.focus({ preventScroll: true }); } }
+    }
+    render(false);
+  })();
 
   var menuBtn = document.querySelector(".menu-btn"), menu = document.getElementById("menu");
   menuBtn.addEventListener("click", function(){ var o = menu.classList.toggle("open"); menuBtn.setAttribute("aria-expanded", String(o)); });
