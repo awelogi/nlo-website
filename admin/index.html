@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Admin | Need Learning Organizer</title>
+<link rel="icon" type="image/png" href="../img/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400..800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #06141c; --ink2: #081c26; --deep: #0b2a36; --deep2: #103a4a;
+  --line: rgba(159,196,204,.16); --line2: rgba(159,196,204,.3);
+  --teal: #14a3b8; --glow: #3fd0e0; --mist: #9fc4cc; --text: #d9e8ec;
+  --ok: #6fe0a8; --warn: #f2c46d; --bad: #ff8f7d;
+  --sans: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { background: var(--ink); }
+body { margin: 0; font-family: var(--sans); font-size: 16px; line-height: 1.6; color: var(--text); background: var(--ink); -webkit-font-smoothing: antialiased; min-height: 100vh; }
+h1, h2, h3 { color: #fff; margin: 0; letter-spacing: -0.01em; }
+p { margin: 0; }
+a { color: var(--glow); }
+button, input, textarea, select { font: inherit; }
+:focus-visible { outline: 2px solid var(--glow); outline-offset: 2px; }
+[hidden] { display: none !important; }
+.wrap { width: min(1100px, 100% - 32px); margin-inline: auto; }
+
+.top { position: sticky; top: 0; z-index: 20; background: rgba(6,20,28,.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; color: #fff; font-weight: 800; text-decoration: none; }
+.brand img { height: 30px; width: auto; }
+.brand span small { display: block; font-size: .7rem; color: var(--mist); font-weight: 600; }
+.top-actions { display: flex; gap: 8px; align-items: center; }
+.who { color: var(--mist); font-size: .85rem; max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 18px; border-radius: 999px; font-weight: 700; font-size: .92rem; border: 1px solid transparent; cursor: pointer; text-decoration: none; line-height: 1.2; }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.btn-solid { background: var(--glow); color: var(--ink); }
+.btn-solid:hover:not(:disabled) { background: #7fe3ee; }
+.btn-ghost { background: transparent; border-color: var(--line2); color: #fff; }
+.btn-ghost:hover:not(:disabled) { border-color: var(--glow); }
+.btn-danger { background: transparent; border-color: rgba(255,143,125,.45); color: var(--bad); }
+.btn-danger:hover:not(:disabled) { background: rgba(255,143,125,.1); }
+.btn-sm { padding: 7px 13px; font-size: .84rem; }
+
+.card { background: var(--deep); border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
+.center { min-height: calc(100vh - 64px); display: grid; place-items: center; padding: 32px 0; }
+.auth { width: min(420px, 100%); }
+.auth h1 { font-size: 1.5rem; margin-bottom: 6px; }
+.auth .hint { color: var(--mist); font-size: .94rem; margin-bottom: 22px; }
+.field { margin-bottom: 14px; }
+.field label { display: block; font-size: .84rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
+.field input, .field textarea, .field select, .input { width: 100%; padding: 11px 13px; border-radius: 10px; border: 1px solid var(--line2); background: var(--ink); color: #fff; font-size: .98rem; }
+.field textarea { min-height: 96px; resize: vertical; line-height: 1.5; }
+.field input:focus, .field textarea:focus, .field select:focus, .input:focus { outline: 2px solid var(--glow); outline-offset: 0; border-color: transparent; }
+.msg { margin: 0 0 14px; padding: 10px 14px; border-radius: 10px; font-size: .9rem; font-weight: 600; }
+.msg.err { background: rgba(255,143,125,.12); color: #ffc2b8; border: 1px solid rgba(255,143,125,.3); }
+.msg.ok { background: rgba(111,224,168,.1); color: var(--ok); border: 1px solid rgba(111,224,168,.3); }
+.link-btn { background: none; border: 0; color: var(--glow); cursor: pointer; padding: 0; font-weight: 600; font-size: .9rem; }
+.setup ol { padding-left: 20px; color: var(--mist); }
+.setup li { margin-bottom: 8px; }
+.setup code { background: var(--ink); padding: 2px 6px; border-radius: 6px; color: #fff; font-size: .88em; }
+
+.tabs { display: flex; gap: 6px; padding: 20px 0 0; overflow-x: auto; }
+.tab { flex-shrink: 0; padding: 10px 18px; border-radius: 999px; border: 1px solid var(--line2); background: transparent; color: var(--mist); font-weight: 700; cursor: pointer; }
+.tab[aria-selected="true"] { background: var(--glow); border-color: var(--glow); color: var(--ink); }
+.panel { padding: 24px 0 120px; }
+.panel-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 12px; margin-bottom: 20px; }
+.panel-head h2 { font-size: 1.5rem; }
+.panel-head p { color: var(--mist); font-size: .94rem; margin-top: 4px; max-width: 60ch; }
+.seg { display: inline-flex; border: 1px solid var(--line2); border-radius: 999px; padding: 3px; gap: 2px; }
+.seg button { border: 0; background: transparent; color: var(--mist); padding: 7px 14px; border-radius: 999px; font-weight: 700; font-size: .86rem; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--deep2); color: #fff; }
+
+.group { margin-bottom: 28px; }
+.group h3 { font-size: 1rem; color: var(--glow); margin-bottom: 10px; }
+.slot { padding: 16px 18px; margin-bottom: 10px; }
+.slot-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 8px; }
+.slot-head label { font-weight: 700; color: #fff; font-size: .9rem; }
+.badge { font-size: .74rem; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: rgba(63,208,224,.12); color: var(--glow); }
+.badge.dirty { background: rgba(242,196,109,.14); color: var(--warn); }
+.slot .def { margin-top: 6px; font-size: .8rem; color: var(--mist); }
+
+.savebar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; background: rgba(11,42,54,.97); border-top: 1px solid var(--line2); padding: 12px 0 calc(12px + env(safe-area-inset-bottom, 0px)); }
+.savebar .wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.savebar span { font-weight: 700; color: #fff; }
+
+.img-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; }
+.img-card { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+.img-card .thumb { aspect-ratio: 4 / 3; background: var(--ink); position: relative; }
+.img-card .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.img-card .thumb .badge { position: absolute; top: 10px; left: 10px; background: rgba(6,20,28,.85); }
+.img-card .body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.img-card .body p { font-size: .86rem; color: var(--mist); }
+.img-card .row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto; }
+.file-btn { position: relative; overflow: hidden; }
+.file-btn input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+
+.drop { display: block; cursor: pointer; border: 2px dashed var(--line2); border-radius: 16px; padding: 28px; text-align: center; color: var(--mist); margin-bottom: 20px; transition: border-color .2s, background .2s; }
+.drop.over { border-color: var(--glow); background: rgba(63,208,224,.06); }
+.drop strong { color: #fff; }
+.gal-list { display: grid; gap: 10px; }
+.gal-row { display: grid; grid-template-columns: 96px 1fr auto; gap: 14px; align-items: center; padding: 12px; }
+.gal-row img { width: 96px; height: 72px; object-fit: cover; border-radius: 10px; display: block; }
+.gal-row .ctrl { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+.empty { padding: 32px; text-align: center; color: var(--mist); }
+.progress { height: 6px; background: var(--ink); border-radius: 999px; overflow: hidden; margin-top: 12px; }
+.progress div { height: 100%; width: 0; background: var(--glow); transition: width .2s; }
+
+.toast { position: fixed; left: 50%; bottom: 84px; transform: translateX(-50%) translateY(20px); z-index: 50; background: #fff; color: var(--ink); font-weight: 700; padding: 12px 20px; border-radius: 999px; box-shadow: 0 12px 30px rgba(0,0,0,.4); opacity: 0; transition: opacity .25s, transform .25s; pointer-events: none; max-width: calc(100vw - 32px); }
+.toast.on { opacity: 1; transform: translateX(-50%); }
+.toast.bad { background: var(--bad); }
+
+@media (max-width: 640px) {
+  .who { display: none; }
+  .top .btn-ghost.hide-sm { display: none; }
+  .gal-row { grid-template-columns: 72px 1fr; }
+  .gal-row img { width: 72px; height: 56px; }
+  .gal-row .ctrl { grid-column: 1 / -1; justify-content: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../img/logo-mark.png" alt="" width="51" height="30"><span>Admin NLO<small>Pengaturan situs</small></span></a>
+    <div class="top-actions">
+      <span class="who" id="who"></span>
+      <a class="btn btn-ghost btn-sm hide-sm" href="../" target="_blank" rel="noopener">Lihat situs</a>
+      <button class="btn btn-ghost btn-sm" id="logout" hidden>Keluar</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Belum dikonfigurasi -->
+  <section class="center" id="v-setup" hidden>
+    <div class="card auth setup">
+      <h1>Supabase belum diatur</h1>
+      <p class="hint">Halaman admin butuh koneksi ke proyek Supabase.</p>
+      <ol>
+        <li>Buka file <code>assets/config.js</code>.</li>
+        <li>Isi <code>supabaseUrl</code> dan <code>supabaseAnonKey</code> dari Supabase, menu Project Settings &gt; API.</li>
+        <li>Unggah ulang file itu, lalu muat ulang halaman ini.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Login -->
+  <section class="center" id="v-login" hidden>
+    <form class="card auth" id="f-login" novalidate>
+      <h1>Masuk sebagai admin</h1>
+      <p class="hint">Gunakan email dan kata sandi akun admin NLO.</p>
+      <p class="msg err" id="login-msg" hidden></p>
+      <div class="field"><label for="l-email">Email</label><input id="l-email" type="email" autocomplete="username" required></div>
+      <div class="field"><label for="l-pass">Kata sandi</label><input id="l-pass" type="password" autocomplete="current-password" required></div>
+      <button class="btn btn-solid" type="submit" style="width:100%;margin-top:6px;">Masuk</button>
+      <p style="margin-top:16px;text-align:center;"><button class="link-btn" type="button" id="forgot">Lupa kata sandi?</button></p>
+    </form>
+  </section>
+
+  <!-- Atur kata sandi baru (dari tautan email) -->
+  <section class="center" id="v-recover" hidden>
+    <form class="card auth" id="f-recover" novalidate>
+      <h1>Buat kata sandi baru</h1>
+      <p class="hint">Minimal 8 karakter.</p>
+      <p class="msg err" id="recover-msg" hidden></p>
+      <div class="field"><label for="r-pass">Kata sandi baru</label><input id="r-pass" type="password" autocomplete="new-password" minlength="8" required></div>
+      <button class="btn btn-solid" type="submit" style="width:100%;">Simpan kata sandi</button>
+    </form>
+  </section>
+
+  <!-- Bukan admin -->
+  <section class="center" id="v-denied" hidden>
+    <div class="card auth">
+      <h1>Akun ini belum menjadi admin</h1>
+      <p class="hint" style="margin-bottom:0;">Anda sudah masuk, tetapi email ini belum terdaftar di tabel admin. Minta pemilik proyek Supabase menambahkannya, lalu muat ulang halaman.</p>
+    </div>
+  </section>
+
+  <!-- Dasbor -->
+  <section id="v-app" hidden>
+    <div class="wrap">
+      <div class="tabs" role="tablist" aria-label="Menu admin">
+        <button class="tab" role="tab" aria-selected="true" data-tab="teks">Teks</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="foto">Foto halaman</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="galeri">Galeri</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="akun">Akun</button>
+      </div>
+
+      <div class="panel" id="p-teks">
+        <div class="panel-head">
+          <div><h2>Teks halaman</h2><p>Ubah judul, paragraf, dan kontak. Kosongkan kolom atau tekan Kembalikan untuk memakai teks bawaan.</p></div>
+          <div class="seg" id="text-filter">
+            <button aria-pressed="true" data-f="home">Beranda</button>
+            <button aria-pressed="false" data-f="gathering">Gathering</button>
+            <button aria-pressed="false" data-f="kontak">Kontak</button>
+          </div>
+        </div>
+        <div id="text-list"></div>
+      </div>
+
+      <div class="panel" id="p-foto" hidden>
+        <div class="panel-head">
+          <div><h2>Foto halaman</h2><p>Ganti foto yang tampil di halaman Gathering. Foto otomatis diperkecil dan dikompres sebelum diunggah.</p></div>
+        </div>
+        <div class="img-grid" id="img-list"></div>
+      </div>
+
+      <div class="panel" id="p-galeri" hidden>
+        <div class="panel-head">
+          <div><h2>Galeri kegiatan</h2><p>Foto di sini tampil di bagian Galeri. Bagian itu otomatis muncul begitu ada minimal satu foto.</p></div>
+          <div class="seg" id="gal-filter">
+            <button aria-pressed="true" data-f="gathering">Halaman Gathering</button>
+            <button aria-pressed="false" data-f="home">Beranda</button>
+          </div>
+        </div>
+        <label class="drop" id="drop">
+          <strong>Tarik foto ke sini</strong> atau klik untuk memilih. Bisa beberapa sekaligus (JPG, PNG, WebP).
+          <input type="file" id="gal-input" accept="image/jpeg,image/png,image/webp" multiple hidden>
+          <div class="progress" id="gal-progress" hidden><div></div></div>
+        </label>
+        <div class="gal-list" id="gal-list"></div>
+      </div>
+
+      <div class="panel" id="p-akun" hidden>
+        <div class="panel-head"><div><h2>Akun</h2><p>Ganti kata sandi akun admin yang sedang dipakai.</p></div></div>
+        <form class="card" id="f-pass" style="max-width:440px;" novalidate>
+          <p class="msg" id="pass-msg" hidden></p>
+          <div class="field"><label for="n-pass">Kata sandi baru</label><input id="n-pass" type="password" autocomplete="new-password" minlength="8"></div>
+          <div class="field"><label for="n-pass2">Ulangi kata sandi baru</label><input id="n-pass2" type="password" autocomplete="new-password" minlength="8"></div>
+          <button class="btn btn-solid" type="submit">Ganti kata sandi</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="savebar" id="savebar" hidden>
+      <div class="wrap">
+        <span id="dirty-count"></span>
+        <div style="display:flex;gap:8px;">
+          <button class="btn btn-ghost btn-sm" id="discard">Batalkan</button>
+          <button class="btn btn-solid btn-sm" id="save">Simpan perubahan</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="../assets/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Art of Gathering | Need Learning Organizer (NLO)</title>
+<meta name="description" content="Employee gathering modern dari Need Learning Organizer: seminar, debrief, signature program, dan pengalaman yang bisa disesuaikan dengan kebutuhan perusahaan.">
+<meta property="og:title" content="The Art of Gathering | NLO">
+<meta property="og:description" content="Beyond Gathering, Creating Meaningful Experiences.">
+<meta name="theme-color" content="#06141c">
+<link rel="icon" type="image/png" href="../img/logo-mark.png">
+<meta property="og:image" content="../img/logo-mark.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Need Learning Organizer (NLO)", "description": "Employee gathering modern dari Need Learning Organizer: The Art of Gathering, dengan seminar, debrief, dan signature program.", "telephone": "+62-877-8101-8187", "email": "needlearningorganizer@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Bandung", "addressRegion": "Jawa Barat", "addressCountry": "ID"}}</script>
+
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400..800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #06141c; --ink2: #081c26; --deep: #0b2a36; --deep2: #103a4a;
+  --line: rgba(159,196,204,.16); --line2: rgba(159,196,204,.3);
+  --teal: #14a3b8; --glow: #3fd0e0; --mist: #9fc4cc; --text: #d9e8ec;
+  --paper: #f3eee2; --paper-ink: #0b2a36; --yellow: #f2c46d;
+  --sans: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --r: 16px;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 132px; background: var(--ink); -webkit-text-size-adjust: 100%; }
+body { margin: 0; font-family: var(--sans); font-size: 17px; line-height: 1.75; color: var(--text); background: var(--ink); -webkit-font-smoothing: antialiased; }
+img, svg { max-width: 100%; display: block; }
+a { color: var(--glow); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 4px; }
+:focus-visible { outline: 2px solid var(--glow); outline-offset: 3px; border-radius: 6px; }
+.wrap { width: min(1180px, 100% - 48px); margin-inline: auto; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+h1, h2, h3, h4 { font-family: var(--sans); color: #fff; margin: 0; letter-spacing: -0.015em; }
+h1 { font-size: clamp(2.4rem, 5.4vw, 4.4rem); line-height: 1.08; font-weight: 800; letter-spacing: -0.025em; }
+h2 { font-size: clamp(1.85rem, 3.4vw, 2.8rem); line-height: 1.16; font-weight: 800; }
+h3 { font-size: 1.22rem; line-height: 1.3; font-weight: 700; }
+p { margin: 0; }
+.lead { font-size: clamp(1.04rem, 1.4vw, 1.18rem); color: var(--mist); max-width: 60ch; }
+.measure { max-width: 66ch; }
+.muted { color: var(--mist); }
+.accent { color: var(--glow); }
+
+/* Header */
+.site { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 60; background: rgba(6,20,28,.86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 20px; position: relative; }
+.brand { display: flex; align-items: center; gap: 12px; color: #fff; font-weight: 800; font-size: .98rem; line-height: 1.15; }
+.brand:hover { text-decoration: none; }
+.logo-mark { height: 38px; width: auto; flex-shrink: 0; }
+.brand small { display: block; font-weight: 500; color: var(--mist); font-size: .66rem; letter-spacing: .34em; }
+.nav ul { display: flex; align-items: center; gap: 4px; list-style: none; margin: 0; padding: 0; }
+.nav ul a { display: block; padding: 9px 14px; border-radius: 999px; color: var(--mist); font-size: .94rem; font-weight: 500; transition: color .2s, background .2s; }
+.nav ul a:hover { color: #fff; background: rgba(255,255,255,.06); text-decoration: none; }
+.nav ul a[aria-current] { color: #fff; background: rgba(63,208,224,.13); }
+.nav ul a.nav-cta { background: var(--glow); color: var(--ink); font-weight: 700; margin-left: 8px; }
+.nav ul a.nav-cta:hover { background: #7fe3ee; }
+.menu-btn { display: none; background: none; border: 1px solid var(--line2); color: #fff; padding: 9px 16px; border-radius: 999px; font: inherit; font-weight: 600; font-size: .92rem; cursor: pointer; }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 26px; border-radius: 999px; font-weight: 700; font-size: .98rem; border: 1px solid transparent; transition: background .2s, border-color .2s, transform .2s; cursor: pointer; font-family: inherit; line-height: 1.2; }
+.btn:hover { text-decoration: none; transform: translateY(-2px); }
+.btn-solid { background: var(--glow); color: var(--ink); }
+.btn-solid:hover { background: #7fe3ee; }
+.btn-ghost { border-color: var(--line2); color: #fff; background: transparent; }
+.btn-ghost:hover { border-color: var(--glow); background: rgba(63,208,224,.08); }
+.btn-dark { background: var(--paper-ink); color: #fff; }
+.btn-dark:hover { background: #14465a; }
+.actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
+
+/* Sections */
+.section { padding: clamp(72px, 9vw, 118px) 0; position: relative; }
+.bg-deep { background: var(--deep); }
+.bg-ink2 { background: var(--ink2); }
+.section-head { max-width: 760px; margin-bottom: 48px; }
+.section-head .lead { margin-top: 18px; }
+.paper { background: var(--paper); color: var(--paper-ink); }
+.paper h2, .paper h3 { color: var(--paper-ink); }
+.paper .lead, .paper .muted { color: #3e5d67; }
+hr.sep { border: 0; border-top: 1px solid var(--line); margin: 0; }
+
+/* Grid helpers */
+.grid { display: grid; gap: 20px; }
+.g2 { grid-template-columns: repeat(2, 1fr); }
+.g3 { grid-template-columns: repeat(3, 1fr); }
+.g4 { grid-template-columns: repeat(4, 1fr); }
+.g5 { grid-template-columns: repeat(5, 1fr); }
+.split { display: grid; gap: 64px; grid-template-columns: 1fr 1fr; align-items: center; }
+.split.top { align-items: start; }
+.split > *, .grid > * { min-width: 0; }
+.contact-list span, .foot-grid a { overflow-wrap: anywhere; }
+
+/* Cards, icons, art */
+.card { background: linear-gradient(180deg, rgba(16,58,74,.55), rgba(11,42,54,.55)); border: 1px solid var(--line); border-radius: var(--r); padding: 28px; transition: transform .25s, border-color .25s, background .25s; }
+.card:hover { transform: translateY(-4px); border-color: var(--line2); }
+.card p { color: var(--mist); font-size: .98rem; margin-top: 10px; }
+.card h3 + p { margin-top: 10px; }
+.ic { width: 28px; height: 28px; stroke: var(--glow); fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; display: block; flex-shrink: 0; }
+.icon-chip { width: 54px; height: 54px; border-radius: 14px; background: rgba(63,208,224,.1); border: 1px solid rgba(63,208,224,.22); display: grid; place-items: center; margin-bottom: 20px; }
+.icon-chip .ic { width: 26px; height: 26px; }
+.art-wrap { background: radial-gradient(circle at 25% 15%, rgba(63,208,224,.16), transparent 60%), var(--ink); border: 1px solid var(--line); border-radius: var(--r); padding: 20px; }
+.art { width: 100%; height: auto; max-height: 280px; display: block; margin: 0 auto; }
+.tag { display: inline-block; font-size: .8rem; font-weight: 700; color: var(--glow); background: rgba(63,208,224,.1); padding: 5px 12px; border-radius: 999px; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.chips span { padding: 9px 16px; border: 1px solid var(--line2); border-radius: 999px; font-size: .92rem; color: #fff; font-weight: 600; background: rgba(255,255,255,.02); }
+.chips.on span { border-color: var(--glow); }
+.link-arrow { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; font-weight: 700; font-size: .95rem; }
+.link-arrow::after { content: "\2192"; transition: transform .2s; }
+.link-arrow:hover { text-decoration: none; }
+.link-arrow:hover::after { transform: translateX(4px); }
+
+/* Reveal on scroll */
+.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+.js .d1 { transition-delay: .08s; } .js .d2 { transition-delay: .16s; } .js .d3 { transition-delay: .24s; } .js .d4 { transition-delay: .32s; }
+
+/* Floating WhatsApp */
+.wa-float { position: fixed; right: 18px; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); z-index: 70; display: inline-flex; align-items: center; gap: 10px; padding: 14px 20px; border-radius: 999px; background: var(--glow); color: var(--ink); font-weight: 800; font-size: .92rem; box-shadow: 0 10px 30px rgba(0,0,0,.4); transition: transform .2s, background .2s; }
+.wa-float:hover { text-decoration: none; transform: translateY(-3px); background: #7fe3ee; }
+.wa-float .ic { stroke: var(--ink); width: 22px; height: 22px; }
+
+/* Footer */
+footer.site-foot { border-top: 1px solid var(--line); padding: 64px 0 calc(36px + env(safe-area-inset-bottom, 0px)); background: var(--ink2); }
+.foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 48px; }
+.foot-grid h4 { font-size: .9rem; color: #fff; margin-bottom: 14px; font-weight: 700; }
+.foot-grid ul { list-style: none; margin: 0; padding: 0; }
+.foot-grid li { padding: 5px 0; font-size: .95rem; }
+.foot-grid a { color: var(--mist); }
+.foot-grid a:hover { color: #fff; }
+.foot-grid a.brand { color: #fff; }
+.foot-desc { color: var(--mist); font-size: .95rem; margin-top: 16px; max-width: 38ch; }
+.foot-bottom { margin-top: 44px; padding-top: 24px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; color: var(--mist); font-size: .88rem; }
+
+/* Responsive */
+@media (max-width: 1080px) {
+  .menu-btn { display: inline-block; }
+  .nav ul { display: none; position: absolute; left: 0; right: 0; top: 76px; flex-direction: column; align-items: stretch; gap: 0; background: var(--deep); border: 1px solid var(--line); border-radius: 16px; padding: 10px; box-shadow: 0 20px 50px rgba(0,0,0,.5); }
+  .nav ul.open { display: flex; }
+  .nav ul a { padding: 14px 16px; border-radius: 10px; color: #fff; }
+  .nav ul a.nav-cta { margin: 6px 0 0; text-align: center; }
+}
+@media (max-width: 960px) {
+  .split { grid-template-columns: 1fr; gap: 40px; }
+  .g3, .g4 { grid-template-columns: repeat(2, 1fr); }
+  .g5 { grid-template-columns: repeat(2, 1fr); }
+  .foot-grid { grid-template-columns: 1fr 1fr; }
+  .foot-grid > div:first-child { grid-column: 1 / -1; }
+}
+@media (max-width: 720px) {
+  body { font-size: 16.5px; }
+  .wrap { width: min(100% - 36px, 1180px); }
+  .g2, .g3, .g4, .g5 { grid-template-columns: 1fr; }
+  .card { padding: 24px; }
+  .wa-float { padding: 14px; }
+  .wa-float span { display: none; }
+  .foot-grid { grid-template-columns: 1fr; gap: 32px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+
+/* Gathering */
+.hero { position: relative; padding: clamp(48px, 7vw, 92px) 0 clamp(56px, 7vw, 96px); overflow: hidden; }
+.hero::before { content: ""; position: absolute; right: -10%; top: -35%; width: min(900px, 80vw); aspect-ratio: 1; background: radial-gradient(closest-side, rgba(20,163,184,.26), transparent 70%); pointer-events: none; }
+.hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.back { display: inline-flex; margin-bottom: 28px; font-weight: 600; font-size: .94rem; }
+.hero .sub { margin-top: 18px; font-size: clamp(1.1rem, 1.8vw, 1.35rem); font-weight: 700; color: var(--glow); }
+.hero blockquote { margin: 26px 0 0; color: var(--mist); max-width: 46ch; font-size: 1.05rem; padding-left: 18px; border-left: 3px solid var(--glow); }
+.collage { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.collage img { width: 100%; object-fit: cover; border-radius: 16px; display: block; border: 1px solid var(--line2); }
+.collage img:first-child { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+.collage img:not(:first-child) { aspect-ratio: 1 / 1; }
+
+.subnav { position: sticky; top: calc(72px + env(safe-area-inset-top, 0px)); z-index: 50; background: rgba(8,28,38,.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.subnav .wrap { display: flex; gap: 6px; overflow-x: auto; padding: 10px 0; scrollbar-width: none; }
+.subnav .wrap::-webkit-scrollbar { display: none; }
+.subnav a { flex-shrink: 0; padding: 8px 16px; border-radius: 999px; color: var(--mist); font-size: .9rem; font-weight: 600; border: 1px solid transparent; }
+.subnav a:hover { color: #fff; text-decoration: none; background: rgba(255,255,255,.05); }
+.subnav a[aria-current] { color: var(--ink); background: var(--glow); }
+
+.why .card { text-align: left; }
+.why .card h3 { font-size: 1.05rem; line-height: 1.45; }
+.why .n { display: block; margin-bottom: 8px; font-weight: 800; color: var(--glow); font-size: .85rem; }
+
+.stairs { display: flex; align-items: flex-end; gap: 12px; height: 340px; margin-top: 8px; }
+.step { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 12px; padding: 20px 12px; border-radius: 14px 14px 0 0; background: rgba(16,58,74,.6); border: 1px solid var(--line); border-bottom: 0; color: #fff; font-weight: 700; text-align: center; font-size: .98rem; line-height: 1.3; transition: transform .25s; }
+.step:hover { transform: translateY(-4px); }
+.step:nth-child(1) { height: 42%; } .step:nth-child(2) { height: 55%; } .step:nth-child(3) { height: 68%; }
+.step:nth-child(4) { height: 80%; } .step:nth-child(5) { height: 92%; } .step:nth-child(6) { height: 100%; }
+.step.hl { background: var(--glow); color: var(--ink); border-color: var(--glow); }
+.step.hl .ic { stroke: var(--ink); }
+.stairs-base { height: 4px; background: linear-gradient(90deg, var(--teal), var(--glow)); border-radius: 2px; }
+.note { margin-top: 24px; color: var(--mist); max-width: 70ch; }
+
+.vcard { padding: 36px; }
+.vcard h3 { font-size: 1.4rem; }
+.vcard .tag { margin-top: 20px; }
+.callout { margin-top: 20px; padding: 24px 28px; border-left: 4px solid var(--glow); background: rgba(6,20,28,.5); border-radius: 0 var(--r) var(--r) 0; color: var(--text); max-width: none; }
+.callout strong { color: #fff; }
+.pick .card { display: flex; align-items: center; gap: 16px; padding: 20px 22px; }
+.pick .icon-chip { margin: 0; flex-shrink: 0; }
+.pick h3 { font-size: 1.02rem; }
+
+.sol .card h3 { font-size: 1.3rem; }
+.sol ul { list-style: none; margin: 18px 0 0; padding: 0; }
+.sol li { padding: 11px 0; border-bottom: 1px solid var(--line); color: var(--text); font-size: .98rem; }
+.sol li small { display: block; color: var(--mist); font-size: .85rem; }
+.format-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 32px; }
+.format-row .lbl { color: var(--mist); font-weight: 600; margin-right: 6px; }
+
+.timeline { list-style: none; margin: 0; padding: 0; position: relative; }
+.timeline::before { content: ""; position: absolute; left: 19px; top: 16px; bottom: 16px; width: 2px; background: linear-gradient(var(--glow), var(--line)); }
+.timeline li { position: relative; padding: 8px 0 22px 64px; min-height: 62px; display: block; font-weight: 700; color: #fff; font-size: 1.04rem; line-height: 1.4; }
+.timeline li:last-child { padding-bottom: 0; min-height: 40px; }
+.timeline .num { position: absolute; left: 0; top: 0; width: 40px; height: 40px; border-radius: 50%; background: var(--ink); border: 2px solid var(--glow); display: grid; place-items: center; color: var(--glow); font-weight: 800; font-size: .85rem; }
+.timeline li.hl .num { background: var(--glow); color: var(--ink); }
+.photo { margin: 0; }
+.photo img { width: 100%; object-fit: cover; border-radius: 16px; border: 1px solid var(--line2); display: block; }
+.photo figcaption { margin-top: 10px; font-size: .9rem; color: var(--mist); font-weight: 600; }
+.hl-card { margin-top: 20px; padding: 26px 28px; border-radius: var(--r); background: rgba(63,208,224,.08); border: 1px solid rgba(63,208,224,.3); }
+.hl-card h3 { font-size: 1.15rem; }
+.hl-card p { margin-top: 8px; color: var(--mist); font-size: .98rem; }
+
+.sig-tabs { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 6px; scrollbar-width: thin; }
+.sig-tab { flex-shrink: 0; cursor: pointer; padding: 12px 20px; border-radius: 999px; border: 1px solid var(--line2); background: transparent; color: var(--mist); font: inherit; font-weight: 700; font-size: .95rem; transition: all .2s; }
+.sig-tab:hover { color: #fff; border-color: var(--glow); }
+.sig-tab[aria-selected="true"] { background: var(--glow); color: var(--ink); border-color: var(--glow); }
+.sig-panel { margin-top: 24px; display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; padding: 40px; background: var(--deep); border: 1px solid var(--line); border-radius: 20px; align-items: start; }
+.sig-panel h3 { font-size: clamp(1.7rem, 3vw, 2.3rem); font-weight: 800; }
+.sig-panel .tagline { margin-top: 8px; color: var(--glow); font-weight: 700; font-size: 1rem; }
+.sig-panel .konsep { margin-top: 18px; color: var(--mist); }
+.sig-panel .meta { margin-top: 18px; display: grid; gap: 6px; font-size: .98rem; }
+.sig-panel .meta strong { color: #fff; }
+.sig-panel h4 { font-size: .85rem; color: var(--glow); font-weight: 700; margin: 26px 0 6px; }
+.sig-panel ol { margin: 0; padding: 0; list-style: none; counter-reset: act; }
+.sig-panel li { counter-increment: act; padding: 12px 0 12px 46px; position: relative; border-bottom: 1px solid var(--line); color: #fff; font-weight: 600; font-size: .98rem; }
+.sig-panel li::before { content: counter(act, decimal-leading-zero); position: absolute; left: 0; top: 13px; color: var(--glow); font-size: .85rem; font-weight: 800; }
+.fade { animation: fadeIn .45s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+.strip img { aspect-ratio: 4 / 3; }
+
+.ent-card { padding: 0; overflow: hidden; }
+.ent-card img { width: 100%; height: 230px; object-fit: cover; display: block; }
+.ent-card .body { padding: 22px 24px 26px; }
+.ent-card h3 { font-size: 1.2rem; }
+.sub-h { margin: 40px 0 16px; font-size: 1.15rem; }
+
+.cta { padding: clamp(28px, 5vw, 60px); border: 1px solid var(--line2); border-radius: 24px; background: radial-gradient(circle at 85% 10%, rgba(63,208,224,.18), transparent 55%), linear-gradient(160deg, var(--deep2), var(--ink)); display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: center; }
+.cta h2 { font-size: clamp(1.7rem, 3.2vw, 2.5rem); }
+.cta .pic-card { padding: 28px; border-radius: 18px; background: rgba(6,20,28,.6); border: 1px solid var(--line); }
+.cta .pic-card small { color: var(--mist); font-size: .85rem; font-weight: 600; }
+.cta .pic-name { margin-top: 4px; font-size: 1.3rem; font-weight: 800; color: #fff; }
+.cta .pic-tel { display: block; margin-top: 4px; color: var(--glow); font-weight: 700; font-size: 1.05rem; }
+.cta .btn { width: 100%; margin-top: 20px; }
+
+@media (max-width: 960px) {
+  .hero-grid, .sig-panel, .cta { grid-template-columns: 1fr; }
+  .sig-panel { padding: 28px; gap: 32px; }
+}
+@media (max-width: 720px) {
+  .stairs { flex-direction: column; height: auto; align-items: stretch; gap: 8px; }
+  .step, .step:nth-child(n) { height: auto; flex-direction: row; justify-content: flex-start; gap: 14px; border-radius: 12px; border-bottom: 1px solid var(--line); padding: 16px 18px; text-align: left; }
+  .step.hl { border-bottom-color: var(--glow); }
+  .stairs-base { display: none; }
+  .strip { grid-template-columns: 1fr; }
+  .ent-card img { height: 200px; }
+}
+
+/* ---- upgrade: shared ---- */
+.wa-float { opacity: 0; transform: translateY(16px); pointer-events: none; transition: opacity .3s, transform .3s, background .2s; }
+.wa-float.show { opacity: 1; transform: none; pointer-events: auto; }
+.skip { position: absolute; left: 12px; top: -60px; z-index: 100; background: var(--glow); color: var(--ink); padding: 10px 16px; border-radius: 10px; font-weight: 700; }
+.skip:focus { top: 12px; text-decoration: none; }
+img[loading="lazy"] { background: var(--deep); }
+.collage img, .photo img { height: auto; }
+.faq { max-width: 860px; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq details:first-child { border-top: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px 0; color: #fff; font-weight: 700; font-size: 1.08rem; line-height: 1.4; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: ""; flex-shrink: 0; width: 12px; height: 12px; border-right: 2px solid var(--glow); border-bottom: 2px solid var(--glow); transform: rotate(45deg) translate(-3px, -3px); transition: transform .25s; }
+.faq details[open] summary::after { transform: rotate(-135deg) translate(-3px, -3px); }
+.faq details p { padding: 0 0 22px; color: var(--mist); max-width: 64ch; }
+.faq details p strong { color: #fff; }
+.form-err { display: none; margin: -6px 0 14px; color: #ffb4a8; font-size: .9rem; font-weight: 600; }
+.form-err.on { display: block; }
+.field input[aria-invalid="true"] { border-color: #ff8f7d; }
+
+@media (max-width: 720px) {
+  .why .card { display: grid; grid-template-columns: 46px 1fr; column-gap: 14px; align-items: center; padding: 18px 20px; }
+  .why .card .icon-chip { margin: 0; width: 46px; height: 46px; grid-row: span 2; }
+  .why .n { margin-bottom: 2px; }
+  .collage img:not(:first-child) { aspect-ratio: 4 / 3; }
+}
+
+/* ---- galeri ---- */
+.gal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+.gal-item { margin: 0; cursor: zoom-in; border-radius: 16px; overflow: hidden; border: 1px solid var(--line2); background: var(--deep); }
+.gal-item img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; transition: transform .4s; }
+.gal-item:hover img { transform: scale(1.03); }
+.gal-item figcaption { padding: 12px 16px; font-size: .92rem; color: var(--text); font-weight: 600; }
+.gal-item figcaption:empty { display: none; }
+dialog.lightbox { border: 0; padding: 0; background: transparent; max-width: min(1100px, 94vw); }
+dialog.lightbox::backdrop { background: rgba(3,10,14,.88); }
+dialog.lightbox img { max-height: 82vh; width: auto; max-width: 100%; border-radius: 12px; margin: 0 auto; }
+dialog.lightbox p { color: #fff; text-align: center; margin-top: 12px; font-weight: 600; }
+dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: rgba(6,20,28,.8); color: #fff; border: 1px solid var(--line2); border-radius: 999px; padding: 8px 14px; font: inherit; font-weight: 700; cursor: pointer; }
+</style>
+</head>
+<body data-page="gathering">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.4 3.2-5.5 6.5-5.5s5.9 2.1 6.5 5.5"/><circle cx="17" cy="9" r="2.8"/><path d="M16 14.6c2.6.2 4.6 2.2 5 5"/></symbol><symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol><symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0V4z"/><path d="M8 6H4a3 3 0 0 0 3 4M16 6h4a3 3 0 0 1-3 4"/><path d="M12 13v4M8 21h8M9 17h6"/></symbol><symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></symbol><symbol id="i-sunset" viewBox="0 0 24 24"><path d="M3 17h18"/><path d="M7 17a5 5 0 0 1 10 0"/><path d="M12 5v3M5.6 9.6l2 2M18.4 9.6l-2 2"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></symbol><symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5c1 1.2 2.2 1.8 3.5 1.8s2.5-.6 3.5-1.8"/><path d="M9 9.5h.01M15 9.5h.01"/></symbol><symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol><symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-4 7 4v13"/><path d="M9 21v-6h6v6"/></symbol><symbol id="i-bars" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol><symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z"/><path d="M20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z"/></symbol><symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></symbol><symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></symbol><symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></symbol><symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol><symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></symbol><symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></symbol><symbol id="i-gamepad" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="9" rx="4"/><path d="M8 11v3M6.5 12.5h3M15 12h.01M17 13.5h.01"/></symbol><symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol></defs></svg>
+
+<a class="skip" href="#konten">Lewati ke konten</a>
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../" aria-label="Need Learning Organizer, ke beranda">
+      <img class="logo-mark" src="../img/logo-mark.png" width="64" height="38" alt="">
+      <span>Need Learning<small>ORGANIZER</small></span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav aria-label="Utama">
+      <ul id="menu">
+        <li><a href="../#tentang">Tentang</a></li>
+        <li><a href="../#alur">Alur karier</a></li>
+        <li><a href="../#riset">Riset</a></li>
+        <li><a href="#top" aria-current="page">Employee Gathering</a></li>
+        <li><a href="../#pendekatan">Pendekatan</a></li>
+        <li><a class="nav-cta" href="#hubungi">Hubungi kami</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <a class="back" href="../">&larr; Kembali ke beranda</a>
+        <h1 data-cms="gathering.hero.judul">The Art of Gathering</h1>
+        <p class="sub" data-cms="gathering.hero.sub">Beyond Gathering, Creating Meaningful Experiences</p>
+        <blockquote data-cms="gathering.hero.kutipan">Karena tim hebat tidak hanya dibangun di ruang meeting, tetapi melalui pengalaman yang mereka jalani bersama.</blockquote>
+        <div class="actions">
+          <a class="btn btn-solid" href="#hubungi">Rancang gathering Anda</a>
+          <a class="btn btn-ghost" href="#signature">Lihat signature program</a>
+        </div>
+      </div>
+      <div class="collage">
+        <img data-cms-img="gathering.foto.hero-team-building" src="../img/hero-team-building.webp" width="710" height="473" decoding="async" fetchpriority="high" alt="Peserta bermain permainan tim di dalam ruangan, dengan panggung bertuliskan Team Building">
+        <img data-cms-img="gathering.foto.hero-bola-besar" src="../img/hero-bola-besar.webp" width="539" height="539" decoding="async" loading="lazy" alt="Peserta bermain bola besar di lapangan outdoor">
+        <img data-cms-img="gathering.foto.hero-human-knot" src="../img/hero-human-knot.webp" width="588" height="589" decoding="async" loading="lazy" alt="Tim membentuk human knot dengan saling menggenggam tangan">
+      </div>
+    </div>
+  </section>
+
+  <span id="konten"></span>
+  <nav class="subnav" aria-label="Bagian halaman">
+    <div class="wrap">
+      <a href="#mengapa">Mengapa penting</a>
+      <a href="#pengalaman">Pengalaman</a>
+      <a href="#nilai">Nilai tambah</a>
+      <a href="#solusi">Solusi</a>
+      <a href="#alur">Alur program</a>
+      <a href="#signature">Signature program</a>
+      <a href="#hiburan">Hiburan &amp; dokumentasi</a>
+      <a href="#galeri" hidden>Galeri</a>
+      <a href="#faq">Tanya jawab</a>
+    </div>
+  </nav>
+
+  <!-- Mengapa penting -->
+  <section class="section why" id="mengapa">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 data-cms="gathering.mengapa.judul">Mengapa employee gathering penting?</h2>
+        <p class="lead" data-cms="gathering.mengapa.lead">Program ini menjadi media strategis untuk lima hal berikut.</p>
+      </div>
+      <div class="grid g5">
+        <div class="card reveal"><div class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></div><span class="n">01</span><h3>Membangun engagement karyawan yang lebih kuat</h3></div>
+        <div class="card reveal d1"><div class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg></div><span class="n">02</span><h3>Mempererat sinergi antar tim dan divisi</h3></div>
+        <div class="card reveal d2"><div class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></div><span class="n">03</span><h3>Memperkuat budaya kerja yang positif</h3></div>
+        <div class="card reveal d3"><div class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-mic"/></svg></div><span class="n">04</span><h3>Menciptakan komunikasi yang lebih terbuka dan efektif</h3></div>
+        <div class="card reveal d4"><div class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg></div><span class="n">05</span><h3>Meningkatkan rasa percaya dan kebersamaan</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pengalaman -->
+  <section class="section bg-ink2" id="pengalaman">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 data-cms="gathering.pengalaman.judul">Dari fun ke experience.</h2>
+        <p class="lead" data-cms="gathering.pengalaman.lead">Employee gathering modern ala NLO dibangun dari enam lapisan pengalaman.</p>
+      </div>
+      <div class="reveal">
+        <div class="stairs">
+          <div class="step"><svg class="ic" aria-hidden="true"><use href="#i-smile"/></svg>Fun</div>
+          <div class="step"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg>Team Building</div>
+          <div class="step"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg>Collaboration</div>
+          <div class="step"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg>Celebration</div>
+          <div class="step hl"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg>Experiential Learning</div>
+          <div class="step"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg>Company Culture</div>
+        </div>
+        <div class="stairs-base"></div>
+      </div>
+      <p class="note reveal">Lapisan Experiential Learning adalah yang kami perdalam lewat seminar dan debrief, dijelaskan di bagian berikut.</p>
+    </div>
+  </section>
+
+  <!-- Nilai tambah -->
+  <section class="section bg-deep" id="nilai">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 data-cms="gathering.nilai.judul">Nilai tambah NLO: seminar dan debrief bermakna.</h2>
+        <p class="lead" data-cms="gathering.nilai.lead">Dari fun menuju impact. Keseruan adalah pintu masuk, dan setiap program dapat dilengkapi seminar serta debrief yang menghubungkan permainan dengan tujuan bisnis tim Anda.</p>
+      </div>
+      <div class="grid g2">
+        <div class="card vcard reveal" style="background:var(--ink);">
+          <div class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-mic"/></svg></div>
+          <h3>Sesi seminar khusus</h3>
+          <p>Satu sesi seminar terpisah bersama fasilitator atau trainer, di dalam rangkaian gathering. Topiknya spesifik, misalnya komunikasi, kolaborasi, atau kepemimpinan, dan dikaitkan langsung dengan pengalaman hari itu.</p>
+          <span class="tag">1 sesi</span>
+        </div>
+        <div class="card vcard reveal d1" style="background:var(--ink);">
+          <div class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg></div>
+          <h3>Game master debrief</h3>
+          <p>Dibawakan langsung di lapangan setelah aktivitas selesai. Momentum dan emosi permainan ditangkap, lalu ditarik menjadi insight kerja tim secara reflektif.</p>
+          <span class="tag">Di lapangan</span>
+        </div>
+      </div>
+      <p class="callout reveal"><strong>Kenapa penting:</strong> hasil gathering menjadi lebih terukur dan mudah dilaporkan ke manajemen, retensi pembelajaran lebih tinggi, dan nilai yang didapat tidak berhenti di hiburan.</p>
+
+      <h3 class="sub-h reveal" style="margin-top:72px;font-size:1.6rem;">Mengapa memilih Need Learning Organizer?</h3>
+      <p class="lead reveal" style="margin-bottom:28px;">Bukan hanya membuat keseruan. Kami merancang pengalaman yang terus dibicarakan bahkan setelah acara selesai.</p>
+      <div class="grid g3 pick">
+        <div class="card reveal"><span class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-sliders"/></svg></span><h3>Customize program</h3></div>
+        <div class="card reveal d1"><span class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg></span><h3>Learning experience</h3></div>
+        <div class="card reveal d2"><span class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-gamepad"/></svg></span><h3>Creative games</h3></div>
+        <div class="card reveal"><span class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg></span><h3>Safety first</h3></div>
+        <div class="card reveal d1"><span class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-mic"/></svg></span><h3>Professional facilitator</h3></div>
+        <div class="card reveal d2"><span class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-camera"/></svg></span><h3>Multimedia documentation</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solusi -->
+  <section class="section sol" id="solusi">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 data-cms="gathering.solusi.judul">Solusi gathering untuk perusahaan Anda.</h2>
+        <p class="lead" data-cms="gathering.solusi.lead">Konsep program yang dapat disesuaikan dengan kebutuhan perusahaan Anda.</p>
+      </div>
+      <div class="grid g3">
+        <div class="card reveal">
+          <div class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-building"/></svg></div>
+          <h3>Corporate gathering</h3>
+          <ul>
+            <li>Customized experience<small>Fleksibel: tema, lokasi, durasi, dan tujuan tim</small></li>
+            <li>Domestik dan international city tour</li>
+            <li>Company outing</li>
+            <li>Annual gathering</li>
+            <li>Employee appreciation</li>
+            <li>Family gathering</li>
+            <li>Gala dinner</li>
+          </ul>
+        </div>
+        <div class="card reveal d1">
+          <div class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-target"/></svg></div>
+          <h3>Team development and engagement</h3>
+          <ul>
+            <li>Team building</li>
+            <li>Amazing race<small>Khusus outdoor</small></li>
+            <li>Master chef challenge</li>
+            <li>Treasure hunt</li>
+            <li>Business simulation</li>
+            <li>Escape challenge</li>
+            <li>Team olympics</li>
+            <li>Fun games</li>
+            <li>Traditional games</li>
+          </ul>
+        </div>
+        <div class="card reveal d2">
+          <div class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></div>
+          <h3>CSR experience</h3>
+          <ul>
+            <li>Charity challenge</li>
+          </ul>
+        </div>
+      </div>
+      <div class="format-row reveal">
+        <span class="lbl">Tersedia dalam format:</span>
+        <div class="chips on"><span>Indoor</span><span>Outdoor</span><span>Virtual</span><span>Hybrid</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alur program -->
+  <section class="section bg-ink2" id="alur">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 data-cms="gathering.alur.judul">Alur program.</h2>
+        <p class="lead" data-cms="gathering.alur.lead">Sembilan tahap dalam satu rangkaian gathering, dari kedatangan sampai penutupan.</p>
+      </div>
+      <div class="split top">
+        <ol class="timeline reveal">
+          <li><span class="num">01</span>Arrival</li>
+          <li><span class="num">02</span>Ice breaking</li>
+          <li><span class="num">03</span>Main activities</li>
+          <li><span class="num">04</span>Team challenge</li>
+          <li><span class="num">05</span>Lunch</li>
+          <li><span class="num">06</span>Entertainment</li>
+          <li class="hl"><span class="num">07</span>Reflection and debrief, seminar</li>
+          <li><span class="num">08</span>Awarding</li>
+          <li><span class="num">09</span>Closing</li>
+        </ol>
+        <div class="reveal d1">
+          <figure class="photo"><img data-cms-img="gathering.foto.alur-lomba" src="../img/alur-lomba.webp" width="720" height="405" decoding="async" loading="lazy" alt="Peserta berseru gembira saat berlomba dalam permainan tim di area terbuka" style="aspect-ratio:16/10;"></figure>
+          <div class="hl-card">
+            <h3>Reflection and debrief, seminar</h3>
+            <p>Tahap ketujuh adalah tempat lapisan Experiential Learning diperdalam lewat seminar dan debrief.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signature program -->
+  <section class="section" id="signature">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 data-cms="gathering.signature.judul">Signature program.</h2>
+        <p class="lead" data-cms="gathering.signature.lead">Pilih salah satu konsep untuk melihat konsep dan contoh aktivitasnya.</p>
+      </div>
+      <div class="sig-tabs reveal" role="tablist" aria-label="Signature program">
+        <button class="sig-tab" role="tab" id="sig-t0" aria-controls="sig-panel" aria-selected="true" tabindex="0" data-sig="0">Amazing Race</button>
+        <button class="sig-tab" role="tab" id="sig-t1" aria-controls="sig-panel" aria-selected="false" tabindex="-1" data-sig="1">Treasure Hunt</button>
+        <button class="sig-tab" role="tab" id="sig-t2" aria-controls="sig-panel" aria-selected="false" tabindex="-1" data-sig="2">Traditional Games</button>
+        <button class="sig-tab" role="tab" id="sig-t3" aria-controls="sig-panel" aria-selected="false" tabindex="-1" data-sig="3">Fun Team Building</button>
+        <button class="sig-tab" role="tab" id="sig-t4" aria-controls="sig-panel" aria-selected="false" tabindex="-1" data-sig="4">Squid Game</button>
+        <button class="sig-tab" role="tab" id="sig-t5" aria-controls="sig-panel" aria-selected="false" tabindex="-1" data-sig="5">Master Chef Challenge</button>
+        <button class="sig-tab" role="tab" id="sig-t6" aria-controls="sig-panel" aria-selected="false" tabindex="-1" data-sig="6">Gala Dinner</button>
+      </div>
+      <div class="sig-panel reveal" id="sig-panel" role="tabpanel" aria-labelledby="sig-t0" tabindex="0"><div class="fade"><div class="art-wrap"><svg class="art" viewBox="0 0 480 260" role="img" aria-label="Peta dengan rute dan lima pos pemberhentian untuk perlombaan tim" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="60" y="40" width="360" height="180" rx="14" fill="#0b2a36" stroke="#14a3b8" stroke-width="2"/><path d="M90 190 C 150 90, 200 230, 250 150 S 360 70, 400 110" stroke="#3fd0e0" stroke-width="3" stroke-dasharray="6 8"/><circle cx="90" cy="190" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="90" y="194" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">1</text><circle cx="180" cy="120" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="180" y="124" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">2</text><circle cx="250" cy="150" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="250" y="154" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">3</text><circle cx="330" cy="92" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="330" y="96" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">4</text><circle cx="400" cy="110" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="400" y="114" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">5</text><path d="M400 60 v-16 l14 5 -14 5" stroke="#f2c46d" stroke-width="2" fill="#f2c46d"/></g></svg></div></div><div class="fade"><h3>Amazing Race</h3><p class="tagline">Explore • Collaborate • Win Together</p><div class="meta"><p><strong>Durasi:</strong> 4–6 jam</p><p><strong>Tujuan:</strong> komunikasi, problem solving, teamwork, leadership</p></div><h4>Contoh aktivitas</h4><ol><li>QR Challenge</li><li>Puzzle Mission</li><li>Photo Challenge</li><li>Blind Navigation</li><li>Local Culture Challenge</li></ol></div></div>
+      <div class="strip reveal">
+        <figure class="photo"><img data-cms-img="gathering.foto.sig-spider-web" src="../img/sig-spider-web.webp" width="661" height="497" decoding="async" loading="lazy" alt="Peserta melewati jaring laba-laba dengan bantuan tim"><figcaption>Spider Web</figcaption></figure>
+        <figure class="photo"><img data-cms-img="gathering.foto.sig-pipe-ball" src="../img/sig-pipe-ball.webp" width="534" height="534" decoding="async" loading="lazy" alt="Peserta memegang batang warna-warni dalam permainan kerja sama"><figcaption>Pipe Ball</figcaption></figure>
+        <figure class="photo"><img data-cms-img="gathering.foto.sig-caterpillar" src="../img/sig-caterpillar.webp" width="533" height="531" decoding="async" loading="lazy" alt="Peserta duduk di atas wahana caterpillar race"><figcaption>Caterpillar Race</figcaption></figure>
+      </div>
+
+      <div class="split" style="margin-top:96px;">
+        <div class="reveal">
+          <h2 style="font-size:clamp(1.7rem,3vw,2.4rem);">Final project</h2>
+          <p class="lead" style="margin-top:16px;color:#fff;font-weight:600;">Karena kemenangan sejati bukan milik satu tim, tetapi seluruh organisasi.</p>
+          <div class="chips" style="margin-top:28px;"><span>Bridge of Synergy</span><span>Giant Puzzle</span><span>Canvas Collaboration</span><span>Human Mosaic</span><span>Candle Guard</span><span>Company Logo Challenge</span></div>
+        </div>
+        <div class="art-wrap reveal d1"><svg class="art" viewBox="0 0 480 260" role="img" aria-label="Potongan puzzle raksasa yang disatukan bersama-sama, satu potongan bergerak ke tempatnya" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="40" y1="236" x2="440" y2="236" stroke="#9fc4cc" stroke-opacity="0.35" stroke-width="2"/><rect x="150" y="52" width="86" height="86" rx="10" fill="#0b2a36" stroke="#14a3b8" stroke-width="2"/><circle cx="193" cy="52" r="9" fill="#0b2a36" stroke="#14a3b8" stroke-width="2"/><circle cx="150" cy="95" r="9" fill="#0b2a36" stroke="#14a3b8" stroke-width="2"/><rect x="236" y="52" width="86" height="86" rx="10" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><circle cx="279" cy="52" r="9" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><circle cx="236" cy="95" r="9" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><rect x="150" y="138" width="86" height="86" rx="10" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><circle cx="193" cy="138" r="9" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><circle cx="150" cy="181" r="9" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><rect x="236" y="138" width="86" height="86" rx="10" fill="none" stroke="#9fc4cc" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="5 6"/><rect x="274" y="132" width="86" height="86" rx="10" fill="#0b2a36" stroke="#f2c46d" stroke-width="2"/><circle cx="317" cy="132" r="9" fill="#0b2a36" stroke="#f2c46d" stroke-width="2"/><circle cx="274" cy="175" r="9" fill="#0b2a36" stroke="#f2c46d" stroke-width="2"/><path d="M380 120 L346 156" stroke="#f2c46d" stroke-width="2" stroke-dasharray="3 6"/><line x1="86" y1="236" x2="86" y2="150" stroke="#3fd0e0" stroke-width="3"/><path d="M86 150 L124 162 L86 174 Z" fill="#3fd0e0" stroke="none"/></g></svg></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hiburan dan dokumentasi -->
+  <section class="section bg-deep" id="hiburan">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 data-cms="gathering.hiburan.judul">Entertainment dan dokumentasi.</h2>
+        <p class="lead" data-cms="gathering.hiburan.lead">Pilihan tambahan untuk menghidupkan acara Anda dan mengabadikan setiap momen berharga.</p>
+      </div>
+      <div class="grid g3">
+        <div class="card ent-card reveal" style="background:var(--ink);"><img data-cms-img="gathering.foto.ent-dj" src="../img/ent-dj.webp" width="720" height="414" decoding="async" loading="lazy" alt="Tangan DJ di depan mixer dengan cahaya biru"><div class="body"><h3>DJ</h3></div></div>
+        <div class="card ent-card reveal d1" style="background:var(--ink);"><img data-cms-img="gathering.foto.ent-live-band" src="../img/ent-live-band.webp" width="720" height="480" decoding="async" loading="lazy" alt="Gitaris dan pemain keyboard tampil live"><div class="body"><h3>Live band</h3></div></div>
+        <div class="card ent-card reveal d2" style="background:var(--ink);"><img data-cms-img="gathering.foto.ent-stand-up" src="../img/ent-stand-up.webp" width="479" height="720" decoding="async" loading="lazy" alt="Pembawa acara stand up comedy di atas panggung"><div class="body"><h3>Stand up comedy</h3></div></div>
+      </div>
+      <h3 class="sub-h reveal">Pilihan hiburan lainnya</h3>
+      <div class="chips reveal"><span>Acoustic</span><span>Talent show</span><span>Employee awards</span><span>Door prize</span></div>
+      <h3 class="sub-h reveal" style="margin-top:56px;">Dokumentasi <span class="muted" style="font-weight:500;">(opsional)</span></h3>
+      <div class="chips reveal"><span>Drone</span><span>Photographer</span><span>Videographer</span><span>After movie</span><span>Highlight reels</span><span>Group photo</span></div>
+    </div>
+  </section>
+
+  <!-- Galeri (diisi dari admin; tersembunyi selama kosong) -->
+  <section class="section bg-deep" id="galeri" data-cms-gallery="gathering" hidden>
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-cms="gathering.galeri.judul">Galeri kegiatan.</h2>
+        <p class="lead" data-cms="gathering.galeri.lead">Momen dari program yang sudah kami jalankan bersama tim klien.</p>
+      </div>
+      <div class="gal-grid"></div>
+    </div>
+  </section>
+
+  <!-- Tanya jawab -->
+  <section class="section bg-ink2" id="faq">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 data-cms="gathering.faq.judul">Tanya jawab.</h2>
+        <p class="lead" data-cms="gathering.faq.lead">Hal yang paling sering ditanyakan sebelum merancang gathering.</p>
+      </div>
+      <div class="faq reveal">
+        <details open><summary>Dalam format apa saja gathering bisa diadakan?</summary><p>Program tersedia dalam format <strong>indoor, outdoor, virtual, dan hybrid</strong>. Amazing Race khusus untuk outdoor.</p></details>
+        <details><summary>Apakah program bisa disesuaikan dengan kebutuhan perusahaan?</summary><p>Bisa. Lewat <strong>customized experience</strong>, tema, lokasi, durasi, dan tujuan tim bisa diatur sesuai kebutuhan perusahaan Anda.</p></details>
+        <details><summary>Berapa lama durasi Amazing Race?</summary><p>Sekitar <strong>4 sampai 6 jam</strong>, dengan tujuan melatih komunikasi, problem solving, teamwork, dan leadership.</p></details>
+        <details><summary>Apakah gathering bisa dilengkapi sesi pembelajaran?</summary><p>Bisa. Setiap program dapat dilengkapi <strong>1 sesi seminar khusus</strong> bersama fasilitator atau trainer, serta <strong>game master debrief</strong> di lapangan setelah aktivitas selesai.</p></details>
+        <details><summary>Apakah dokumentasi sudah termasuk?</summary><p>Dokumentasi bersifat <strong>opsional</strong>. Pilihannya meliputi drone, photographer, videographer, after movie, highlight reels, dan group photo.</p></details>
+        <details><summary>Bagaimana cara mulai merancang gathering?</summary><p>Hubungi <strong>Helga Yuliana</strong> di <span data-cms="kontak.telepon">+62 877-8101-8187</span> lewat telepon atau WhatsApp, lalu ceritakan tujuan dan jumlah peserta tim Anda.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" id="hubungi">
+    <div class="wrap">
+      <div class="cta reveal">
+        <div>
+          <h2 data-cms="gathering.hubungi.judul">Mari rancang pengalaman gathering yang berkesan untuk tim Anda.</h2>
+          <p class="lead" data-cms="gathering.hubungi.lead" style="margin-top:16px;">Ceritakan kebutuhan perusahaan Anda, dan kami bantu menyusun programnya bersama.</p>
+        </div>
+        <div class="pic-card">
+          <small>Hubungi</small>
+          <div class="pic-name" data-cms="kontak.pic">Helga Yuliana</div>
+          <a class="pic-tel" data-cms-tel href="tel:+6287781018187"><span data-cms="kontak.telepon">+62 877-8101-8187</span></a>
+          <a class="btn btn-solid" data-cms-wa href="https://wa.me/6287781018187?text=Halo%20Helga%2C%20saya%20ingin%20berdiskusi%20tentang%20program%20employee%20gathering." target="_blank" rel="noopener">Chat WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="../"><img class="logo-mark" src="../img/logo-mark.png" width="64" height="38" alt=""><span>Need Learning<small>ORGANIZER</small></span></a>
+        <p class="foot-desc">Konsultan Program Pengembangan Sumber Daya Manusia (PSDM) Perusahaan.</p>
+      </div>
+      <div>
+        <h4>Jelajahi</h4>
+        <ul>
+          <li><a href="../#tentang">Tentang</a></li>
+          <li><a href="../#alur">Alur karier</a></li>
+          <li><a href="../#riset">Riset &amp; assessment</a></li>
+          <li><a href="#top">Employee Gathering</a></li>
+          <li><a href="../#pendekatan">Pendekatan</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <ul>
+          <li><a data-cms-tel href="tel:+6287781018187"><span data-cms="kontak.telepon">+62 877-8101-8187</span></a></li>
+          <li><a data-cms-mail href="mailto:needlearningorganizer@gmail.com"><span data-cms="kontak.email">needlearningorganizer@gmail.com</span></a></li>
+          <li>Bandung, Jawa Barat</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom"><span>&copy; 2026 Need Learning Organizer. Training &amp; Development.</span><span><span data-cms="kontak.instagram">@needlearningorganizer</span></span></div>
+  </div>
+</footer>
+
+<a class="wa-float" data-cms-wa href="https://wa.me/6287781018187?text=Halo%20NLO%2C%20saya%20ingin%20berdiskusi%20tentang%20program%20employee%20gathering." target="_blank" rel="noopener" aria-label="Chat WhatsApp dengan NLO"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg><span>Chat WhatsApp</span></a>
+
+<script>
+  (function(){
+    var b = document.querySelector(".wa-float"); if (!b) return;
+    function t(){ if (window.scrollY > Math.min(560, window.innerHeight * .7)) b.classList.add("show"); else b.classList.remove("show"); }
+    window.addEventListener("scroll", t, { passive: true }); t();
+  })();
+  function arrowNav(list, attr){
+    list.forEach(function(t, i){
+      t.addEventListener("keydown", function(e){
+        var k = e.key, n = null;
+        if (k === "ArrowRight") n = (i + 1) % list.length;
+        else if (k === "ArrowLeft") n = (i - 1 + list.length) % list.length;
+        else if (k === "Home") n = 0; else if (k === "End") n = list.length - 1;
+        if (n === null) return;
+        e.preventDefault(); list[n].focus(); list[n].click();
+      });
+    });
+  }
+
+  var sigPrograms = [{"name": "Amazing Race", "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Peta dengan rute dan lima pos pemberhentian untuk perlombaan tim\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"60\" y=\"40\" width=\"360\" height=\"180\" rx=\"14\" fill=\"#0b2a36\" stroke=\"#14a3b8\" stroke-width=\"2\"/><path d=\"M90 190 C 150 90, 200 230, 250 150 S 360 70, 400 110\" stroke=\"#3fd0e0\" stroke-width=\"3\" stroke-dasharray=\"6 8\"/><circle cx=\"90\" cy=\"190\" r=\"13\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><text x=\"90\" y=\"194\" text-anchor=\"middle\" font-family=\"Plus Jakarta Sans, sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#3fd0e0\" stroke=\"none\">1<\/text><circle cx=\"180\" cy=\"120\" r=\"13\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><text x=\"180\" y=\"124\" text-anchor=\"middle\" font-family=\"Plus Jakarta Sans, sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#3fd0e0\" stroke=\"none\">2<\/text><circle cx=\"250\" cy=\"150\" r=\"13\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><text x=\"250\" y=\"154\" text-anchor=\"middle\" font-family=\"Plus Jakarta Sans, sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#3fd0e0\" stroke=\"none\">3<\/text><circle cx=\"330\" cy=\"92\" r=\"13\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><text x=\"330\" y=\"96\" text-anchor=\"middle\" font-family=\"Plus Jakarta Sans, sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#3fd0e0\" stroke=\"none\">4<\/text><circle cx=\"400\" cy=\"110\" r=\"13\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><text x=\"400\" y=\"114\" text-anchor=\"middle\" font-family=\"Plus Jakarta Sans, sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#3fd0e0\" stroke=\"none\">5<\/text><path d=\"M400 60 v-16 l14 5 -14 5\" stroke=\"#f2c46d\" stroke-width=\"2\" fill=\"#f2c46d\"/><\/g><\/svg>", "tagline": "Explore • Collaborate • Win Together", "konsep": "", "durasi": "4–6 jam", "tujuan": "komunikasi, problem solving, teamwork, leadership", "acts": ["QR Challenge", "Puzzle Mission", "Photo Challenge", "Blind Navigation", "Local Culture Challenge"]}, {"name": "Treasure Hunt", "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Peta kota dengan jalur dan tanda X sebagai tujuan pencarian harta karun\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"60\" y=\"40\" width=\"360\" height=\"180\" rx=\"14\" fill=\"#0b2a36\" stroke=\"#14a3b8\" stroke-width=\"2\"/><line x1=\"120\" y1=\"40\" x2=\"120\" y2=\"220\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><line x1=\"180\" y1=\"40\" x2=\"180\" y2=\"220\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><line x1=\"240\" y1=\"40\" x2=\"240\" y2=\"220\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><line x1=\"300\" y1=\"40\" x2=\"300\" y2=\"220\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><line x1=\"360\" y1=\"40\" x2=\"360\" y2=\"220\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><line x1=\"60\" y1=\"80\" x2=\"420\" y2=\"80\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><line x1=\"60\" y1=\"120\" x2=\"420\" y2=\"120\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><line x1=\"60\" y1=\"160\" x2=\"420\" y2=\"160\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><line x1=\"60\" y1=\"200\" x2=\"420\" y2=\"200\" stroke=\"#9fc4cc\" stroke-opacity=\"0.12\"/><path d=\"M110 200 C 150 150, 190 210, 240 150 S 330 100, 360 90\" stroke=\"#3fd0e0\" stroke-width=\"2.5\" stroke-dasharray=\"5 6\"/><path d=\"M352 84 l16 16 M368 84 l-16 16\" stroke=\"#f2c46d\" stroke-width=\"3\"/><path d=\"M250 70 c-10 0 -18 8 -18 18 c0 14 18 30 18 30 s18-16 18-30 c0-10-8-18-18-18z\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><circle cx=\"250\" cy=\"88\" r=\"5\" fill=\"#3fd0e0\" stroke=\"none\"/><\/g><\/svg>", "tagline": "The City Becomes Your Playground", "konsep": "Peserta menjelajah kota sambil menyelesaikan misi menggunakan aplikasi maupun petunjuk lokasi.", "durasi": "", "tujuan": "", "acts": ["GPS Challenge", "Heritage Quiz", "Hidden Object", "Story Challenge", "Creative Campaign"]}, {"name": "Traditional Games", "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Seseorang berjalan dengan egrang bambu dalam permainan tradisional\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"40\" y1=\"236\" x2=\"440\" y2=\"236\" stroke=\"#9fc4cc\" stroke-opacity=\"0.35\" stroke-width=\"2\"/><line x1=\"205\" y1=\"236\" x2=\"205\" y2=\"120\" stroke=\"#f2c46d\" stroke-width=\"6\"/><line x1=\"275\" y1=\"236\" x2=\"275\" y2=\"120\" stroke=\"#f2c46d\" stroke-width=\"6\"/><circle cx=\"240\" cy=\"62.0\" r=\"16.0\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"214.0\" y=\"84.0\" width=\"52.0\" height=\"70.0\" rx=\"18.0\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><path d=\"M70 236 l10 -10 M410 236 l-10 -10\" stroke=\"#9fc4cc\" stroke-opacity=\"0.5\"/><path d=\"M320 190 l40 0 M340 170 l20 0\" stroke=\"#f2c46d\" stroke-opacity=\"0.6\" stroke-width=\"2\"/><\/g><\/svg>", "tagline": "Traditional Game, Modern Collaboration", "konsep": "Mengadaptasi konsep Perlombaan Desa yang menggabungkan permainan tradisional untuk membangun kerja sama tim.", "durasi": "", "tujuan": "", "acts": ["Bakiak", "Egrang (bambu)", "Galasin", "Egrang batok kelapa", "Gobak sodor", "Panahan", "Ring tos"]}, {"name": "Fun Team Building", "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Tiga orang saling terhubung dengan tali dalam permainan tim\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M140 150 L240 96 L340 150 Z\" fill=\"none\" stroke=\"#3fd0e0\" stroke-width=\"2\" stroke-dasharray=\"3 6\"/><circle cx=\"140\" cy=\"121.2\" r=\"11.2\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"121.8\" y=\"136.6\" width=\"36.4\" height=\"49.0\" rx=\"12.6\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><circle cx=\"240\" cy=\"71.2\" r=\"11.2\" fill=\"#0b2a36\" stroke=\"#14a3b8\" stroke-width=\"2\"/><rect x=\"221.8\" y=\"86.6\" width=\"36.4\" height=\"49.0\" rx=\"12.6\" fill=\"#0b2a36\" stroke=\"#14a3b8\" stroke-width=\"2\"/><circle cx=\"340\" cy=\"121.2\" r=\"11.2\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"321.8\" y=\"136.6\" width=\"36.4\" height=\"49.0\" rx=\"12.6\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><circle cx=\"240\" cy=\"200\" r=\"16\" fill=\"none\" stroke=\"#f2c46d\" stroke-width=\"3\"/><circle cx=\"262\" cy=\"200\" r=\"16\" fill=\"none\" stroke=\"#f2c46d\" stroke-width=\"3\"/><\/g><\/svg>", "tagline": "Small Games. Big Impact.", "konsep": "", "durasi": "", "tujuan": "", "acts": ["Balloon Race", "Giant Volleyball", "Spider Web", "Water Transfer", "Human Knot", "Caterpillar Race", "Pipe Ball", "Synergy Bridge"]}, {"name": "Squid Game", "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Lampu lalu lintas merah dan hijau di atas lapangan permainan\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"190\" y=\"30\" width=\"100\" height=\"170\" rx=\"18\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><circle cx=\"240\" cy=\"70\" r=\"20\" fill=\"#e5695f\" stroke=\"none\"/><circle cx=\"240\" cy=\"115\" r=\"20\" fill=\"#f2c46d\" stroke=\"none\" fill-opacity=\"0.4\"/><circle cx=\"240\" cy=\"160\" r=\"20\" fill=\"#3fd0e0\" stroke=\"none\" fill-opacity=\"0.4\"/><line x1=\"40\" y1=\"236\" x2=\"440\" y2=\"236\" stroke=\"#9fc4cc\" stroke-opacity=\"0.35\" stroke-width=\"2\"/><path d=\"M70 236 l60 -22 M410 236 l-60 -22\" stroke=\"#9fc4cc\" stroke-opacity=\"0.4\" stroke-width=\"2\"/><circle cx=\"360\" cy=\"158.8\" r=\"8.8\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"345.7\" y=\"170.9\" width=\"28.6\" height=\"38.5\" rx=\"9.9\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><circle cx=\"110\" cy=\"168.8\" r=\"8.8\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"95.7\" y=\"180.9\" width=\"28.6\" height=\"38.5\" rx=\"9.9\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><\/g><\/svg>", "tagline": "Strategic Resilience • Risk Management • Coordination", "konsep": "Kompetisi individu diubah menjadi kompetisi berbasis tim. Estetika ikonik Squid Game dikemas profesional, aman, dan penuh keseruan.", "durasi": "", "tujuan": "", "acts": ["Red Light, Green Light", "Dalgona Candy Challenge", "Marble Battle", "Tug of War", "Squid Game Finale"]}, {"name": "Master Chef Challenge", "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Panci mengepul di atas kompor dengan piring dan sendok\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"40\" y1=\"236\" x2=\"440\" y2=\"236\" stroke=\"#9fc4cc\" stroke-opacity=\"0.35\" stroke-width=\"2\"/><path d=\"M150 150 h140 v60 a40 40 0 0 1 -40 40 h-60 a40 40 0 0 1 -40 -40 z\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><path d=\"M130 150 h180\" stroke=\"#3fd0e0\" stroke-width=\"3\"/><path d=\"M210 130 q-8 -12 0 -22 q8 -10 0 -22\" stroke=\"#9fc4cc\" stroke-opacity=\"0.6\" stroke-width=\"2\"/><path d=\"M240 130 q-8 -12 0 -22 q8 -10 0 -22\" stroke=\"#9fc4cc\" stroke-opacity=\"0.6\" stroke-width=\"2\"/><path d=\"M270 130 q-8 -12 0 -22 q8 -10 0 -22\" stroke=\"#9fc4cc\" stroke-opacity=\"0.6\" stroke-width=\"2\"/><ellipse cx=\"380\" cy=\"230\" rx=\"60\" ry=\"10\" fill=\"#0b2a36\" stroke=\"#14a3b8\" stroke-width=\"2\"/><path d=\"M330 230 q50 -40 100 0\" fill=\"none\" stroke=\"#14a3b8\" stroke-width=\"2\"/><line x1=\"70\" y1=\"120\" x2=\"110\" y2=\"220\" stroke=\"#f2c46d\" stroke-width=\"5\"/><ellipse cx=\"66\" cy=\"112\" rx=\"14\" ry=\"8\" fill=\"#f2c46d\" stroke=\"none\"/><\/g><\/svg>", "tagline": "Culinary Teamwork • Time Pressure • Creative Problem Solving", "konsep": "Kompetisi memasak individu diubah menjadi kompetisi berbasis tim di ruang terbuka. Estetika ikonik MasterChef dikemas profesional, aman, dan penuh keseruan.", "durasi": "", "tujuan": "", "acts": ["Mystery Box Challenge", "Relay Cooking Race", "Plating & Presentation Battle", "Blind Taste Test", "Chef's Table Judging Finale"]}, {"name": "Gala Dinner", "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Sorotan lampu ke panggung dengan dua gelas minum dan satu orang di tengah\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M240 20 L140 236 L340 236 Z\" fill=\"#f2c46d\" fill-opacity=\"0.12\" stroke=\"none\"/><line x1=\"240\" y1=\"20\" x2=\"240\" y2=\"40\" stroke=\"#f2c46d\" stroke-width=\"3\"/><line x1=\"40\" y1=\"236\" x2=\"440\" y2=\"236\" stroke=\"#9fc4cc\" stroke-opacity=\"0.35\" stroke-width=\"2\"/><path d=\"M180 236 q0 -40 20 -60 M300 236 q0 -40 -20 -60\" stroke=\"#9fc4cc\" stroke-opacity=\"0.2\" stroke-width=\"2\"/><path d=\"M150 170 l14 40 l-14 0 l14 0 M168 170 l-14 40\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><path d=\"M322 170 h28 l-6 36 h-16 z\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><line x1=\"336\" y1=\"206\" x2=\"336\" y2=\"236\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><path d=\"M200 220 h80\" stroke=\"#9fc4cc\" stroke-opacity=\"0.5\" stroke-width=\"2\"/><path d=\"M170 210 h10 v8 h-10 z M300 200 h8 v8 h-8 z\" fill=\"none\" stroke=\"none\"/><circle cx=\"240\" cy=\"119.6\" r=\"9.6\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"224.4\" y=\"132.8\" width=\"31.2\" height=\"42.0\" rx=\"10.8\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><\/g><\/svg>", "tagline": "Elegance • Immersive Experience • Celebration", "konsep": "Malam penghargaan formal diubah menjadi perayaan tematik dengan dekorasi eksklusif dan dress code tematik yang glamor, profesional, dan berkesan. Bertema kostum, indoor.", "durasi": "", "tujuan": "", "acts": ["Red Carpet Welcome & Photo Booth", "Best Costume Award", "Themed Dinner Course & Entertainment", "Interactive Live Performance", "Award Night Finale & Toast"]}];
+  var sigPanel = document.getElementById("sig-panel");
+  var sigTabs = document.querySelectorAll(".sig-tab");
+  function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+  function renderSig(i){
+    var p = sigPrograms[i];
+    sigTabs.forEach(function(t, idx){ t.setAttribute("aria-selected", idx === i ? "true" : "false"); t.tabIndex = idx === i ? 0 : -1; });
+    sigPanel.setAttribute("aria-labelledby", "sig-t" + i);
+    var meta = (p.durasi || p.tujuan) ? '<div class="meta">' + (p.durasi ? '<p><strong>Durasi:</strong> '+esc(p.durasi)+'</p>' : '') + (p.tujuan ? '<p><strong>Tujuan:</strong> '+esc(p.tujuan)+'</p>' : '') + '</div>' : '';
+    sigPanel.innerHTML =
+      '<div class="fade"><div class="art-wrap">'+p.art+'</div></div>' +
+      '<div class="fade"><h3>'+esc(p.name)+'</h3><p class="tagline">'+esc(p.tagline)+'</p>' + (p.konsep ? '<p class="konsep">'+esc(p.konsep)+'</p>' : '') + meta +
+      '<h4>Contoh aktivitas</h4><ol>'+p.acts.map(function(a){return '<li>'+esc(a)+'</li>';}).join("")+'</ol></div>';
+  }
+  sigTabs.forEach(function(t){ t.addEventListener("click", function(){ renderSig(Number(t.dataset.sig)); }); });
+  arrowNav([].slice.call(sigTabs));
+
+  var menuBtn = document.querySelector(".menu-btn"), menu = document.getElementById("menu");
+  menuBtn.addEventListener("click", function(){ var o = menu.classList.toggle("open"); menuBtn.setAttribute("aria-expanded", String(o)); });
+  menu.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ menu.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false"); }); });
+
+  (function(){
+    var els = [].slice.call(document.querySelectorAll(".reveal"));
+    if (!("IntersectionObserver" in window)) { els.forEach(function(e){ e.classList.add("in"); }); return; }
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, { threshold: .12, rootMargin: "0px 0px -40px 0px" });
+    els.forEach(function(e){ io.observe(e); });
+  })();
+
+  (function(){
+    if (!("IntersectionObserver" in window)) return;
+    var links = {};
+    document.querySelectorAll('.subnav a[href^="#"]').forEach(function(a){ links[a.getAttribute("href").slice(1)] = a; });
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){
+      if (e.isIntersecting && links[e.target.id]) {
+        Object.keys(links).forEach(function(k){ links[k].removeAttribute("aria-current"); });
+        var a = links[e.target.id]; a.setAttribute("aria-current", "true");
+        var box = a.parentNode; if (box.scrollWidth > box.clientWidth) { box.scrollLeft = a.offsetLeft - 24; }
+      }
+    }); }, { rootMargin: "-45% 0px -50% 0px" });
+    Object.keys(links).forEach(function(id){ var s = document.getElementById(id); if (s) io.observe(s); });
+  })();
+</script>
+<script src="../assets/config.js"></script>
+<script src="../assets/cms.js" defer></script>
+</body>
+</html>

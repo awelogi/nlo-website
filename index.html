@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Need Learning Organizer (NLO) | Konsultan Program PSDM</title>
+<meta name="description" content="Need Learning Organizer (NLO) menyediakan sistem program Pengembangan Sumber Daya Manusia terintegrasi yang mengikuti siklus karier karyawan, dari onboarding sampai purnabakti.">
+<meta property="og:title" content="Need Learning Organizer (NLO)">
+<meta property="og:description" content="Konsultan Program Pengembangan Sumber Daya Manusia (PSDM) Perusahaan.">
+<meta name="theme-color" content="#06141c">
+<link rel="icon" type="image/png" href="img/logo-mark.png">
+<meta property="og:image" content="img/logo-mark.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Need Learning Organizer (NLO)", "description": "Konsultan Program Pengembangan Sumber Daya Manusia (PSDM) Perusahaan di Bandung.", "telephone": "+62-877-8101-8187", "email": "needlearningorganizer@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Bandung", "addressRegion": "Jawa Barat", "addressCountry": "ID"}}</script>
+
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400..800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #06141c; --ink2: #081c26; --deep: #0b2a36; --deep2: #103a4a;
+  --line: rgba(159,196,204,.16); --line2: rgba(159,196,204,.3);
+  --teal: #14a3b8; --glow: #3fd0e0; --mist: #9fc4cc; --text: #d9e8ec;
+  --paper: #f3eee2; --paper-ink: #0b2a36; --yellow: #f2c46d;
+  --sans: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --r: 16px;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 132px; background: var(--ink); -webkit-text-size-adjust: 100%; }
+body { margin: 0; font-family: var(--sans); font-size: 17px; line-height: 1.75; color: var(--text); background: var(--ink); -webkit-font-smoothing: antialiased; }
+img, svg { max-width: 100%; display: block; }
+a { color: var(--glow); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 4px; }
+:focus-visible { outline: 2px solid var(--glow); outline-offset: 3px; border-radius: 6px; }
+.wrap { width: min(1180px, 100% - 48px); margin-inline: auto; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+h1, h2, h3, h4 { font-family: var(--sans); color: #fff; margin: 0; letter-spacing: -0.015em; }
+h1 { font-size: clamp(2.4rem, 5.4vw, 4.4rem); line-height: 1.08; font-weight: 800; letter-spacing: -0.025em; }
+h2 { font-size: clamp(1.85rem, 3.4vw, 2.8rem); line-height: 1.16; font-weight: 800; }
+h3 { font-size: 1.22rem; line-height: 1.3; font-weight: 700; }
+p { margin: 0; }
+.lead { font-size: clamp(1.04rem, 1.4vw, 1.18rem); color: var(--mist); max-width: 60ch; }
+.measure { max-width: 66ch; }
+.muted { color: var(--mist); }
+.accent { color: var(--glow); }
+
+/* Header */
+.site { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 60; background: rgba(6,20,28,.86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 20px; position: relative; }
+.brand { display: flex; align-items: center; gap: 12px; color: #fff; font-weight: 800; font-size: .98rem; line-height: 1.15; }
+.brand:hover { text-decoration: none; }
+.logo-mark { height: 38px; width: auto; flex-shrink: 0; }
+.brand small { display: block; font-weight: 500; color: var(--mist); font-size: .66rem; letter-spacing: .34em; }
+.nav ul { display: flex; align-items: center; gap: 4px; list-style: none; margin: 0; padding: 0; }
+.nav ul a { display: block; padding: 9px 14px; border-radius: 999px; color: var(--mist); font-size: .94rem; font-weight: 500; transition: color .2s, background .2s; }
+.nav ul a:hover { color: #fff; background: rgba(255,255,255,.06); text-decoration: none; }
+.nav ul a[aria-current] { color: #fff; background: rgba(63,208,224,.13); }
+.nav ul a.nav-cta { background: var(--glow); color: var(--ink); font-weight: 700; margin-left: 8px; }
+.nav ul a.nav-cta:hover { background: #7fe3ee; }
+.menu-btn { display: none; background: none; border: 1px solid var(--line2); color: #fff; padding: 9px 16px; border-radius: 999px; font: inherit; font-weight: 600; font-size: .92rem; cursor: pointer; }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 26px; border-radius: 999px; font-weight: 700; font-size: .98rem; border: 1px solid transparent; transition: background .2s, border-color .2s, transform .2s; cursor: pointer; font-family: inherit; line-height: 1.2; }
+.btn:hover { text-decoration: none; transform: translateY(-2px); }
+.btn-solid { background: var(--glow); color: var(--ink); }
+.btn-solid:hover { background: #7fe3ee; }
+.btn-ghost { border-color: var(--line2); color: #fff; background: transparent; }
+.btn-ghost:hover { border-color: var(--glow); background: rgba(63,208,224,.08); }
+.btn-dark { background: var(--paper-ink); color: #fff; }
+.btn-dark:hover { background: #14465a; }
+.actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
+
+/* Sections */
+.section { padding: clamp(72px, 9vw, 118px) 0; position: relative; }
+.bg-deep { background: var(--deep); }
+.bg-ink2 { background: var(--ink2); }
+.section-head { max-width: 760px; margin-bottom: 48px; }
+.section-head .lead { margin-top: 18px; }
+.paper { background: var(--paper); color: var(--paper-ink); }
+.paper h2, .paper h3 { color: var(--paper-ink); }
+.paper .lead, .paper .muted { color: #3e5d67; }
+hr.sep { border: 0; border-top: 1px solid var(--line); margin: 0; }
+
+/* Grid helpers */
+.grid { display: grid; gap: 20px; }
+.g2 { grid-template-columns: repeat(2, 1fr); }
+.g3 { grid-template-columns: repeat(3, 1fr); }
+.g4 { grid-template-columns: repeat(4, 1fr); }
+.g5 { grid-template-columns: repeat(5, 1fr); }
+.split { display: grid; gap: 64px; grid-template-columns: 1fr 1fr; align-items: center; }
+.split.top { align-items: start; }
+.split > *, .grid > * { min-width: 0; }
+.contact-list span, .foot-grid a { overflow-wrap: anywhere; }
+
+/* Cards, icons, art */
+.card { background: linear-gradient(180deg, rgba(16,58,74,.55), rgba(11,42,54,.55)); border: 1px solid var(--line); border-radius: var(--r); padding: 28px; transition: transform .25s, border-color .25s, background .25s; }
+.card:hover { transform: translateY(-4px); border-color: var(--line2); }
+.card p { color: var(--mist); font-size: .98rem; margin-top: 10px; }
+.card h3 + p { margin-top: 10px; }
+.ic { width: 28px; height: 28px; stroke: var(--glow); fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; display: block; flex-shrink: 0; }
+.icon-chip { width: 54px; height: 54px; border-radius: 14px; background: rgba(63,208,224,.1); border: 1px solid rgba(63,208,224,.22); display: grid; place-items: center; margin-bottom: 20px; }
+.icon-chip .ic { width: 26px; height: 26px; }
+.art-wrap { background: radial-gradient(circle at 25% 15%, rgba(63,208,224,.16), transparent 60%), var(--ink); border: 1px solid var(--line); border-radius: var(--r); padding: 20px; }
+.art { width: 100%; height: auto; max-height: 280px; display: block; margin: 0 auto; }
+.tag { display: inline-block; font-size: .8rem; font-weight: 700; color: var(--glow); background: rgba(63,208,224,.1); padding: 5px 12px; border-radius: 999px; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.chips span { padding: 9px 16px; border: 1px solid var(--line2); border-radius: 999px; font-size: .92rem; color: #fff; font-weight: 600; background: rgba(255,255,255,.02); }
+.chips.on span { border-color: var(--glow); }
+.link-arrow { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; font-weight: 700; font-size: .95rem; }
+.link-arrow::after { content: "\2192"; transition: transform .2s; }
+.link-arrow:hover { text-decoration: none; }
+.link-arrow:hover::after { transform: translateX(4px); }
+
+/* Reveal on scroll */
+.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+.js .d1 { transition-delay: .08s; } .js .d2 { transition-delay: .16s; } .js .d3 { transition-delay: .24s; } .js .d4 { transition-delay: .32s; }
+
+/* Floating WhatsApp */
+.wa-float { position: fixed; right: 18px; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); z-index: 70; display: inline-flex; align-items: center; gap: 10px; padding: 14px 20px; border-radius: 999px; background: var(--glow); color: var(--ink); font-weight: 800; font-size: .92rem; box-shadow: 0 10px 30px rgba(0,0,0,.4); transition: transform .2s, background .2s; }
+.wa-float:hover { text-decoration: none; transform: translateY(-3px); background: #7fe3ee; }
+.wa-float .ic { stroke: var(--ink); width: 22px; height: 22px; }
+
+/* Footer */
+footer.site-foot { border-top: 1px solid var(--line); padding: 64px 0 calc(36px + env(safe-area-inset-bottom, 0px)); background: var(--ink2); }
+.foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 48px; }
+.foot-grid h4 { font-size: .9rem; color: #fff; margin-bottom: 14px; font-weight: 700; }
+.foot-grid ul { list-style: none; margin: 0; padding: 0; }
+.foot-grid li { padding: 5px 0; font-size: .95rem; }
+.foot-grid a { color: var(--mist); }
+.foot-grid a:hover { color: #fff; }
+.foot-grid a.brand { color: #fff; }
+.foot-desc { color: var(--mist); font-size: .95rem; margin-top: 16px; max-width: 38ch; }
+.foot-bottom { margin-top: 44px; padding-top: 24px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; color: var(--mist); font-size: .88rem; }
+
+/* Responsive */
+@media (max-width: 1080px) {
+  .menu-btn { display: inline-block; }
+  .nav ul { display: none; position: absolute; left: 0; right: 0; top: 76px; flex-direction: column; align-items: stretch; gap: 0; background: var(--deep); border: 1px solid var(--line); border-radius: 16px; padding: 10px; box-shadow: 0 20px 50px rgba(0,0,0,.5); }
+  .nav ul.open { display: flex; }
+  .nav ul a { padding: 14px 16px; border-radius: 10px; color: #fff; }
+  .nav ul a.nav-cta { margin: 6px 0 0; text-align: center; }
+}
+@media (max-width: 960px) {
+  .split { grid-template-columns: 1fr; gap: 40px; }
+  .g3, .g4 { grid-template-columns: repeat(2, 1fr); }
+  .g5 { grid-template-columns: repeat(2, 1fr); }
+  .foot-grid { grid-template-columns: 1fr 1fr; }
+  .foot-grid > div:first-child { grid-column: 1 / -1; }
+}
+@media (max-width: 720px) {
+  body { font-size: 16.5px; }
+  .wrap { width: min(100% - 36px, 1180px); }
+  .g2, .g3, .g4, .g5 { grid-template-columns: 1fr; }
+  .card { padding: 24px; }
+  .wa-float { padding: 14px; }
+  .wa-float span { display: none; }
+  .foot-grid { grid-template-columns: 1fr; gap: 32px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+
+/* Home */
+.hero { position: relative; padding: clamp(56px, 8vw, 104px) 0 clamp(64px, 8vw, 110px); overflow: hidden; }
+.hero::before { content: ""; position: absolute; right: -12%; top: -30%; width: min(900px, 80vw); aspect-ratio: 1; background: radial-gradient(closest-side, rgba(20,163,184,.26), transparent 70%); pointer-events: none; }
+.hero::after { content: ""; position: absolute; left: -14%; bottom: -45%; width: 620px; aspect-ratio: 1; background: radial-gradient(closest-side, rgba(63,208,224,.08), transparent 70%); pointer-events: none; }
+.hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
+.hero .lead { margin-top: 26px; }
+.hero-points { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 40px; }
+.hero-points span { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px 9px 12px; border: 1px solid var(--line2); border-radius: 999px; color: #fff; font-weight: 600; font-size: .92rem; }
+.hero-points .ic { width: 18px; height: 18px; }
+.emblem { position: relative; }
+.emblem-svg { width: 100%; height: auto; }
+.emblem-svg .track { stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: draw 1.8s ease-out .2s forwards; }
+.emblem-svg .node { opacity: 0; animation: pop .5s ease-out forwards; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes pop { from { opacity: 0; } to { opacity: 1; } }
+
+.svc { display: flex; flex-direction: column; color: inherit; }
+.svc:hover { text-decoration: none; }
+.svc .art-wrap { margin-bottom: 24px; padding: 14px; }
+.svc .art { max-height: 190px; }
+.svc h3 { font-size: 1.3rem; }
+.svc .link-arrow { margin-top: auto; padding-top: 18px; color: var(--glow); }
+
+.quote { margin-top: 40px; padding: 36px; border-radius: var(--r); background: var(--deep); border-left: 4px solid var(--glow); }
+.quote p { font-size: clamp(1.35rem, 2.3vw, 1.85rem); line-height: 1.35; color: #fff; font-weight: 700; letter-spacing: -0.01em; max-width: none; }
+.quote .who { margin-top: 14px; color: var(--glow); font-size: .85rem; font-weight: 700; }
+.pillar-card h3 { font-size: 1.1rem; }
+
+.stage-tabs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+.stage-tab { all: unset; box-sizing: border-box; cursor: pointer; padding: 18px 18px 16px; border: 1px solid var(--line); border-radius: 14px; display: flex; flex-direction: column; gap: 4px; background: rgba(6,20,28,.4); transition: background .2s, border-color .2s, transform .2s; }
+.stage-tab:hover { border-color: var(--line2); transform: translateY(-2px); }
+.stage-tab:focus-visible { outline: 2px solid var(--glow); outline-offset: 3px; }
+.stage-tab .ic { width: 24px; height: 24px; margin-bottom: 10px; }
+.stage-tab .num { font-weight: 800; color: var(--glow); font-size: .82rem; }
+.stage-tab .nm { font-weight: 700; color: #fff; font-size: 1rem; }
+.stage-tab[aria-pressed="true"] { background: var(--glow); border-color: var(--glow); }
+.stage-tab[aria-pressed="true"] .num, .stage-tab[aria-pressed="true"] .nm { color: var(--ink); }
+.stage-tab[aria-pressed="true"] .ic { stroke: var(--ink); }
+.stage-panel { margin-top: 20px; display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; padding: 44px; background: var(--ink); border: 1px solid var(--line); border-radius: var(--r); }
+.stage-panel h3 { font-size: clamp(1.6rem, 2.6vw, 2.1rem); font-weight: 800; margin-bottom: 14px; }
+.stage-panel .desc { color: var(--mist); }
+.block { margin-top: 28px; }
+.block h4 { font-size: .85rem; color: var(--glow); font-weight: 700; margin-bottom: 8px; }
+.ticks { list-style: none; margin: 0; padding: 0; }
+.ticks li { padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid var(--line); font-size: .98rem; }
+.ticks li::before { content: ""; position: absolute; left: 0; top: 17px; width: 12px; height: 7px; border-left: 2px solid var(--glow); border-bottom: 2px solid var(--glow); transform: rotate(-45deg); }
+.programs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
+.program { padding: 15px 16px; border: 1px solid var(--line); border-radius: 12px; color: #fff; font-weight: 600; font-size: .94rem; background: rgba(11,42,54,.5); line-height: 1.4; }
+.program small { display: block; color: var(--mist); font-weight: 500; font-size: .82rem; margin-top: 4px; }
+.programs-title { margin-top: 24px; font-size: .85rem; color: var(--glow); font-weight: 700; }
+.fade { animation: fadeIn .45s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+.research .card { padding: 32px; }
+.research .art-wrap { margin-bottom: 26px; }
+.research .tag { margin-bottom: 14px; }
+.research h3 { font-size: 1.5rem; }
+.research .chips { margin-top: 22px; }
+
+.promo { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; padding: clamp(28px, 5vw, 64px); border: 1px solid var(--line2); border-radius: 24px; background: radial-gradient(circle at 85% 10%, rgba(63,208,224,.18), transparent 55%), linear-gradient(160deg, var(--deep2), var(--ink)); }
+.promo h2 { font-size: clamp(2rem, 4vw, 3.2rem); }
+.promo .sub { margin-top: 14px; font-weight: 700; color: var(--glow); font-size: 1.05rem; }
+.promo blockquote { margin: 26px 0 0; color: var(--mist); max-width: 46ch; }
+.thumbs { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.thumbs figure { margin: 0; }
+.thumbs figure:first-child { grid-column: 1 / -1; }
+.thumbs .art-wrap { padding: 12px; }
+.thumbs .art { max-height: 170px; }
+.thumbs figcaption { margin-top: 8px; font-size: .88rem; font-weight: 700; color: #fff; }
+
+.timeline { list-style: none; margin: 0; padding: 0; position: relative; }
+.timeline::before { content: ""; position: absolute; left: 19px; top: 14px; bottom: 14px; width: 2px; background: rgba(11,42,54,.18); }
+.timeline li { position: relative; padding: 8px 0 22px 64px; min-height: 62px; display: block; font-weight: 700; color: var(--paper-ink); font-size: 1.04rem; line-height: 1.4; }
+.timeline li:last-child { padding-bottom: 0; min-height: 40px; }
+.timeline .num { position: absolute; left: 0; top: 0; width: 40px; height: 40px; border-radius: 50%; background: var(--paper); border: 2px solid #0a7d91; display: grid; place-items: center; color: #0a7d91; font-weight: 800; font-size: .85rem; }
+.checks { list-style: none; margin: 0; padding: 0; }
+.checks li { padding: 15px 0 15px 36px; position: relative; border-bottom: 1px solid rgba(11,42,54,.14); font-weight: 600; color: var(--paper-ink); }
+.checks li::before { content: ""; position: absolute; left: 4px; top: 21px; width: 14px; height: 8px; border-left: 3px solid #0a7d91; border-bottom: 3px solid #0a7d91; transform: rotate(-45deg); }
+.commit { margin-top: 32px; padding: 32px; background: var(--paper-ink); border-radius: var(--r); }
+.commit h3 { color: #fff; margin-bottom: 10px; font-size: 1.4rem; }
+.commit p { color: var(--mist); font-size: 1rem; }
+.commit strong { color: #fff; }
+.paper h3.sub { margin-bottom: 4px; }
+
+.contact-list { list-style: none; margin: 36px 0 0; padding: 0; }
+.contact-list li { border-bottom: 1px solid var(--line); }
+.contact-list a, .contact-list .v { display: flex; align-items: center; gap: 18px; padding: 18px 0; color: #fff; font-weight: 600; }
+.contact-list a:hover { text-decoration: none; color: var(--glow); }
+.contact-list .icon-chip { margin: 0; width: 46px; height: 46px; border-radius: 12px; }
+.contact-list small { display: block; color: var(--mist); font-weight: 500; font-size: .82rem; }
+.form-card { padding: 36px; border-radius: 20px; background: var(--deep); border: 1px solid var(--line2); }
+.form-card h3 { font-size: 1.4rem; margin-bottom: 6px; }
+.form-card .hint { color: var(--mist); font-size: .94rem; margin-bottom: 24px; }
+.field { margin-bottom: 16px; }
+.field label { display: block; font-size: .86rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
+.field input, .field select, .field textarea { width: 100%; padding: 13px 15px; border-radius: 12px; border: 1px solid var(--line2); background: var(--ink); color: #fff; font: inherit; font-size: 1rem; }
+.field textarea { min-height: 110px; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: 2px solid var(--glow); outline-offset: 1px; border-color: transparent; }
+.form-card .btn { width: 100%; margin-top: 6px; }
+
+@media (max-width: 960px) {
+  .hero-grid, .promo, .stage-panel { grid-template-columns: 1fr; }
+  .emblem { max-width: 520px; margin-inline: auto; }
+  .stage-tabs { grid-template-columns: repeat(5, minmax(150px, 1fr)); overflow-x: auto; padding-bottom: 6px; scroll-snap-type: x proximity; }
+  .stage-tab { scroll-snap-align: start; }
+}
+@media (max-width: 720px) {
+  .emblem-svg text[paint-order] { font-size: 21px; }
+  .stage-panel { padding: 24px; gap: 32px; }
+  .programs { grid-template-columns: 1fr; }
+  .quote { padding: 26px; }
+  .form-card { padding: 26px; }
+  .thumbs { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .emblem-svg .track { stroke-dashoffset: 0; }
+  .emblem-svg .node { opacity: 1; }
+}
+
+/* ---- upgrade: shared ---- */
+.wa-float { opacity: 0; transform: translateY(16px); pointer-events: none; transition: opacity .3s, transform .3s, background .2s; }
+.wa-float.show { opacity: 1; transform: none; pointer-events: auto; }
+.skip { position: absolute; left: 12px; top: -60px; z-index: 100; background: var(--glow); color: var(--ink); padding: 10px 16px; border-radius: 10px; font-weight: 700; }
+.skip:focus { top: 12px; text-decoration: none; }
+img[loading="lazy"] { background: var(--deep); }
+.collage img, .photo img { height: auto; }
+.faq { max-width: 860px; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq details:first-child { border-top: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px 0; color: #fff; font-weight: 700; font-size: 1.08rem; line-height: 1.4; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: ""; flex-shrink: 0; width: 12px; height: 12px; border-right: 2px solid var(--glow); border-bottom: 2px solid var(--glow); transform: rotate(45deg) translate(-3px, -3px); transition: transform .25s; }
+.faq details[open] summary::after { transform: rotate(-135deg) translate(-3px, -3px); }
+.faq details p { padding: 0 0 22px; color: var(--mist); max-width: 64ch; }
+.faq details p strong { color: #fff; }
+.form-err { display: none; margin: -6px 0 14px; color: #ffb4a8; font-size: .9rem; font-weight: 600; }
+.form-err.on { display: block; }
+.field input[aria-invalid="true"] { border-color: #ff8f7d; }
+
+/* ---- galeri ---- */
+.gal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+.gal-item { margin: 0; cursor: zoom-in; border-radius: 16px; overflow: hidden; border: 1px solid var(--line2); background: var(--deep); }
+.gal-item img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; transition: transform .4s; }
+.gal-item:hover img { transform: scale(1.03); }
+.gal-item figcaption { padding: 12px 16px; font-size: .92rem; color: var(--text); font-weight: 600; }
+.gal-item figcaption:empty { display: none; }
+dialog.lightbox { border: 0; padding: 0; background: transparent; max-width: min(1100px, 94vw); }
+dialog.lightbox::backdrop { background: rgba(3,10,14,.88); }
+dialog.lightbox img { max-height: 82vh; width: auto; max-width: 100%; border-radius: 12px; margin: 0 auto; }
+dialog.lightbox p { color: #fff; text-align: center; margin-top: 12px; font-weight: 600; }
+dialog.lightbox button { position: absolute; top: 8px; right: 8px; background: rgba(6,20,28,.8); color: #fff; border: 1px solid var(--line2); border-radius: 999px; padding: 8px 14px; font: inherit; font-weight: 700; cursor: pointer; }
+</style>
+</head>
+<body data-page="home">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.4 3.2-5.5 6.5-5.5s5.9 2.1 6.5 5.5"/><circle cx="17" cy="9" r="2.8"/><path d="M16 14.6c2.6.2 4.6 2.2 5 5"/></symbol><symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol><symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0V4z"/><path d="M8 6H4a3 3 0 0 0 3 4M16 6h4a3 3 0 0 1-3 4"/><path d="M12 13v4M8 21h8M9 17h6"/></symbol><symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></symbol><symbol id="i-sunset" viewBox="0 0 24 24"><path d="M3 17h18"/><path d="M7 17a5 5 0 0 1 10 0"/><path d="M12 5v3M5.6 9.6l2 2M18.4 9.6l-2 2"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></symbol><symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5c1 1.2 2.2 1.8 3.5 1.8s2.5-.6 3.5-1.8"/><path d="M9 9.5h.01M15 9.5h.01"/></symbol><symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol><symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-4 7 4v13"/><path d="M9 21v-6h6v6"/></symbol><symbol id="i-bars" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol><symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z"/><path d="M20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z"/></symbol><symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></symbol><symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></symbol><symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></symbol><symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol><symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></symbol><symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></symbol><symbol id="i-gamepad" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="9" rx="4"/><path d="M8 11v3M6.5 12.5h3M15 12h.01M17 13.5h.01"/></symbol><symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol></defs></svg>
+
+<a class="skip" href="#layanan">Lewati ke konten</a>
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Need Learning Organizer, kembali ke atas">
+      <img class="logo-mark" src="img/logo-mark.png" width="64" height="38" alt="">
+      <span>Need Learning<small>ORGANIZER</small></span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav aria-label="Utama">
+      <ul id="menu">
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#alur">Alur karier</a></li>
+        <li><a href="#riset">Riset</a></li>
+        <li><a href="gathering/">Employee Gathering</a></li>
+        <li><a href="#pendekatan">Pendekatan</a></li>
+        <li><a class="nav-cta" href="#kontak">Hubungi kami</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1 data-cms="home.hero.judul">Program PSDM untuk setiap tahap karier karyawan.</h1>
+        <p class="lead" data-cms="home.hero.lead">Kami menyediakan sistem program PSDM terintegrasi yang mengikuti siklus karier dan kompetensi karyawan, dari hari pertama bergabung hingga masa purnabakti.</p>
+        <div class="actions">
+          <a class="btn btn-solid" href="#kontak">Diskusikan kebutuhan Anda</a>
+          <a class="btn btn-ghost" href="#alur">Lihat alur pelatihan</a>
+        </div>
+        <div class="hero-points" aria-label="Prinsip NLO">
+          <span><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Adaptif</span><span><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Kompeten</span><span><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Berkelanjutan</span>
+        </div>
+      </div>
+      <div class="emblem"><svg class="emblem-svg" viewBox="0 0 470 390" role="img" aria-labelledby="emb-t" xmlns="http://www.w3.org/2000/svg"><title id="emb-t">Lima tahap siklus karier karyawan: Onboarding, Development, Promotion, Leadership, Pre-retire</title><defs><linearGradient id="eg" x1="0" x2="1"><stop offset="0" stop-color="#14a3b8"/><stop offset="1" stop-color="#3fd0e0"/></linearGradient></defs><circle cx="235" cy="200" r="176" fill="none" stroke="rgba(159,196,204,.12)"/><circle cx="235" cy="200" r="130" fill="none" stroke="rgba(159,196,204,.08)"/><circle cx="235" cy="200" r="84" fill="none" stroke="rgba(159,196,204,.06)"/><path class="track" d="M48 330 C63.0 319.3 108.3 285.3 138 266 C167.7 246.7 196.0 235.0 226 214 C256.0 193.0 289.3 164.7 318 140 C346.7 115.3 384.7 78.3 398 66" fill="none" stroke="url(#eg)" stroke-width="4" stroke-linecap="round" pathLength="1000"/><g class="node" style="animation-delay:0.50s"><circle cx="48" cy="330" r="17" fill="#06141c" stroke="#3fd0e0" stroke-width="2.5"/><text x="48" y="336" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="800" fill="#3fd0e0">1</text><text x="72" y="356" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="700" fill="#e9f6f8" stroke="#06141c" stroke-width="5" paint-order="stroke" stroke-linejoin="round">Onboarding</text></g><g class="node" style="animation-delay:0.72s"><circle cx="138" cy="266" r="17" fill="#06141c" stroke="#3fd0e0" stroke-width="2.5"/><text x="138" y="272" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="800" fill="#3fd0e0">2</text><text x="162" y="292" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="700" fill="#e9f6f8" stroke="#06141c" stroke-width="5" paint-order="stroke" stroke-linejoin="round">Development</text></g><g class="node" style="animation-delay:0.94s"><circle cx="226" cy="214" r="17" fill="#06141c" stroke="#3fd0e0" stroke-width="2.5"/><text x="226" y="220" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="800" fill="#3fd0e0">3</text><text x="250" y="240" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="700" fill="#e9f6f8" stroke="#06141c" stroke-width="5" paint-order="stroke" stroke-linejoin="round">Promotion</text></g><g class="node" style="animation-delay:1.16s"><circle cx="318" cy="140" r="17" fill="#06141c" stroke="#3fd0e0" stroke-width="2.5"/><text x="318" y="146" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="800" fill="#3fd0e0">4</text><text x="342" y="166" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="700" fill="#e9f6f8" stroke="#06141c" stroke-width="5" paint-order="stroke" stroke-linejoin="round">Leadership</text></g><g class="node" style="animation-delay:1.38s"><circle cx="398" cy="66" r="17" fill="#14a3b8" stroke="#3fd0e0" stroke-width="2.5"/><text x="398" y="72" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="800" fill="#06141c">5</text><text x="376" y="46" text-anchor="end" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="700" fill="#e9f6f8" stroke="#06141c" stroke-width="5" paint-order="stroke" stroke-linejoin="round">Pre-retire</text></g></svg></div>
+    </div>
+  </section>
+
+  <!-- Layanan -->
+  <section class="section bg-ink2" id="layanan">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 data-cms="home.layanan.judul">Tiga layanan untuk kebutuhan SDM perusahaan Anda.</h2>
+        <p class="lead" data-cms="home.layanan.lead">Dari pelatihan sepanjang siklus karier, riset berbasis data, sampai pengalaman gathering yang berkesan.</p>
+      </div>
+      <div class="grid g3">
+        <a class="card svc reveal" href="#alur">
+          <div class="art-wrap"><svg class="art" viewBox="0 0 480 260" role="img" aria-label="Seseorang bekerja di laptop dengan grafik naik dan roda gigi" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="40" y1="236" x2="440" y2="236" stroke="#9fc4cc" stroke-opacity="0.35" stroke-width="2"/><circle cx="95" cy="135.2" r="15.2" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><rect x="70.3" y="156.1" width="49.4" height="66.5" rx="17.1" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><rect x="160" y="150" width="150" height="86" rx="8" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><rect x="150" y="236" width="170" height="6" rx="3" fill="#14a3b8" stroke="none"/><rect x="178" y="170" width="18" height="50" fill="#14a3b8" stroke="none"/><rect x="204" y="188" width="18" height="32" fill="#14a3b8" stroke="none"/><rect x="230" y="178" width="18" height="42" fill="#3fd0e0" stroke="none"/><rect x="256" y="160" width="18" height="60" fill="#3fd0e0" stroke="none"/><circle cx="380" cy="100" r="30" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><circle cx="380" cy="100" r="11" stroke="#3fd0e0" stroke-width="2"/><line x1="416.0" y1="100.0" x2="424.0" y2="100.0" stroke="#3fd0e0" stroke-width="6"/><line x1="405.5" y1="125.5" x2="411.1" y2="131.1" stroke="#3fd0e0" stroke-width="6"/><line x1="380.0" y1="136.0" x2="380.0" y2="144.0" stroke="#3fd0e0" stroke-width="6"/><line x1="354.5" y1="125.5" x2="348.9" y2="131.1" stroke="#3fd0e0" stroke-width="6"/><line x1="344.0" y1="100.0" x2="336.0" y2="100.0" stroke="#3fd0e0" stroke-width="6"/><line x1="354.5" y1="74.5" x2="348.9" y2="68.9" stroke="#3fd0e0" stroke-width="6"/><line x1="380.0" y1="64.0" x2="380.0" y2="56.0" stroke="#3fd0e0" stroke-width="6"/><line x1="405.5" y1="74.5" x2="411.1" y2="68.9" stroke="#3fd0e0" stroke-width="6"/><path d="M350 210 L402 176" stroke="#14a3b8" stroke-width="3" stroke-dasharray="2 6"/></g></svg></div>
+          <h3>Training &amp; Development</h3>
+          <p>Lima tahap pengembangan yang mengikuti siklus karier karyawan, dari onboarding sampai pre-retire.</p>
+          <span class="link-arrow">Lihat alur karier</span>
+        </a>
+        <a class="card svc reveal d1" href="#riset">
+          <div class="art-wrap"><svg class="art" viewBox="0 0 480 260" role="img" aria-label="Pelanggan misterius dengan topi dan kaca pembesar menilai layanan di sebuah toko" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="40" y1="236" x2="440" y2="236" stroke="#9fc4cc" stroke-opacity="0.35" stroke-width="2"/><rect x="250" y="92" width="38" height="30" fill="#14a3b8" fill-opacity="0.85" stroke="none"/><rect x="288" y="92" width="38" height="30" fill="#3fd0e0" fill-opacity="0.85" stroke="none"/><rect x="326" y="92" width="38" height="30" fill="#14a3b8" fill-opacity="0.85" stroke="none"/><rect x="364" y="92" width="38" height="30" fill="#3fd0e0" fill-opacity="0.85" stroke="none"/><rect x="402" y="92" width="38" height="30" fill="#14a3b8" fill-opacity="0.85" stroke="none"/><path d="M250 122 q19 14 38 0 q19 14 38 0 q19 14 38 0 q19 14 38 0 q19 14 38 0" stroke="#0b2a36" stroke-width="2"/><rect x="258" y="150" width="174" height="86" rx="6" fill="#0b2a36" stroke="#14a3b8" stroke-width="2"/><rect x="276" y="128" width="26" height="22" rx="3" fill="#0b2a36" stroke="#9fc4cc" stroke-width="2"/><rect x="310" y="132" width="22" height="18" rx="3" fill="#0b2a36" stroke="#9fc4cc" stroke-width="2"/><rect x="372" y="126" width="30" height="24" rx="3" fill="#0b2a36" stroke="#9fc4cc" stroke-width="2"/><circle cx="110" cy="112.0" r="16.0" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><rect x="84.0" y="134.0" width="52.0" height="70.0" rx="18.0" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><ellipse cx="110" cy="100" rx="28" ry="6" fill="#f2c46d" stroke="none"/><rect x="97" y="80" width="26" height="20" rx="5" fill="#f2c46d" stroke="none"/><rect x="97" y="93" width="26" height="5" fill="#0b2a36" stroke="none"/><line x1="134" y1="150" x2="168" y2="156" stroke="#3fd0e0" stroke-width="3"/><circle cx="190" cy="158" r="20" fill="#3fd0e0" fill-opacity="0.12" stroke="#3fd0e0" stroke-width="3"/><line x1="205" y1="173" x2="222" y2="192" stroke="#3fd0e0" stroke-width="5"/><polygon points="300.0,49.0 302.9,56.0 310.5,56.6 304.7,61.5 306.5,68.9 300.0,65.0 293.5,68.9 295.3,61.5 289.5,56.6 297.1,56.0" fill="#f2c46d" stroke="none"/><polygon points="335.0,41.0 337.9,48.0 345.5,48.6 339.7,53.5 341.5,60.9 335.0,57.0 328.5,60.9 330.3,53.5 324.5,48.6 332.1,48.0" fill="#f2c46d" stroke="none"/><polygon points="370.0,49.0 372.9,56.0 380.5,56.6 374.7,61.5 376.5,68.9 370.0,65.0 363.5,68.9 365.3,61.5 359.5,56.6 367.1,56.0" fill="#f2c46d" stroke="none"/></g></svg></div>
+          <h3>Research &amp; Assessment</h3>
+          <p>Mystery Shopper dan Customer Satisfaction Research untuk keputusan PSDM yang berbasis data.</p>
+          <span class="link-arrow">Lihat layanan riset</span>
+        </a>
+        <a class="card svc reveal d2" href="gathering/">
+          <div class="art-wrap"><svg class="art" viewBox="0 0 480 260" role="img" aria-label="Tiga orang merayakan kebersamaan di bawah untaian bendera dan konfeti" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M60 50 Q240 78 420 50" stroke="#9fc4cc" stroke-opacity="0.6" stroke-width="2"/><path d="M70 52 l14 26 l14 -26" fill="#3fd0e0" fill-opacity="0.85" stroke="none"/><path d="M112 58 l14 26 l14 -26" fill="#f2c46d" fill-opacity="0.85" stroke="none"/><path d="M154 52 l14 26 l14 -26" fill="#14a3b8" fill-opacity="0.85" stroke="none"/><path d="M196 58 l14 26 l14 -26" fill="#e5695f" fill-opacity="0.85" stroke="none"/><path d="M238 52 l14 26 l14 -26" fill="#3fd0e0" fill-opacity="0.85" stroke="none"/><path d="M280 58 l14 26 l14 -26" fill="#f2c46d" fill-opacity="0.85" stroke="none"/><path d="M322 52 l14 26 l14 -26" fill="#14a3b8" fill-opacity="0.85" stroke="none"/><path d="M364 58 l14 26 l14 -26" fill="#e5695f" fill-opacity="0.85" stroke="none"/><path d="M406 52 l14 26 l14 -26" fill="#3fd0e0" fill-opacity="0.85" stroke="none"/><rect x="120" y="112" width="7" height="12" rx="2" fill="#f2c46d" stroke="none" transform="rotate(20 120 112)"/><rect x="184" y="96" width="7" height="12" rx="2" fill="#3fd0e0" stroke="none" transform="rotate(-30 184 96)"/><rect x="300" y="104" width="7" height="12" rx="2" fill="#e5695f" stroke="none" transform="rotate(35 300 104)"/><rect x="356" y="120" width="7" height="12" rx="2" fill="#3fd0e0" stroke="none" transform="rotate(10 356 120)"/><rect x="250" y="88" width="7" height="12" rx="2" fill="#f2c46d" stroke="none" transform="rotate(-15 250 88)"/><rect x="412" y="98" width="7" height="12" rx="2" fill="#14a3b8" stroke="none" transform="rotate(25 412 98)"/><rect x="84" y="140" width="7" height="12" rx="2" fill="#e5695f" stroke="none" transform="rotate(-20 84 140)"/><line x1="40" y1="236" x2="440" y2="236" stroke="#9fc4cc" stroke-opacity="0.35" stroke-width="2"/><circle cx="170" cy="146.4" r="14.4" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><rect x="146.6" y="166.2" width="46.8" height="63.0" rx="16.2" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><circle cx="240" cy="133.2" r="15.2" fill="#0b2a36" stroke="#14a3b8" stroke-width="2"/><rect x="215.3" y="154.1" width="49.4" height="66.5" rx="17.1" fill="#0b2a36" stroke="#14a3b8" stroke-width="2"/><circle cx="310" cy="146.4" r="14.4" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><rect x="286.6" y="166.2" width="46.8" height="63.0" rx="16.2" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><path d="M150 170 L128 136 M330 170 L352 136 M222 156 L206 124 M258 156 L274 124" stroke="#3fd0e0" stroke-width="3"/></g></svg></div>
+          <h3>Employee Gathering</h3>
+          <p>The Art of Gathering: gathering yang dirancang sebagai pengalaman, dilengkapi seminar dan debrief.</p>
+          <span class="link-arrow">Lihat program gathering</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tentang -->
+  <section class="section" id="tentang">
+    <div class="wrap split top">
+      <div class="reveal">
+        <h2 data-cms="home.tentang.judul">Mitra strategis dalam pengembangan manusia.</h2>
+        <p class="lead" data-cms="home.tentang.lead" style="margin-top:20px;">Need Learning Organizer hadir untuk membantu perusahaan menjawab pertanyaan yang sama: bagaimana memastikan setiap orang di dalamnya kompeten untuk pekerjaannya hari ini dan siap untuk peran berikutnya.</p>
+        <div class="quote">
+          <p data-cms="home.visi">Menjadi mitra strategis perusahaan dalam PSDM yang adaptif, kompeten, dan berdaya saing tinggi.</p>
+          <div class="who">VISI NLO</div>
+        </div>
+      </div>
+      <div class="reveal d1">
+        <h3 style="margin-bottom:20px;">Misi: empat pilar komitmen</h3>
+        <div class="grid g2">
+          <div class="card pillar-card"><div class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-building"/></svg></div><h3>Solusi PSDM berbasis kebutuhan perusahaan</h3></div>
+          <div class="card pillar-card"><div class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-trend"/></svg></div><h3>Program yang meningkatkan performa individu dan tim</h3></div>
+          <div class="card pillar-card"><div class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-bars"/></svg></div><h3>Membangun jalur talenta yang berkelanjutan</h3></div>
+          <div class="card pillar-card"><div class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg></div><h3>Metode pembelajaran modern, aplikatif, dan terukur</h3></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alur karier -->
+  <section class="section bg-deep" id="alur">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 data-cms="home.alur.judul">Lima tahap, sesuai siklus karier karyawan.</h2>
+        <p class="lead" data-cms="home.alur.lead">Dari hari pertama bergabung sampai masa purnabakti. Pilih tahap untuk melihat sasaran peserta dan program unggulannya.</p>
+      </div>
+      <div class="stage-tabs reveal" role="group" aria-label="Pilih tahap karier">
+        <button class="stage-tab" data-stage="0" aria-pressed="true"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg><span class="num">01</span><span class="nm">Onboarding</span></button><button class="stage-tab" data-stage="1" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-trend"/></svg><span class="num">02</span><span class="nm">Development</span></button><button class="stage-tab" data-stage="2" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-trophy"/></svg><span class="num">03</span><span class="nm">Promotion</span></button><button class="stage-tab" data-stage="3" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-compass"/></svg><span class="num">04</span><span class="nm">Leadership</span></button><button class="stage-tab" data-stage="4" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-sunset"/></svg><span class="num">05</span><span class="nm">Pre-retire</span></button>
+      </div>
+      <div class="stage-panel reveal" id="stage-panel" aria-live="polite"><div class="fade"><h3>Integrasi karyawan baru</h3><p class="desc">Masa krusial untuk mengintegrasikan karyawan baru ke ekosistem perusahaan secara sistematis. Menghilangkan hambatan psikologis dan teknis sejak hari pertama.</p><div class="block"><h4>Profil peserta</h4><ul class="ticks"><li>Karyawan baru semua level, dari staf sampai manajerial</li><li>Masa orientasi kurang dari 3 bulan sejak bergabung</li><li>Karyawan mutasi antar unit bisnis</li></ul></div><div class="block"><h4>Fokus tahap ini</h4><ul class="ticks"><li>Penyesuaian budaya</li><li>Orientasi organisasi</li><li>Orientasi tugas dasar</li></ul></div></div><div class="fade"><div class="art-wrap"><svg class="art" viewBox="0 0 480 260" role="img" aria-label="Dua orang menyambut karyawan baru di depan papan selamat datang" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="40" y1="236" x2="440" y2="236" stroke="#9fc4cc" stroke-opacity="0.35" stroke-width="2"/><rect x="150" y="50" width="180" height="130" rx="10" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><rect x="150" y="50" width="180" height="26" rx="10" fill="#14a3b8" stroke="none"/><text x="240" y="68" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#0b2a36" stroke="none">WELCOME</text><circle cx="172" cy="101" r="7" stroke="#3fd0e0" stroke-width="2"/><path d="M169 101 l2.5 2.5 4-4.5" stroke="#3fd0e0" stroke-width="2"/><line x1="188" y1="101" x2="306" y2="101" stroke="#9fc4cc" stroke-opacity="0.5" stroke-width="3"/><circle cx="172" cy="127" r="7" stroke="#3fd0e0" stroke-width="2"/><path d="M169 127 l2.5 2.5 4-4.5" stroke="#3fd0e0" stroke-width="2"/><line x1="188" y1="127" x2="306" y2="127" stroke="#9fc4cc" stroke-opacity="0.5" stroke-width="3"/><circle cx="172" cy="153" r="7" stroke="#3fd0e0" stroke-width="2"/><path d="M169 153 l2.5 2.5 4-4.5" stroke="#3fd0e0" stroke-width="2"/><line x1="188" y1="153" x2="306" y2="153" stroke="#9fc4cc" stroke-opacity="0.5" stroke-width="3"/><circle cx="100" cy="116.0" r="16.0" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><rect x="74.0" y="138.0" width="52.0" height="70.0" rx="18.0" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><circle cx="380" cy="116.0" r="16.0" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><rect x="354.0" y="138.0" width="52.0" height="70.0" rx="18.0" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><path d="M140 178 L160 178" stroke="#3fd0e0" stroke-width="3"/></g></svg></div><p class="programs-title">Program unggulan</p><div class="programs"><div class="program">Corporate Culture</div><div class="program">Soft Skills</div><div class="program">Communication</div><div class="program">Customer Mindset</div><div class="program">KPI Awareness</div><div class="program">Work Ethics</div></div></div></div>
+    </div>
+  </section>
+
+  <!-- Riset -->
+  <section class="section research" id="riset">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 data-cms="home.riset.judul">Keputusan PSDM yang tepat dimulai dari data yang terukur.</h2>
+        <p class="lead" data-cms="home.riset.lead">NLO juga menjadi mitra riset perusahaan lewat assessment dan evaluasi program untuk menemukan perbaikan yang berbasis data.</p>
+      </div>
+      <div class="grid g2">
+        <article class="card reveal">
+          <div class="art-wrap"><svg class="art" viewBox="0 0 480 260" role="img" aria-label="Pelanggan misterius dengan topi dan kaca pembesar menilai layanan di sebuah toko" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="40" y1="236" x2="440" y2="236" stroke="#9fc4cc" stroke-opacity="0.35" stroke-width="2"/><rect x="250" y="92" width="38" height="30" fill="#14a3b8" fill-opacity="0.85" stroke="none"/><rect x="288" y="92" width="38" height="30" fill="#3fd0e0" fill-opacity="0.85" stroke="none"/><rect x="326" y="92" width="38" height="30" fill="#14a3b8" fill-opacity="0.85" stroke="none"/><rect x="364" y="92" width="38" height="30" fill="#3fd0e0" fill-opacity="0.85" stroke="none"/><rect x="402" y="92" width="38" height="30" fill="#14a3b8" fill-opacity="0.85" stroke="none"/><path d="M250 122 q19 14 38 0 q19 14 38 0 q19 14 38 0 q19 14 38 0 q19 14 38 0" stroke="#0b2a36" stroke-width="2"/><rect x="258" y="150" width="174" height="86" rx="6" fill="#0b2a36" stroke="#14a3b8" stroke-width="2"/><rect x="276" y="128" width="26" height="22" rx="3" fill="#0b2a36" stroke="#9fc4cc" stroke-width="2"/><rect x="310" y="132" width="22" height="18" rx="3" fill="#0b2a36" stroke="#9fc4cc" stroke-width="2"/><rect x="372" y="126" width="30" height="24" rx="3" fill="#0b2a36" stroke="#9fc4cc" stroke-width="2"/><circle cx="110" cy="112.0" r="16.0" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><rect x="84.0" y="134.0" width="52.0" height="70.0" rx="18.0" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><ellipse cx="110" cy="100" rx="28" ry="6" fill="#f2c46d" stroke="none"/><rect x="97" y="80" width="26" height="20" rx="5" fill="#f2c46d" stroke="none"/><rect x="97" y="93" width="26" height="5" fill="#0b2a36" stroke="none"/><line x1="134" y1="150" x2="168" y2="156" stroke="#3fd0e0" stroke-width="3"/><circle cx="190" cy="158" r="20" fill="#3fd0e0" fill-opacity="0.12" stroke="#3fd0e0" stroke-width="3"/><line x1="205" y1="173" x2="222" y2="192" stroke="#3fd0e0" stroke-width="5"/><polygon points="300.0,49.0 302.9,56.0 310.5,56.6 304.7,61.5 306.5,68.9 300.0,65.0 293.5,68.9 295.3,61.5 289.5,56.6 297.1,56.0" fill="#f2c46d" stroke="none"/><polygon points="335.0,41.0 337.9,48.0 345.5,48.6 339.7,53.5 341.5,60.9 335.0,57.0 328.5,60.9 330.3,53.5 324.5,48.6 332.1,48.0" fill="#f2c46d" stroke="none"/><polygon points="370.0,49.0 372.9,56.0 380.5,56.6 374.7,61.5 376.5,68.9 370.0,65.0 363.5,68.9 365.3,61.5 359.5,56.6 367.1,56.0" fill="#f2c46d" stroke="none"/></g></svg></div>
+          <span class="tag">Program A</span>
+          <h3>Mystery Shopper</h3>
+          <p>Penilaian layanan staf lini depan lewat kunjungan terencana oleh mystery shopper yang berperan sebagai pelanggan biasa. Karyawan yang dinilai tidak mengetahui proses ini, sehingga hasilnya objektif dan real-time.</p>
+          <div class="chips"><span>Frontliner assessment</span><span>Kualitas layanan</span><span>Evaluasi real-time</span><span>Standar layanan</span></div>
+        </article>
+        <article class="card reveal d1">
+          <div class="art-wrap"><svg class="art" viewBox="0 0 480 260" role="img" aria-label="Papan survei dengan daftar centang, diagram lingkaran, dan wajah tersenyum dengan bintang penilaian" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="96" y="42" width="140" height="190" rx="12" fill="#0b2a36" stroke="#14a3b8" stroke-width="2"/><rect x="136" y="32" width="60" height="22" rx="8" fill="#14a3b8" stroke="none"/><circle cx="124" cy="104" r="9" stroke="#3fd0e0" stroke-width="2"/><path d="M120 104 l3 3 6-7" stroke="#3fd0e0" stroke-width="2"/><line x1="146" y1="104" x2="212" y2="104" stroke="#9fc4cc" stroke-opacity="0.55" stroke-width="4"/><circle cx="124" cy="142" r="9" stroke="#3fd0e0" stroke-width="2"/><path d="M120 142 l3 3 6-7" stroke="#3fd0e0" stroke-width="2"/><line x1="146" y1="142" x2="212" y2="142" stroke="#9fc4cc" stroke-opacity="0.55" stroke-width="4"/><circle cx="124" cy="180" r="9" stroke="#3fd0e0" stroke-width="2"/><path d="M120 180 l3 3 6-7" stroke="#3fd0e0" stroke-width="2"/><line x1="146" y1="180" x2="212" y2="180" stroke="#9fc4cc" stroke-opacity="0.55" stroke-width="4"/><circle cx="124" cy="218" r="9" stroke="#3fd0e0" stroke-width="2"/><path d="M120 218 l3 3 6-7" stroke="#3fd0e0" stroke-width="2"/><line x1="146" y1="218" x2="212" y2="218" stroke="#9fc4cc" stroke-opacity="0.55" stroke-width="4"/><circle cx="340" cy="100" r="50" fill="#0b2a36" stroke="#14a3b8" stroke-width="2"/><path d="M340 100 L340 50 A50 50 0 1 1 292 114 Z" fill="#14a3b8" fill-opacity="0.8" stroke="none"/><path d="M340 100 L292 114 A50 50 0 0 1 340 50 Z" fill="#3fd0e0" stroke="none"/><circle cx="340" cy="100" r="50" stroke="#0b2a36" stroke-width="3"/><circle cx="300" cy="206" r="24" fill="#0b2a36" stroke="#f2c46d" stroke-width="3"/><path d="M290 200h.01M310 200h.01" stroke="#f2c46d" stroke-width="4"/><path d="M290 212 q10 10 20 0" stroke="#f2c46d" stroke-width="3"/><polygon points="358.0,189.0 360.9,196.0 368.5,196.6 362.7,201.5 364.5,208.9 358.0,204.9 351.5,208.9 353.3,201.5 347.5,196.6 355.1,196.0" fill="#f2c46d" stroke="none"/><polygon points="386.0,189.0 388.9,196.0 396.5,196.6 390.7,201.5 392.5,208.9 386.0,204.9 379.5,208.9 381.3,201.5 375.5,196.6 383.1,196.0" fill="#f2c46d" stroke="none"/><polygon points="414.0,189.0 416.9,196.0 424.5,196.6 418.7,201.5 420.5,208.9 414.0,204.9 407.5,208.9 409.3,201.5 403.5,196.6 411.1,196.0" fill="#f2c46d" stroke="none"/></g></svg></div>
+          <span class="tag">Program B</span>
+          <h3>Customer Satisfaction Research</h3>
+          <p>Mengukur dan menganalisis pengalaman pelanggan secara menyeluruh dengan matriks standar. Mencakup kepuasan, loyalitas, word-of-mouth, dan aspek penting lain untuk meningkatkan mutu dan daya saing.</p>
+          <div class="chips"><span>Customer satisfaction</span><span>Loyalty index</span><span>NPS research</span><span>Metodologi ilmiah</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gathering teaser -->
+  <section class="section bg-ink2" id="gathering">
+    <div class="wrap">
+      <div class="promo reveal">
+        <div>
+          <h2 data-cms="gathering.hero.judul">The Art of Gathering</h2>
+          <p class="sub">Beyond Gathering, Creating Meaningful Experiences</p>
+          <blockquote>Karena tim hebat tidak hanya dibangun di ruang meeting, tetapi melalui pengalaman yang mereka jalani bersama.</blockquote>
+          <div class="actions"><a class="btn btn-solid" href="gathering/">Lihat program gathering</a></div>
+        </div>
+        <div class="thumbs">
+          <figure><div class="art-wrap"><svg class="art" viewBox="0 0 480 260" role="img" aria-label="Peta dengan rute dan lima pos pemberhentian untuk perlombaan tim" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="60" y="40" width="360" height="180" rx="14" fill="#0b2a36" stroke="#14a3b8" stroke-width="2"/><path d="M90 190 C 150 90, 200 230, 250 150 S 360 70, 400 110" stroke="#3fd0e0" stroke-width="3" stroke-dasharray="6 8"/><circle cx="90" cy="190" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="90" y="194" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">1</text><circle cx="180" cy="120" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="180" y="124" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">2</text><circle cx="250" cy="150" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="250" y="154" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">3</text><circle cx="330" cy="92" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="330" y="96" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">4</text><circle cx="400" cy="110" r="13" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><text x="400" y="114" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#3fd0e0" stroke="none">5</text><path d="M400 60 v-16 l14 5 -14 5" stroke="#f2c46d" stroke-width="2" fill="#f2c46d"/></g></svg></div><figcaption>Amazing Race</figcaption></figure>
+          <figure><div class="art-wrap"><svg class="art" viewBox="0 0 480 260" role="img" aria-label="Peta kota dengan jalur dan tanda X sebagai tujuan pencarian harta karun" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="60" y="40" width="360" height="180" rx="14" fill="#0b2a36" stroke="#14a3b8" stroke-width="2"/><line x1="120" y1="40" x2="120" y2="220" stroke="#9fc4cc" stroke-opacity="0.12"/><line x1="180" y1="40" x2="180" y2="220" stroke="#9fc4cc" stroke-opacity="0.12"/><line x1="240" y1="40" x2="240" y2="220" stroke="#9fc4cc" stroke-opacity="0.12"/><line x1="300" y1="40" x2="300" y2="220" stroke="#9fc4cc" stroke-opacity="0.12"/><line x1="360" y1="40" x2="360" y2="220" stroke="#9fc4cc" stroke-opacity="0.12"/><line x1="60" y1="80" x2="420" y2="80" stroke="#9fc4cc" stroke-opacity="0.12"/><line x1="60" y1="120" x2="420" y2="120" stroke="#9fc4cc" stroke-opacity="0.12"/><line x1="60" y1="160" x2="420" y2="160" stroke="#9fc4cc" stroke-opacity="0.12"/><line x1="60" y1="200" x2="420" y2="200" stroke="#9fc4cc" stroke-opacity="0.12"/><path d="M110 200 C 150 150, 190 210, 240 150 S 330 100, 360 90" stroke="#3fd0e0" stroke-width="2.5" stroke-dasharray="5 6"/><path d="M352 84 l16 16 M368 84 l-16 16" stroke="#f2c46d" stroke-width="3"/><path d="M250 70 c-10 0 -18 8 -18 18 c0 14 18 30 18 30 s18-16 18-30 c0-10-8-18-18-18z" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><circle cx="250" cy="88" r="5" fill="#3fd0e0" stroke="none"/></g></svg></div><figcaption>Treasure Hunt</figcaption></figure>
+          <figure><div class="art-wrap"><svg class="art" viewBox="0 0 480 260" role="img" aria-label="Seseorang berjalan dengan egrang bambu dalam permainan tradisional" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="40" y1="236" x2="440" y2="236" stroke="#9fc4cc" stroke-opacity="0.35" stroke-width="2"/><line x1="205" y1="236" x2="205" y2="120" stroke="#f2c46d" stroke-width="6"/><line x1="275" y1="236" x2="275" y2="120" stroke="#f2c46d" stroke-width="6"/><circle cx="240" cy="62.0" r="16.0" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><rect x="214.0" y="84.0" width="52.0" height="70.0" rx="18.0" fill="#0b2a36" stroke="#3fd0e0" stroke-width="2"/><path d="M70 236 l10 -10 M410 236 l-10 -10" stroke="#9fc4cc" stroke-opacity="0.5"/><path d="M320 190 l40 0 M340 170 l20 0" stroke="#f2c46d" stroke-opacity="0.6" stroke-width="2"/></g></svg></div><figcaption>Traditional Games</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Galeri (diisi dari admin; tersembunyi selama kosong) -->
+  <section class="section " id="galeri" data-cms-gallery="home" hidden>
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-cms="home.galeri.judul">Galeri kegiatan.</h2>
+        <p class="lead" data-cms="home.galeri.lead">Momen dari program yang sudah kami jalankan bersama tim klien.</p>
+      </div>
+      <div class="gal-grid"></div>
+    </div>
+  </section>
+
+  <!-- Pendekatan -->
+  <section class="section paper" id="pendekatan">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 data-cms="home.pendekatan.judul">Tujuh langkah dari kebutuhan sampai dampak.</h2>
+        <p class="lead" data-cms="home.pendekatan.lead">Pendekatan yang kami pakai di setiap program, dari analisis kebutuhan sampai tindak lanjut setelah pelatihan.</p>
+      </div>
+      <div class="split top">
+        <ol class="timeline reveal">
+          <li><span class="num">01</span>Training Need Analysis (TNA)</li>
+          <li><span class="num">02</span>Competency-Based Framework</li>
+          <li><span class="num">03</span>Experiential Learning Method</li>
+          <li><span class="num">04</span>Case Study dan Simulation</li>
+          <li><span class="num">05</span>Project-Based Learning</li>
+          <li><span class="num">06</span>Post-Training Evaluation (Level 1 sampai 3)</li>
+          <li><span class="num">07</span>Coaching dan Follow-Up Session</li>
+        </ol>
+        <div class="reveal d1">
+          <h3 class="sub">Keunggulan kami</h3>
+          <ul class="checks">
+            <li>End-to-end development system</li>
+            <li>Program berbasis kebutuhan nyata organisasi</li>
+            <li>Trainer profesional dan praktisi industri</li>
+            <li>Metode interaktif dan aplikatif</li>
+            <li>Pendekatan terukur dan berbasis dampak</li>
+            <li>Fleksibel: in-house, hybrid, maupun digital learning</li>
+          </ul>
+          <div class="commit">
+            <h3>Komitmen kami</h3>
+            <p>Kami percaya pengembangan manusia adalah <strong>investasi strategis jangka panjang</strong>. NLO berkomitmen menjadi mitra transformasi organisasi melalui sistem PSDM yang terintegrasi, terukur, dan berkelanjutan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section class="section" id="kontak">
+    <div class="wrap split top">
+      <div class="reveal">
+        <h2 data-cms="home.kontak.judul">Mari berkolaborasi bersama NLO.</h2>
+        <p class="lead" data-cms="home.kontak.lead" style="margin-top:20px;">Kami siap merancang program pengembangan SDM yang tepat sasaran, terukur, dan berdampak nyata untuk pertumbuhan perusahaan Anda.</p>
+        <ul class="contact-list">
+          <li><a data-cms-tel href="tel:+6287781018187"><span class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span><span><small>Telepon</small><span data-cms="kontak.telepon">+62 877-8101-8187</span></span></a></li>
+          <li><a data-cms-mail href="mailto:needlearningorganizer@gmail.com"><span class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></span><span><small>Email</small><span data-cms="kontak.email">needlearningorganizer@gmail.com</span></span></a></li>
+          <li><span class="v"><span class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg></span><span><small>Lokasi</small>Bandung, Jawa Barat</span></span></li>
+          <li><a data-cms-ig href="https://instagram.com/needlearningorganizer" target="_blank" rel="noopener"><span class="icon-chip"><svg class="ic" aria-hidden="true"><use href="#i-camera"/></svg></span><span><small>Instagram</small><span data-cms="kontak.instagram">@needlearningorganizer</span></span></a></li>
+        </ul>
+      </div>
+      <form class="form-card reveal d1" id="wa-form" novalidate>
+        <h3>Ceritakan kebutuhan Anda</h3>
+        <p class="hint">Isi singkat, lalu pesan akan terbuka di WhatsApp dan Anda tinggal menekan kirim.</p>
+        <div class="field"><label for="f-nama">Nama</label><input id="f-nama" name="nama" type="text" autocomplete="name" placeholder="Nama Anda" aria-describedby="f-err"></div>
+        <p class="form-err" id="f-err" role="alert">Isi nama Anda terlebih dahulu.</p>
+        <div class="field"><label for="f-pt">Perusahaan</label><input id="f-pt" name="pt" type="text" autocomplete="organization" placeholder="Nama perusahaan"></div>
+        <div class="field"><label for="f-butuh">Kebutuhan</label>
+          <select id="f-butuh" name="butuh">
+            <option>Training &amp; Development</option>
+            <option>Research &amp; Assessment</option>
+            <option>Employee Gathering</option>
+            <option>Lainnya</option>
+          </select></div>
+        <div class="field"><label for="f-pesan">Pesan</label><textarea id="f-pesan" name="pesan" placeholder="Jumlah peserta, tujuan, atau waktu yang direncanakan"></textarea></div>
+        <button class="btn btn-solid" type="submit">Kirim lewat WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top"><img class="logo-mark" src="img/logo-mark.png" width="64" height="38" alt=""><span>Need Learning<small>ORGANIZER</small></span></a>
+        <p class="foot-desc">Konsultan Program Pengembangan Sumber Daya Manusia (PSDM) Perusahaan.</p>
+      </div>
+      <div>
+        <h4>Jelajahi</h4>
+        <ul>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#alur">Alur karier</a></li>
+          <li><a href="#riset">Riset &amp; assessment</a></li>
+          <li><a href="gathering/">Employee Gathering</a></li>
+          <li><a href="#pendekatan">Pendekatan</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <ul>
+          <li><a data-cms-tel href="tel:+6287781018187"><span data-cms="kontak.telepon">+62 877-8101-8187</span></a></li>
+          <li><a data-cms-mail href="mailto:needlearningorganizer@gmail.com"><span data-cms="kontak.email">needlearningorganizer@gmail.com</span></a></li>
+          <li>Bandung, Jawa Barat</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom"><span>&copy; 2026 Need Learning Organizer. Training &amp; Development.</span><span><span data-cms="kontak.instagram">@needlearningorganizer</span></span></div>
+  </div>
+</footer>
+
+<a class="wa-float" data-cms-wa href="https://wa.me/6287781018187?text=Halo%20NLO%2C%20saya%20ingin%20berdiskusi%20tentang%20program%20PSDM." target="_blank" rel="noopener" aria-label="Chat WhatsApp dengan NLO"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg><span>Chat WhatsApp</span></a>
+
+<script>
+  (function(){
+    var b = document.querySelector(".wa-float"); if (!b) return;
+    function t(){ if (window.scrollY > Math.min(560, window.innerHeight * .7)) b.classList.add("show"); else b.classList.remove("show"); }
+    window.addEventListener("scroll", t, { passive: true }); t();
+  })();
+  function arrowNav(list, attr){
+    list.forEach(function(t, i){
+      t.addEventListener("keydown", function(e){
+        var k = e.key, n = null;
+        if (k === "ArrowRight") n = (i + 1) % list.length;
+        else if (k === "ArrowLeft") n = (i - 1 + list.length) % list.length;
+        else if (k === "Home") n = 0; else if (k === "End") n = list.length - 1;
+        if (n === null) return;
+        e.preventDefault(); list[n].focus(); list[n].click();
+      });
+    });
+  }
+
+  var stages = [{"name": "Onboarding", "title": "Integrasi karyawan baru", "desc": "Masa krusial untuk mengintegrasikan karyawan baru ke ekosistem perusahaan secara sistematis. Menghilangkan hambatan psikologis dan teknis sejak hari pertama.", "who": ["Karyawan baru semua level, dari staf sampai manajerial", "Masa orientasi kurang dari 3 bulan sejak bergabung", "Karyawan mutasi antar unit bisnis"], "focus": ["Penyesuaian budaya", "Orientasi organisasi", "Orientasi tugas dasar"], "programs": [["Corporate Culture", ""], ["Soft Skills", ""], ["Communication", ""], ["Customer Mindset", ""], ["KPI Awareness", ""], ["Work Ethics", ""]], "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Dua orang menyambut karyawan baru di depan papan selamat datang\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"40\" y1=\"236\" x2=\"440\" y2=\"236\" stroke=\"#9fc4cc\" stroke-opacity=\"0.35\" stroke-width=\"2\"/><rect x=\"150\" y=\"50\" width=\"180\" height=\"130\" rx=\"10\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"150\" y=\"50\" width=\"180\" height=\"26\" rx=\"10\" fill=\"#14a3b8\" stroke=\"none\"/><text x=\"240\" y=\"68\" text-anchor=\"middle\" font-family=\"Plus Jakarta Sans, sans-serif\" font-size=\"12\" font-weight=\"700\" fill=\"#0b2a36\" stroke=\"none\">WELCOME<\/text><circle cx=\"172\" cy=\"101\" r=\"7\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><path d=\"M169 101 l2.5 2.5 4-4.5\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><line x1=\"188\" y1=\"101\" x2=\"306\" y2=\"101\" stroke=\"#9fc4cc\" stroke-opacity=\"0.5\" stroke-width=\"3\"/><circle cx=\"172\" cy=\"127\" r=\"7\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><path d=\"M169 127 l2.5 2.5 4-4.5\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><line x1=\"188\" y1=\"127\" x2=\"306\" y2=\"127\" stroke=\"#9fc4cc\" stroke-opacity=\"0.5\" stroke-width=\"3\"/><circle cx=\"172\" cy=\"153\" r=\"7\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><path d=\"M169 153 l2.5 2.5 4-4.5\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><line x1=\"188\" y1=\"153\" x2=\"306\" y2=\"153\" stroke=\"#9fc4cc\" stroke-opacity=\"0.5\" stroke-width=\"3\"/><circle cx=\"100\" cy=\"116.0\" r=\"16.0\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"74.0\" y=\"138.0\" width=\"52.0\" height=\"70.0\" rx=\"18.0\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><circle cx=\"380\" cy=\"116.0\" r=\"16.0\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"354.0\" y=\"138.0\" width=\"52.0\" height=\"70.0\" rx=\"18.0\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><path d=\"M140 178 L160 178\" stroke=\"#3fd0e0\" stroke-width=\"3\"/><\/g><\/svg>"}, {"name": "Development", "title": "Penguasaan kompetensi inti", "desc": "Fokus pada penguasaan kompetensi inti untuk produktivitas dan efisiensi operasional. Mengidentifikasi skill gap dan memberikan solusi pelatihan yang aplikatif.", "who": ["Karyawan tetap atau kontrak, level staf sampai senior staf", "Individu dengan skill gap teknis yang teridentifikasi", "Staf yang butuh literasi digital dan teknologi baru"], "focus": ["Peningkatan skill teknis", "Soft skills", "Pelatihan berkelanjutan"], "programs": [["Advanced Technical", ""], ["Problem Solving", ""], ["Critical Thinking", ""], ["Collaboration", ""], ["Time Management", ""], ["Digital Literacy", ""]], "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Seseorang bekerja di laptop dengan grafik naik dan roda gigi\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"40\" y1=\"236\" x2=\"440\" y2=\"236\" stroke=\"#9fc4cc\" stroke-opacity=\"0.35\" stroke-width=\"2\"/><circle cx=\"95\" cy=\"135.2\" r=\"15.2\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"70.3\" y=\"156.1\" width=\"49.4\" height=\"66.5\" rx=\"17.1\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"160\" y=\"150\" width=\"150\" height=\"86\" rx=\"8\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"150\" y=\"236\" width=\"170\" height=\"6\" rx=\"3\" fill=\"#14a3b8\" stroke=\"none\"/><rect x=\"178\" y=\"170\" width=\"18\" height=\"50\" fill=\"#14a3b8\" stroke=\"none\"/><rect x=\"204\" y=\"188\" width=\"18\" height=\"32\" fill=\"#14a3b8\" stroke=\"none\"/><rect x=\"230\" y=\"178\" width=\"18\" height=\"42\" fill=\"#3fd0e0\" stroke=\"none\"/><rect x=\"256\" y=\"160\" width=\"18\" height=\"60\" fill=\"#3fd0e0\" stroke=\"none\"/><circle cx=\"380\" cy=\"100\" r=\"30\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><circle cx=\"380\" cy=\"100\" r=\"11\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><line x1=\"416.0\" y1=\"100.0\" x2=\"424.0\" y2=\"100.0\" stroke=\"#3fd0e0\" stroke-width=\"6\"/><line x1=\"405.5\" y1=\"125.5\" x2=\"411.1\" y2=\"131.1\" stroke=\"#3fd0e0\" stroke-width=\"6\"/><line x1=\"380.0\" y1=\"136.0\" x2=\"380.0\" y2=\"144.0\" stroke=\"#3fd0e0\" stroke-width=\"6\"/><line x1=\"354.5\" y1=\"125.5\" x2=\"348.9\" y2=\"131.1\" stroke=\"#3fd0e0\" stroke-width=\"6\"/><line x1=\"344.0\" y1=\"100.0\" x2=\"336.0\" y2=\"100.0\" stroke=\"#3fd0e0\" stroke-width=\"6\"/><line x1=\"354.5\" y1=\"74.5\" x2=\"348.9\" y2=\"68.9\" stroke=\"#3fd0e0\" stroke-width=\"6\"/><line x1=\"380.0\" y1=\"64.0\" x2=\"380.0\" y2=\"56.0\" stroke=\"#3fd0e0\" stroke-width=\"6\"/><line x1=\"405.5\" y1=\"74.5\" x2=\"411.1\" y2=\"68.9\" stroke=\"#3fd0e0\" stroke-width=\"6\"/><path d=\"M350 210 L402 176\" stroke=\"#14a3b8\" stroke-width=\"3\" stroke-dasharray=\"2 6\"/><\/g><\/svg>"}, {"name": "Promotion", "title": "Kenaikan jabatan dan manajerial", "desc": "Menyiapkan talenta terbaik untuk tanggung jawab yang lebih kompleks. Mengubah pola pikir dari pelaksana teknis menjadi pengambil keputusan operasional yang handal.", "who": ["High potential dalam rencana suksesi perusahaan", "Calon supervisor atau manajer lini pertama", "Senior yang akan memimpin tim kecil"], "focus": ["Evaluasi kinerja unggul", "Tanggung jawab baru", "Pelatihan manajerial"], "programs": [["SDP (Supervisory)", ""], ["Leadership Transition", ""], ["Performance Management System", ""], ["Conflict Management", ""], ["Assessment & Development Center", ""], ["Talent Mapping", ""]], "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Seseorang menaiki tangga menuju piala di puncak\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"40\" y1=\"236\" x2=\"440\" y2=\"236\" stroke=\"#9fc4cc\" stroke-opacity=\"0.35\" stroke-width=\"2\"/><rect x=\"60\" y=\"200\" width=\"90\" height=\"36\" fill=\"#0b2a36\" stroke=\"#14a3b8\" stroke-width=\"2\"/><rect x=\"150\" y=\"166\" width=\"90\" height=\"70\" fill=\"#0b2a36\" stroke=\"#14a3b8\" stroke-width=\"2\"/><rect x=\"240\" y=\"132\" width=\"90\" height=\"104\" fill=\"#0b2a36\" stroke=\"#14a3b8\" stroke-width=\"2\"/><rect x=\"330\" y=\"98\" width=\"90\" height=\"138\" fill=\"#0b2a36\" stroke=\"#14a3b8\" stroke-width=\"2\"/><circle cx=\"95\" cy=\"111.6\" r=\"13.6\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"72.9\" y=\"130.3\" width=\"44.2\" height=\"59.5\" rx=\"15.3\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><path d=\"M380 40 h40 v12 a20 20 0 0 1 -40 0 z\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><path d=\"M372 46 h-6 a8 8 0 0 0 8 14 M408 46 h6 a8 8 0 0 1 -8 14\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><line x1=\"400\" y1=\"64\" x2=\"400\" y2=\"80\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"386\" y=\"80\" width=\"28\" height=\"6\" rx=\"2\" fill=\"#3fd0e0\" stroke=\"none\"/><\/g><\/svg>"}, {"name": "Leadership", "title": "Kepemimpinan strategis", "desc": "Memperkuat kapasitas manajer dan eksekutif dalam mengarahkan strategi bisnis dan mengelola perubahan. Menciptakan budaya kerja yang inovatif dan resilien.", "who": ["Manager, senior manager, dan C-level executive", "Pemimpin unit bisnis atau departemen", "Pemimpin proyek transformasi besar"], "focus": ["Pelatihan kepemimpinan", "Manajemen tim", "Pengambilan keputusan"], "programs": [["Leader as Coach", ""], ["Strategic Leadership", ""], ["Change Management", ""], ["High Performance Team", ""], ["Emotional Intelligence", ""], ["Business Acumen", ""]], "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Seseorang berdiri di puncak gunung dengan bendera\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"40\" y1=\"236\" x2=\"440\" y2=\"236\" stroke=\"#9fc4cc\" stroke-opacity=\"0.35\" stroke-width=\"2\"/><path d=\"M70 236 L230 80 L390 236 Z\" fill=\"#0b2a36\" stroke=\"#14a3b8\" stroke-width=\"2\"/><path d=\"M205 110 L230 80 L255 110\" fill=\"none\" stroke=\"#9fc4cc\" stroke-opacity=\"0.5\" stroke-width=\"2\"/><line x1=\"230\" y1=\"80\" x2=\"230\" y2=\"36\" stroke=\"#3fd0e0\" stroke-width=\"3\"/><path d=\"M230 36 L266 48 L230 60 Z\" fill=\"#3fd0e0\" stroke=\"none\"/><circle cx=\"150\" cy=\"101.6\" r=\"9.6\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"134.4\" y=\"114.8\" width=\"31.2\" height=\"42.0\" rx=\"10.8\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><path d=\"M300 210 L330 160 M330 160 L322 162 M330 160 L332 168\" stroke=\"#9fc4cc\" stroke-opacity=\"0.6\" stroke-width=\"2\"/><circle cx=\"400\" cy=\"60\" r=\"3\" fill=\"#9fc4cc\" stroke=\"none\"/><circle cx=\"60\" cy=\"70\" r=\"2\" fill=\"#9fc4cc\" stroke=\"none\"/><circle cx=\"430\" cy=\"110\" r=\"2\" fill=\"#9fc4cc\" stroke=\"none\"/><\/g><\/svg>"}, {"name": "Pre-retire", "title": "Persiapan masa purnabakti", "desc": "Mendampingi karyawan merencanakan masa purnabakti yang bermartabat dan sejahtera, mencakup aspek psikologis, finansial, kewirausahaan, dan gaya hidup sehat.", "who": [], "focus": ["Transfer pengetahuan", "Perencanaan pensiun", "Sehat dan bahagia"], "programs": [["Financial Planning for Retirement", "Konsultasi privat"], ["Investment & Wealth Awareness", "Seminar"], ["Digital Entrepreneurship", "Praktik langsung"], ["Business Planning Post-Career", "Workshop"], ["Mental & Emotional Readiness", "Talkshow"], ["Health & Lifestyle Management", "Kelas praktis"]], "art": "<svg class=\"art\" viewBox=\"0 0 480 260\" role=\"img\" aria-label=\"Seseorang duduk menikmati matahari terbenam di samping rumah, dengan tumpukan koin\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"40\" y1=\"236\" x2=\"440\" y2=\"236\" stroke=\"#9fc4cc\" stroke-opacity=\"0.35\" stroke-width=\"2\"/><path d=\"M120 236 A120 120 0 0 1 360 236\" fill=\"#14a3b8\" fill-opacity=\"0.25\" stroke=\"#14a3b8\" stroke-width=\"2\"/><circle cx=\"240\" cy=\"180\" r=\"36\" fill=\"#f2c46d\" fill-opacity=\"0.85\" stroke=\"none\"/><path d=\"M290 170 L320 150 M286 190 L320 196 M190 170 L160 150\" stroke=\"#f2c46d\" stroke-width=\"2\" stroke-opacity=\"0.8\"/><path d=\"M330 236 V176 L370 146 L410 176 V236 Z\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"356\" y=\"200\" width=\"22\" height=\"36\" fill=\"#3fd0e0\" fill-opacity=\"0.3\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><ellipse cx=\"90\" cy=\"232\" rx=\"30\" ry=\"8\" fill=\"#f2c46d\" stroke=\"#f2c46d\" stroke-width=\"2\"/><ellipse cx=\"90\" cy=\"222\" rx=\"30\" ry=\"8\" fill=\"#f2c46d\" stroke=\"#f2c46d\" stroke-width=\"2\"/><ellipse cx=\"90\" cy=\"212\" rx=\"30\" ry=\"8\" fill=\"#f2c46d\" stroke=\"#f2c46d\" stroke-width=\"2\"/><rect x=\"150\" y=\"146\" width=\"0\" height=\"0\"/><circle cx=\"200\" cy=\"141.6\" r=\"9.6\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><rect x=\"184.4\" y=\"154.8\" width=\"31.2\" height=\"42.0\" rx=\"10.8\" fill=\"#0b2a36\" stroke=\"#3fd0e0\" stroke-width=\"2\"/><\/g><\/svg>"}];
+  var panel = document.getElementById("stage-panel");
+  var tabs = document.querySelectorAll(".stage-tab");
+  function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+  function renderStage(i){
+    var s = stages[i];
+    tabs.forEach(function(t, idx){ t.setAttribute("aria-pressed", idx === i ? "true" : "false"); });
+    var who = s.who.length ? '<div class="block"><h4>Profil peserta</h4><ul class="ticks">' + s.who.map(function(w){return '<li>'+esc(w)+'</li>';}).join("") + '</ul></div>' : "";
+    var focus = '<div class="block"><h4>Fokus tahap ini</h4><ul class="ticks">' + s.focus.map(function(f){return '<li>'+esc(f)+'</li>';}).join("") + '</ul></div>';
+    var progs = s.programs.map(function(p){ return '<div class="program">'+esc(p[0])+(p[1] ? '<small>'+esc(p[1])+'</small>' : '')+'</div>'; }).join("");
+    panel.innerHTML =
+      '<div class="fade"><h3>'+esc(s.title)+'</h3><p class="desc">'+esc(s.desc)+'</p>'+who+focus+'</div>' +
+      '<div class="fade"><div class="art-wrap">'+s.art+'</div><p class="programs-title">Program unggulan</p><div class="programs">'+progs+'</div></div>';
+  }
+  tabs.forEach(function(t){ t.addEventListener("click", function(){ renderStage(Number(t.dataset.stage)); }); });
+  renderStage(0);
+  arrowNav([].slice.call(tabs));
+
+  var menuBtn = document.querySelector(".menu-btn"), menu = document.getElementById("menu");
+  menuBtn.addEventListener("click", function(){ var o = menu.classList.toggle("open"); menuBtn.setAttribute("aria-expanded", String(o)); });
+  menu.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ menu.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false"); }); });
+
+  (function(){
+    var els = [].slice.call(document.querySelectorAll(".reveal"));
+    if (!("IntersectionObserver" in window)) { els.forEach(function(e){ e.classList.add("in"); }); return; }
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, { threshold: .12, rootMargin: "0px 0px -40px 0px" });
+    els.forEach(function(e){ io.observe(e); });
+  })();
+
+  (function(){
+    if (!("IntersectionObserver" in window)) return;
+    var links = {};
+    document.querySelectorAll('#menu a[href^="#"]').forEach(function(a){ links[a.getAttribute("href").slice(1)] = a; });
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){
+      if (e.isIntersecting && links[e.target.id]) {
+        Object.keys(links).forEach(function(k){ links[k].removeAttribute("aria-current"); });
+        links[e.target.id].setAttribute("aria-current", "true");
+      }
+    }); }, { rootMargin: "-45% 0px -50% 0px" });
+    Object.keys(links).forEach(function(id){ var s = document.getElementById(id); if (s) io.observe(s); });
+  })();
+
+  document.getElementById("wa-form").addEventListener("submit", function(ev){
+    ev.preventDefault();
+    var f = ev.target, v = function(n){ return (f.elements[n].value || "").trim(); };
+    var err = document.getElementById("f-err"), nm = f.elements["nama"];
+    if (!v("nama")) { err.classList.add("on"); nm.setAttribute("aria-invalid", "true"); nm.focus(); return; }
+    err.classList.remove("on"); nm.removeAttribute("aria-invalid");
+    var msg = "Halo NLO, saya " + v("nama") + (v("pt") ? " dari " + v("pt") : "") + ". Saya tertarik dengan " + v("butuh") + "." + (v("pesan") ? "\n\n" + v("pesan") : "");
+    window.open("https://wa.me/" + ((window.NLO && window.NLO.wa) || "6287781018187") + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
+  });
+</script>
+<script src="assets/config.js"></script>
+<script src="assets/cms.js" defer></script>
+</body>
+</html>

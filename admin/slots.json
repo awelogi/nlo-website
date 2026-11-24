@@ -1,0 +1,418 @@
+{
+ "text": [
+  {
+   "key": "home.hero.judul",
+   "page": "home",
+   "group": "Bagian pembuka (hero)",
+   "label": "Judul",
+   "default": "Program PSDM untuk setiap tahap karier karyawan.",
+   "multiline": false
+  },
+  {
+   "key": "home.hero.lead",
+   "page": "home",
+   "group": "Bagian pembuka (hero)",
+   "label": "Paragraf pembuka",
+   "default": "Kami menyediakan sistem program PSDM terintegrasi yang mengikuti siklus karier dan kompetensi karyawan, dari hari pertama bergabung hingga masa purnabakti.",
+   "multiline": true
+  },
+  {
+   "key": "home.layanan.judul",
+   "page": "home",
+   "group": "Tiga layanan",
+   "label": "Judul",
+   "default": "Tiga layanan untuk kebutuhan SDM perusahaan Anda.",
+   "multiline": false
+  },
+  {
+   "key": "home.layanan.lead",
+   "page": "home",
+   "group": "Tiga layanan",
+   "label": "Paragraf pembuka",
+   "default": "Dari pelatihan sepanjang siklus karier, riset berbasis data, sampai pengalaman gathering yang berkesan.",
+   "multiline": true
+  },
+  {
+   "key": "home.tentang.judul",
+   "page": "home",
+   "group": "Tentang",
+   "label": "Judul",
+   "default": "Mitra strategis dalam pengembangan manusia.",
+   "multiline": false
+  },
+  {
+   "key": "home.tentang.lead",
+   "page": "home",
+   "group": "Tentang",
+   "label": "Paragraf pembuka",
+   "default": "Need Learning Organizer hadir untuk membantu perusahaan menjawab pertanyaan yang sama: bagaimana memastikan setiap orang di dalamnya kompeten untuk pekerjaannya hari ini dan siap untuk peran berikutnya.",
+   "multiline": true
+  },
+  {
+   "key": "home.visi",
+   "page": "home",
+   "group": "Visi",
+   "label": "Teks",
+   "default": "Menjadi mitra strategis perusahaan dalam PSDM yang adaptif, kompeten, dan berdaya saing tinggi.",
+   "multiline": true
+  },
+  {
+   "key": "home.alur.judul",
+   "page": "home",
+   "group": "Alur",
+   "label": "Judul",
+   "default": "Lima tahap, sesuai siklus karier karyawan.",
+   "multiline": false
+  },
+  {
+   "key": "home.alur.lead",
+   "page": "home",
+   "group": "Alur",
+   "label": "Paragraf pembuka",
+   "default": "Dari hari pertama bergabung sampai masa purnabakti. Pilih tahap untuk melihat sasaran peserta dan program unggulannya.",
+   "multiline": true
+  },
+  {
+   "key": "home.riset.judul",
+   "page": "home",
+   "group": "Riset",
+   "label": "Judul",
+   "default": "Keputusan PSDM yang tepat dimulai dari data yang terukur.",
+   "multiline": false
+  },
+  {
+   "key": "home.riset.lead",
+   "page": "home",
+   "group": "Riset",
+   "label": "Paragraf pembuka",
+   "default": "NLO juga menjadi mitra riset perusahaan lewat assessment dan evaluasi program untuk menemukan perbaikan yang berbasis data.",
+   "multiline": true
+  },
+  {
+   "key": "gathering.hero.judul",
+   "page": "gathering",
+   "group": "Bagian pembuka (hero)",
+   "label": "Judul",
+   "default": "The Art of Gathering",
+   "multiline": false
+  },
+  {
+   "key": "home.galeri.judul",
+   "page": "home",
+   "group": "Galeri",
+   "label": "Judul",
+   "default": "Galeri kegiatan.",
+   "multiline": false
+  },
+  {
+   "key": "home.galeri.lead",
+   "page": "home",
+   "group": "Galeri",
+   "label": "Paragraf pembuka",
+   "default": "Momen dari program yang sudah kami jalankan bersama tim klien.",
+   "multiline": false
+  },
+  {
+   "key": "home.pendekatan.judul",
+   "page": "home",
+   "group": "Pendekatan",
+   "label": "Judul",
+   "default": "Tujuh langkah dari kebutuhan sampai dampak.",
+   "multiline": false
+  },
+  {
+   "key": "home.pendekatan.lead",
+   "page": "home",
+   "group": "Pendekatan",
+   "label": "Paragraf pembuka",
+   "default": "Pendekatan yang kami pakai di setiap program, dari analisis kebutuhan sampai tindak lanjut setelah pelatihan.",
+   "multiline": true
+  },
+  {
+   "key": "home.kontak.judul",
+   "page": "home",
+   "group": "Kontak",
+   "label": "Judul",
+   "default": "Mari berkolaborasi bersama NLO.",
+   "multiline": false
+  },
+  {
+   "key": "home.kontak.lead",
+   "page": "home",
+   "group": "Kontak",
+   "label": "Paragraf pembuka",
+   "default": "Kami siap merancang program pengembangan SDM yang tepat sasaran, terukur, dan berdampak nyata untuk pertumbuhan perusahaan Anda.",
+   "multiline": true
+  },
+  {
+   "key": "kontak.telepon",
+   "page": "kontak",
+   "group": "Kontak",
+   "label": "Nomor telepon / WhatsApp",
+   "default": "+62 877-8101-8187",
+   "multiline": false
+  },
+  {
+   "key": "kontak.email",
+   "page": "kontak",
+   "group": "Kontak",
+   "label": "Email",
+   "default": "needlearningorganizer@gmail.com",
+   "multiline": false
+  },
+  {
+   "key": "kontak.instagram",
+   "page": "kontak",
+   "group": "Kontak",
+   "label": "Instagram (dengan @)",
+   "default": "@needlearningorganizer",
+   "multiline": false
+  },
+  {
+   "key": "gathering.hero.sub",
+   "page": "gathering",
+   "group": "Bagian pembuka (hero)",
+   "label": "Subjudul",
+   "default": "Beyond Gathering, Creating Meaningful Experiences",
+   "multiline": false
+  },
+  {
+   "key": "gathering.hero.kutipan",
+   "page": "gathering",
+   "group": "Bagian pembuka (hero)",
+   "label": "Kutipan",
+   "default": "Karena tim hebat tidak hanya dibangun di ruang meeting, tetapi melalui pengalaman yang mereka jalani bersama.",
+   "multiline": true
+  },
+  {
+   "key": "gathering.mengapa.judul",
+   "page": "gathering",
+   "group": "Mengapa penting",
+   "label": "Judul",
+   "default": "Mengapa employee gathering penting?",
+   "multiline": false
+  },
+  {
+   "key": "gathering.mengapa.lead",
+   "page": "gathering",
+   "group": "Mengapa penting",
+   "label": "Paragraf pembuka",
+   "default": "Program ini menjadi media strategis untuk lima hal berikut.",
+   "multiline": false
+  },
+  {
+   "key": "gathering.pengalaman.judul",
+   "page": "gathering",
+   "group": "Pengalaman",
+   "label": "Judul",
+   "default": "Dari fun ke experience.",
+   "multiline": false
+  },
+  {
+   "key": "gathering.pengalaman.lead",
+   "page": "gathering",
+   "group": "Pengalaman",
+   "label": "Paragraf pembuka",
+   "default": "Employee gathering modern ala NLO dibangun dari enam lapisan pengalaman.",
+   "multiline": true
+  },
+  {
+   "key": "gathering.nilai.judul",
+   "page": "gathering",
+   "group": "Nilai tambah",
+   "label": "Judul",
+   "default": "Nilai tambah NLO: seminar dan debrief bermakna.",
+   "multiline": false
+  },
+  {
+   "key": "gathering.nilai.lead",
+   "page": "gathering",
+   "group": "Nilai tambah",
+   "label": "Paragraf pembuka",
+   "default": "Dari fun menuju impact. Keseruan adalah pintu masuk, dan setiap program dapat dilengkapi seminar serta debrief yang menghubungkan permainan dengan tujuan bisnis tim Anda.",
+   "multiline": true
+  },
+  {
+   "key": "gathering.solusi.judul",
+   "page": "gathering",
+   "group": "Solusi",
+   "label": "Judul",
+   "default": "Solusi gathering untuk perusahaan Anda.",
+   "multiline": false
+  },
+  {
+   "key": "gathering.solusi.lead",
+   "page": "gathering",
+   "group": "Solusi",
+   "label": "Paragraf pembuka",
+   "default": "Konsep program yang dapat disesuaikan dengan kebutuhan perusahaan Anda.",
+   "multiline": true
+  },
+  {
+   "key": "gathering.alur.judul",
+   "page": "gathering",
+   "group": "Alur",
+   "label": "Judul",
+   "default": "Alur program.",
+   "multiline": false
+  },
+  {
+   "key": "gathering.alur.lead",
+   "page": "gathering",
+   "group": "Alur",
+   "label": "Paragraf pembuka",
+   "default": "Sembilan tahap dalam satu rangkaian gathering, dari kedatangan sampai penutupan.",
+   "multiline": true
+  },
+  {
+   "key": "gathering.signature.judul",
+   "page": "gathering",
+   "group": "Signature program",
+   "label": "Judul",
+   "default": "Signature program.",
+   "multiline": false
+  },
+  {
+   "key": "gathering.signature.lead",
+   "page": "gathering",
+   "group": "Signature program",
+   "label": "Paragraf pembuka",
+   "default": "Pilih salah satu konsep untuk melihat konsep dan contoh aktivitasnya.",
+   "multiline": false
+  },
+  {
+   "key": "gathering.hiburan.judul",
+   "page": "gathering",
+   "group": "Hiburan & dokumentasi",
+   "label": "Judul",
+   "default": "Entertainment dan dokumentasi.",
+   "multiline": false
+  },
+  {
+   "key": "gathering.hiburan.lead",
+   "page": "gathering",
+   "group": "Hiburan & dokumentasi",
+   "label": "Paragraf pembuka",
+   "default": "Pilihan tambahan untuk menghidupkan acara Anda dan mengabadikan setiap momen berharga.",
+   "multiline": true
+  },
+  {
+   "key": "gathering.galeri.judul",
+   "page": "gathering",
+   "group": "Galeri",
+   "label": "Judul",
+   "default": "Galeri kegiatan.",
+   "multiline": false
+  },
+  {
+   "key": "gathering.galeri.lead",
+   "page": "gathering",
+   "group": "Galeri",
+   "label": "Paragraf pembuka",
+   "default": "Momen dari program yang sudah kami jalankan bersama tim klien.",
+   "multiline": false
+  },
+  {
+   "key": "gathering.faq.judul",
+   "page": "gathering",
+   "group": "Tanya jawab",
+   "label": "Judul",
+   "default": "Tanya jawab.",
+   "multiline": false
+  },
+  {
+   "key": "gathering.faq.lead",
+   "page": "gathering",
+   "group": "Tanya jawab",
+   "label": "Paragraf pembuka",
+   "default": "Hal yang paling sering ditanyakan sebelum merancang gathering.",
+   "multiline": false
+  },
+  {
+   "key": "gathering.hubungi.judul",
+   "page": "gathering",
+   "group": "Ajakan menghubungi",
+   "label": "Judul",
+   "default": "Mari rancang pengalaman gathering yang berkesan untuk tim Anda.",
+   "multiline": false
+  },
+  {
+   "key": "gathering.hubungi.lead",
+   "page": "gathering",
+   "group": "Ajakan menghubungi",
+   "label": "Paragraf pembuka",
+   "default": "Ceritakan kebutuhan perusahaan Anda, dan kami bantu menyusun programnya bersama.",
+   "multiline": true
+  },
+  {
+   "key": "kontak.pic",
+   "page": "kontak",
+   "group": "Kontak",
+   "label": "Nama kontak (halaman Gathering)",
+   "default": "Helga Yuliana",
+   "multiline": false
+  }
+ ],
+ "images": [
+  {
+   "key": "gathering.foto.hero-team-building",
+   "default": "img/hero-team-building.webp",
+   "alt": "Peserta bermain permainan tim di dalam ruangan, dengan panggung bertuliskan Team Building",
+   "page": "gathering"
+  },
+  {
+   "key": "gathering.foto.hero-bola-besar",
+   "default": "img/hero-bola-besar.webp",
+   "alt": "Peserta bermain bola besar di lapangan outdoor",
+   "page": "gathering"
+  },
+  {
+   "key": "gathering.foto.hero-human-knot",
+   "default": "img/hero-human-knot.webp",
+   "alt": "Tim membentuk human knot dengan saling menggenggam tangan",
+   "page": "gathering"
+  },
+  {
+   "key": "gathering.foto.alur-lomba",
+   "default": "img/alur-lomba.webp",
+   "alt": "Peserta berseru gembira saat berlomba dalam permainan tim di area terbuka",
+   "page": "gathering"
+  },
+  {
+   "key": "gathering.foto.sig-spider-web",
+   "default": "img/sig-spider-web.webp",
+   "alt": "Peserta melewati jaring laba-laba dengan bantuan tim",
+   "page": "gathering"
+  },
+  {
+   "key": "gathering.foto.sig-pipe-ball",
+   "default": "img/sig-pipe-ball.webp",
+   "alt": "Peserta memegang batang warna-warni dalam permainan kerja sama",
+   "page": "gathering"
+  },
+  {
+   "key": "gathering.foto.sig-caterpillar",
+   "default": "img/sig-caterpillar.webp",
+   "alt": "Peserta duduk di atas wahana caterpillar race",
+   "page": "gathering"
+  },
+  {
+   "key": "gathering.foto.ent-dj",
+   "default": "img/ent-dj.webp",
+   "alt": "Tangan DJ di depan mixer dengan cahaya biru",
+   "page": "gathering"
+  },
+  {
+   "key": "gathering.foto.ent-live-band",
+   "default": "img/ent-live-band.webp",
+   "alt": "Gitaris dan pemain keyboard tampil live",
+   "page": "gathering"
+  },
+  {
+   "key": "gathering.foto.ent-stand-up",
+   "default": "img/ent-stand-up.webp",
+   "alt": "Pembawa acara stand up comedy di atas panggung",
+   "page": "gathering"
+  }
+ ]
+}
