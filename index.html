@@ -329,7 +329,14 @@ img[loading="lazy"] { background: var(--deep); }
   .hero-visual { max-width: 680px; margin-inline: auto; width: 100%; }
 }
 @media (max-width: 720px) {
-  .hero-visual .emblem-svg text[paint-order] { display: none; }
+  /* label tetap tampil di layar kecil, diperbesar agar terbaca */
+  .hero-visual .emblem { left: 40%; top: 14%; width: 57%; }
+  .hero-visual .emblem-svg { overflow: visible; }
+  .hero-visual .emblem-svg text[paint-order] { font-size: 21px; stroke-width: 6px; }
+}
+@media (max-width: 480px) {
+  .hero-visual .emblem { left: 35%; top: 12%; width: 60%; }
+  .hero-visual .emblem-svg text[paint-order] { font-size: 27px; stroke-width: 7px; }
   .hero-photo { border-radius: 20px;
     -webkit-mask-image: linear-gradient(to top, transparent 0, #000 14%); mask-image: linear-gradient(to top, transparent 0, #000 14%); }
 }
